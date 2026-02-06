@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-06 — Completed 01-01-PLAN.md (Foundation Scaffold)
+Last activity: 2026-02-06 — Completed 01-02-PLAN.md (Text Data Ingestion)
 
-Progress: [█░░░░░░░░░] 12.5% (1/8 plans completed)
+Progress: [██░░░░░░░░] 25.0% (2/8 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 1
-- Average duration: 2 minutes
-- Total execution time: 0.03 hours
+- Total plans completed: 2
+- Average duration: 2.5 minutes
+- Total execution time: 0.08 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 1 | 1 | 2 min | 2 min |
+| Phase 1 | 2 | 5 min | 2.5 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min)
-- Trend: First plan completed
+- Last 5 plans: 01-01 (2 min), 01-02 (3 min)
+- Trend: Consistent velocity
 
 *Updated after each plan completion*
 
@@ -49,6 +49,8 @@ Recent decisions affecting current work:
 - GDELT over direct media scraping (free, no auth, 15-min updates)
 - Use acreate_client() for async Supabase client (01-01: sync client lacks realtime support)
 - Separate Create and Row Pydantic models per table (01-01: clearer type safety for insert vs read)
+- Use domain_exact not domain in GDELT filters (01-02: partial matching causes false positives)
+- Lazy initialization for Telegram client (01-02: allows import without credentials, better error messages)
 
 ### Pending Todos
 
@@ -60,7 +62,9 @@ None yet.
 
 **Phase 1 (pending):** User must manually set REPLICA IDENTITY FULL on all 7 tables after migration (requires Supabase SQL Editor access, cannot be automated).
 
-**Phase 1 (pending):** GDELT Chinese state media coverage needs validation during Plan 01-02 — verify Xinhua, Global Times, CCTV, People's Daily actually indexed.
+**Phase 1 (pending - now in code):** GDELT Chinese state media coverage needs validation during first fetch — verify Xinhua, Global Times, CCTV, People's Daily actually indexed (01-02: fetcher implemented with TODO comment for tone score).
+
+**Phase 1 (pending):** User must obtain Telegram API credentials (api_id, api_hash) from https://my.telegram.org/apps before Telegram scraper can run (01-02: see 01-02-USER-SETUP.md).
 
 **Phase 2:** Novel prompt engineering for narrative coordination detection (sparse public examples) — may require iteration during Phase 2 LLM wrapper development.
 
@@ -71,7 +75,7 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-06 (plan execution)
-Stopped at: Completed 01-01-PLAN.md — Foundation Scaffold
+Stopped at: Completed 01-02-PLAN.md — Text Data Ingestion (GDELT + Telegram)
 Resume file: None
 
 ---
