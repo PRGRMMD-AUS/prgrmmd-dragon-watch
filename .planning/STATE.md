@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 1 of 5 (Foundation)
-Plan: 0 of TBD in current phase
-Status: Ready to plan
-Last activity: 2026-02-07 — Roadmap created with 5 phases covering all 24 v1 requirements
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-06 — Completed 01-01-PLAN.md (Foundation Scaffold)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [█░░░░░░░░░] 12.5% (1/8 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: N/A
-- Total execution time: 0 hours
+- Total plans completed: 1
+- Average duration: 2 minutes
+- Total execution time: 0.03 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| Phase 1 | 1 | 2 min | 2 min |
 
 **Recent Trend:**
-- Last 5 plans: N/A
-- Trend: N/A
+- Last 5 plans: 01-01 (2 min)
+- Trend: First plan completed
 
 *Updated after each plan completion*
 
@@ -47,6 +47,8 @@ Recent decisions affecting current work:
 - Simulated data first, live feeds second (demo reliability paramount)
 - Claude for narrative analysis, GPT-4o Mini for bulk classification (cost optimization)
 - GDELT over direct media scraping (free, no auth, 15-min updates)
+- Use acreate_client() for async Supabase client (01-01: sync client lacks realtime support)
+- Separate Create and Row Pydantic models per table (01-01: clearer type safety for insert vs read)
 
 ### Pending Todos
 
@@ -54,9 +56,11 @@ None yet.
 
 ### Blockers/Concerns
 
-**Phase 1:** Package version validation required (gdeltdoc, Telethon, Supabase Python client) — training cutoff January 2025, research date February 2026. Verify on PyPI before Phase 1 setup.
+**Phase 1 (resolved 01-01):** Package version validation required — verified supabase>=2.27.3, pydantic>=2.0 install successfully on Python 3.13.
 
-**Phase 1:** GDELT Chinese state media coverage needs validation during Phase 1 — verify Xinhua, Global Times, CCTV, People's Daily actually indexed.
+**Phase 1 (pending):** User must manually set REPLICA IDENTITY FULL on all 7 tables after migration (requires Supabase SQL Editor access, cannot be automated).
+
+**Phase 1 (pending):** GDELT Chinese state media coverage needs validation during Plan 01-02 — verify Xinhua, Global Times, CCTV, People's Daily actually indexed.
 
 **Phase 2:** Novel prompt engineering for narrative coordination detection (sparse public examples) — may require iteration during Phase 2 LLM wrapper development.
 
@@ -66,10 +70,10 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-07 (roadmap creation)
-Stopped at: Roadmap and STATE.md created, REQUIREMENTS.md traceability pending update
+Last session: 2026-02-06 (plan execution)
+Stopped at: Completed 01-01-PLAN.md — Foundation Scaffold
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-06*
