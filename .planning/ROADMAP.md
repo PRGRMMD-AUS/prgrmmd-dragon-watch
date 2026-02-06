@@ -30,10 +30,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Telegram scraper pulls messages from OSINT channels and writes to Supabase
   4. AIS vessel tracker receives WebSocket data for Taiwan Strait and writes positions to Supabase
   5. Simulated Taiwan Strait demo dataset (50+ articles, 100+ posts, AIS data) loaded and available in Supabase
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] TBD during phase planning
+- [ ] 01-01-PLAN.md — Project scaffolding, Supabase schema, Pydantic models, async DB client
+- [ ] 01-02-PLAN.md — GDELT article fetcher and Telegram OSINT scraper
+- [ ] 01-03-PLAN.md — AIS WebSocket vessel tracker and simulated demo dataset
+- [ ] 01-04-PLAN.md — FastAPI app wiring and integration verification
 
 ### Phase 2: Intelligence Processing
 **Goal**: Raw data is processed into structured intelligence events with LLM-powered analysis
@@ -101,7 +104,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/TBD | Not started | - |
+| 1. Foundation | 0/4 | Planned | - |
 | 2. Intelligence Processing | 0/TBD | Not started | - |
 | 3. Correlation Engine | 0/TBD | Not started | - |
 | 4. Visualization | 0/TBD | Not started | - |
