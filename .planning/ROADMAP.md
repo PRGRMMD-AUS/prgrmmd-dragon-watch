@@ -47,10 +47,13 @@ Plans:
   2. Civilian post classifier processes social posts and writes military-relevant classifications (convoy, naval, flight, restricted zone) with locations and confidence to movement_events table
   3. Entity extraction pulls structured data (military units, equipment types, locations with lat/lon, timestamps) from unstructured text
   4. Intelligence brief generator produces formatted assessments with threat level, confidence, evidence chain, timeline, and collection priorities
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] TBD during phase planning
+- [ ] 02-01-PLAN.md — LLM foundation: config, Pydantic schemas, async clients, retry/logging utilities
+- [ ] 02-02-PLAN.md — Narrative coordination detector (LLM-01) + entity extraction (LLM-03) + batch article pipeline
+- [ ] 02-03-PLAN.md — Civilian post classifier (LLM-02) + batch post pipeline
+- [ ] 02-04-PLAN.md — Intelligence brief generator (LLM-04) + brief generation pipeline
 
 ### Phase 3: Correlation Engine
 **Goal**: Two independent intelligence streams converge to produce threat-level alerts
@@ -105,7 +108,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 0/4 | Planned | - |
-| 2. Intelligence Processing | 0/TBD | Not started | - |
+| 2. Intelligence Processing | 0/4 | Planned | - |
 | 3. Correlation Engine | 0/TBD | Not started | - |
 | 4. Visualization | 0/TBD | Not started | - |
 | 5. Demo Integration | 0/TBD | Not started | - |
