@@ -188,12 +188,12 @@ export function NarrativeTimeline() {
               color: '#a3a3a3',
               padding: '8px 10px',
             }}
-            formatter={(value: number, name?: string) => {
-              if (name === 'score') {
+            formatter={(value: number | undefined, name?: string) => {
+              if (name === 'score' && value != null) {
                 const color = scoreToColor(value)
                 return [<span style={{ color }}>{value.toFixed(1)}</span>, 'Score']
               }
-              return [value, name || '']
+              return [value ?? 0, name || '']
             }}
             labelStyle={{ color: '#3d3d3d', fontSize: '9px', marginBottom: '2px' }}
           />

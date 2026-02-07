@@ -37,15 +37,15 @@ export function useMovementHeatmap() {
 
       if (data) {
         const points = data
-          .filter((event: Record<string, unknown>) => event.location_lat !== null && event.location_lon !== null)
-          .map((event: Record<string, unknown>) => ({
-            id: event.id,
-            lat: event.location_lat!,
-            lon: event.location_lon!,
-            type: event.event_type,
-            detected_at: event.detected_at,
-            vessel_mmsi: event.vessel_mmsi,
-            description: event.description || '',
+          .filter((event: any) => event.location_lat !== null && event.location_lon !== null)
+          .map((event: any): HeatmapPoint => ({
+            id: event.id as string,
+            lat: event.location_lat as number,
+            lon: event.location_lon as number,
+            type: event.event_type as string,
+            detected_at: event.detected_at as string,
+            vessel_mmsi: event.vessel_mmsi as string,
+            description: (event.description || '') as string,
           }))
         setHeatmapPoints(points)
       }

@@ -105,7 +105,6 @@ export function EventFeed() {
     setFeedFilter,
     focusCluster,
     setFocusCluster,
-    narrativeFilter,
     setNarrativeFilter,
   } = useDashboard()
 

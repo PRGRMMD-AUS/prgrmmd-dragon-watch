@@ -116,7 +116,6 @@ export function MapPanel() {
     timelinePosition,
     setTimelinePosition,
     escalatedIds,
-    escalateEvent,
     startEscalation,
     focusCluster,
     setFocusCluster,
