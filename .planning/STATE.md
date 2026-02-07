@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 5 of 5 (Demo Integration)
-Plan: 0 of TBD in current phase
-Status: Not started
-Last activity: 2026-02-07 — Phase 4 approved by user, all 5 dashboard zones working
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-07 — Completed 05-01-PLAN.md (demo fixture generation)
 
-Progress: [██████████████░] 82% (14/17 plans completed)
+Progress: [███████████████░] 88% (15/17 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 14
-- Average duration: ~3.0 minutes
-- Total execution time: ~1.0 hours
+- Total plans completed: 15
+- Average duration: ~3.2 minutes
+- Total execution time: ~1.1 hours
 
 **By Phase:**
 
@@ -31,10 +31,11 @@ Progress: [██████████████░] 82% (14/17 plans compl
 | Phase 2 | 4/4 | 20 min | 5 min |
 | Phase 3 | 3/3 | 7.1 min | 2.4 min |
 | Phase 4 | 4/4 | 13.85 min | 3.46 min |
+| Phase 5 | 1/4 | 5.7 min | 5.7 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-01 (3 min), 04-02 (3 min), 04-03 (4 min), 04-04 (3.85 min)
-- Trend: Phase 4 complete. UI tasks average 3.46 min (slightly above overall 3.0 min average due to component complexity)
+- Last 5 plans: 04-02 (3 min), 04-03 (4 min), 04-04 (3.85 min), 05-01 (5.7 min)
+- Trend: Phase 5 started. Plan 05-01 took longer due to fixture generation complexity (392 records, 7 tables, validation logic)
 
 *Updated after each plan completion*
 
@@ -86,6 +87,10 @@ Recent decisions affecting current work:
 - Slate palette for consistency (04-04: replaced gray-* with slate-* for professional SaaS appearance)
 - Typography hierarchy: headers (text-slate-500), body (text-slate-700), metadata (text-slate-400) (04-04: semantic visual hierarchy)
 - Inter font from Google Fonts (04-04: modern screen-readable typeface for analytics dashboard)
+- Pre-compute all intelligence outputs (05-01: demo reliability requires zero live API dependencies)
+- 72 hours compressed to 5 minutes (05-01: Normal demo speed allows full escalation arc in presentation timeframe)
+- Continuous drip pacing with jitter (05-01: 0.1-3s random jitter prevents timestamp collisions, natural intelligence flow)
+- Alert upsert pattern with action metadata (05-01: first alert INSERT, subsequent UPDATE to match correlation engine behavior)
 
 ### Pending Todos
 
@@ -113,12 +118,14 @@ None yet.
 
 **Phase 4 (pending):** Optional Mapbox token setup for full map rendering — fallback SVG works without token but production deployment should set VITE_MAPBOX_TOKEN for Mapbox Light style. Get token from https://account.mapbox.com/access-tokens/
 
+**Phase 5 (resolved 05-01):** Demo fixture generation complete — 392 records across all 7 Supabase tables with 5-beat escalation arc validated and ready for playback engine. No blockers for Plan 05-02.
+
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Phase 4 complete. Ready for Phase 5 (Demo Integration).
+Stopped at: Completed 05-01-PLAN.md (demo fixture generation). Ready for 05-02 (playback engine).
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (Phase 4 complete, approved by user)*
+*Last updated: 2026-02-07 (05-01 complete, fixture validated and ready)*
