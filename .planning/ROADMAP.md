@@ -82,10 +82,13 @@ Plans:
   4. Movement stream feed displays real-time scrollable posts with location and category tags
   5. Threat gauge displays current GREEN/AMBER/RED status with confidence score and auto-updates from alerts table
   6. Intelligence brief panel displays formatted LLM-generated assessment with classification markings
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] TBD during phase planning
+- [ ] 04-01-PLAN.md — Schema migration + React project scaffold + layout shell + Supabase client
+- [ ] 04-02-PLAN.md — Threat status banner + Taiwan Strait map with vessel markers
+- [ ] 04-03-PLAN.md — Event feed cards (left panel) + Narrative timeline (bottom panel)
+- [ ] 04-04-PLAN.md — Intelligence brief sidebar + Visual polish + Human verification
 
 ### Phase 5: Demo Integration
 **Goal**: Demo runs reliably GREEN to RED in 5 minutes with no live API dependencies
@@ -112,7 +115,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 4/4 | Complete | 2026-02-07 |
 | 2. Intelligence Processing | 4/4 | Complete | 2026-02-07 |
 | 3. Correlation Engine | 3/3 | Complete | 2026-02-07 |
-| 4. Visualization | 0/TBD | Not started | - |
+| 4. Visualization | 0/4 | Not started | - |
 | 5. Demo Integration | 0/TBD | Not started | - |
 
 ---
