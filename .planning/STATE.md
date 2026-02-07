@@ -5,33 +5,35 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Correlation of state media narrative coordination with civilian movement indicators provides pre-conflict warning hours before official announcements — a capability no existing OSINT vendor offers.
-**Current focus:** Phase 2 - Intelligence Processing
+**Current focus:** Phase 3 - Correlation Engine
 
 ## Current Position
 
-Phase: 2 of 5 (Intelligence Processing)
-Plan: 0 of 4 in current phase
-Status: Not started (phase needs planning)
-Last activity: 2026-02-07 — Completed Phase 1 (Foundation) — all 4 plans executed
+Phase: 3 of 5 (Correlation Engine)
+Plan: 1 of 4 in current phase
+Status: In progress
+Last activity: 2026-02-07 — Completed 03-01-PLAN.md (Foundation Types)
 
-Progress: [██░░░░░░░░] 20% (1/5 phases completed)
+Progress: [████████░░] 42% (2.25/5 phases completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 4
-- Average duration: 2.75 minutes
-- Total execution time: 0.18 hours
+- Total plans completed: 8
+- Average duration: ~2.6 minutes
+- Total execution time: ~0.45 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
 | Phase 1 | 4/4 | 11 min | 2.75 min |
+| Phase 2 | 4/4 | 20 min | 5 min |
+| Phase 3 | 1/4 | 2.3 min | 2.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (3 min), 01-03 (3 min), 01-04 (3 min)
-- Trend: Consistent velocity, stable at ~3 min/plan
+- Last 5 plans: 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 03-01 (2.3 min)
+- Trend: Phase 3 foundation types faster than AI integration tasks (no async complexity)
 
 *Updated after each plan completion*
 
@@ -55,6 +57,10 @@ Recent decisions affecting current work:
 - Taiwan Strait bounding box 23-26N, 118-122E (01-03: prevents AISstream message overflow)
 - 72-hour GREEN/AMBER/RED escalation scenario (01-03: shows clear pattern progression for demo)
 - asyncio.create_task for AIS stream, BackgroundTasks for one-shot fetchers (01-04: lifecycle management)
+- Monotonic threat escalation only (03-01: prevents correlation engine flip-flopping)
+- Shapely over GeoPandas for single-region containment (03-01: avoids heavyweight GDAL/GEOS dependencies)
+- Confidence capped at 95% max (03-01: always acknowledge OSINT correlation uncertainty)
+- Separate correlation and LLM ThreatLevel enums (03-01: different purposes, different implementations)
 
 ### Pending Todos
 
@@ -81,9 +87,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed Phase 1 (Foundation) — all 4 plans, 8 commits, 2041 lines of code
+Stopped at: Completed 03-01-PLAN.md (Foundation Types) — 2 tasks, 2 commits
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-07 (after 03-01)*
