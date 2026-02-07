@@ -1,4 +1,4 @@
-import { SocialPost, MovementEvent } from '../types/database'
+import type { SocialPost, MovementEvent } from '../types/database'
 
 interface PostCardProps {
   post: SocialPost

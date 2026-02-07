@@ -1,4 +1,4 @@
-import { Article } from '../types/database'
+import type { Article } from '../types/database'
 
 interface ArticleCardProps {
   article: Article

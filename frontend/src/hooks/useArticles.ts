@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { Article } from '../types/database'
-import { RealtimeChannel } from '@supabase/supabase-js'
+import type { Article } from '../types/database'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 export function useArticles() {
   const [articles, setArticles] = useState<Article[]>([])

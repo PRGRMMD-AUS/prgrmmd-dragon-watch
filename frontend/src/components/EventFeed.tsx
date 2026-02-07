@@ -5,7 +5,7 @@ import { useNarrativeEvents } from '../hooks/useNarrativeEvents'
 import { useMovementEvents } from '../hooks/useMovementEvents'
 import { ArticleCard } from './ArticleCard'
 import { PostCard } from './PostCard'
-import { Article, SocialPost, MovementEvent } from '../types/database'
+import type { Article, SocialPost, MovementEvent } from '../types/database'
 
 type FeedItem =
   | { type: 'article'; data: Article; sortTime: string }

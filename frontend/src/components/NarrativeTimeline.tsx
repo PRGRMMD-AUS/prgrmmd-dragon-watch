@@ -20,13 +20,6 @@ function formatTime(timestamp: string): string {
   return `${hours}:${minutes}`
 }
 
-// Get color based on threat score
-function getAreaColor(score: number): string {
-  if (score >= 70) return '#ef4444' // red-500
-  if (score >= 30) return '#f59e0b' // amber-500
-  return '#10b981' // green-500
-}
-
 export function NarrativeTimeline() {
   const { events, detectionHistory, loading } = useNarrativeEvents()
 
@@ -166,9 +159,9 @@ export function NarrativeTimeline() {
               borderRadius: '6px',
               fontSize: '12px',
             }}
-            formatter={(value: any, name: string) => {
+            formatter={(value: any, name?: string) => {
               if (name === 'score') return [value.toFixed(1), 'Threat Score']
-              return [value, name]
+              return [value, name || '']
             }}
           />
         </ComposedChart>

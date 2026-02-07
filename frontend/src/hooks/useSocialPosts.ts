@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { SocialPost } from '../types/database'
-import { RealtimeChannel } from '@supabase/supabase-js'
+import type { SocialPost } from '../types/database'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 export function useSocialPosts() {
   const [posts, setPosts] = useState<SocialPost[]>([])

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { MovementEvent } from '../types/database'
-import { RealtimeChannel } from '@supabase/supabase-js'
+import type { MovementEvent } from '../types/database'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 export function useMovementEvents() {
   const [movementEvents, setMovementEvents] = useState<MovementEvent[]>([])

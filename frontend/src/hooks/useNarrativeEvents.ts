@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { NarrativeEvent } from '../types/database'
-import { RealtimeChannel } from '@supabase/supabase-js'
+import type { NarrativeEvent } from '../types/database'
+import type { RealtimeChannel } from '@supabase/supabase-js'
 
 interface DetectionHistoryPoint {
   detected_at: string
@@ -37,7 +37,7 @@ export function useNarrativeEvents() {
           const articleIds = new Set<string>()
           narrativeEvents.forEach((event) => {
             if (event.source_ids && Array.isArray(event.source_ids)) {
-              event.source_ids.forEach((id) => articleIds.add(id))
+              event.source_ids.forEach((id: string) => articleIds.add(id))
             }
           })
           setCoordinatedArticleIds(articleIds)
@@ -81,7 +81,7 @@ export function useNarrativeEvents() {
               if (newEvent.source_ids && Array.isArray(newEvent.source_ids)) {
                 setCoordinatedArticleIds((prev) => {
                   const updated = new Set(prev)
-                  newEvent.source_ids.forEach((id) => updated.add(id))
+                  newEvent.source_ids.forEach((id: string) => updated.add(id))
                   return updated
                 })
               }

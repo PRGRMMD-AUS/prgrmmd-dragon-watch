@@ -1,4 +1,3 @@
-import { cn } from '../lib/utils'
 import { ThreatBanner } from './ThreatBanner'
 import { EventFeed } from './EventFeed'
 import { MapPanel } from './MapPanel'
