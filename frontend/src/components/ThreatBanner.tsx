@@ -55,13 +55,13 @@ export function ThreatBanner() {
   return (
     <div
       className={`
-        col-span-3 border-b border-gray-200 flex items-center justify-center px-6
+        col-span-3 border-b border-slate-200 flex items-center justify-center px-6
         ${getBackgroundClass()}
         ${isPulsing ? 'animate-pulse' : ''}
       `}
       style={{ gridArea: '1 / 1 / 2 / 4', height: '48px' }}
     >
-      <div className="text-sm font-bold text-white uppercase tracking-wide">
+      <div className="text-sm font-bold text-white uppercase tracking-wider">
         {getText()}
       </div>
     </div>

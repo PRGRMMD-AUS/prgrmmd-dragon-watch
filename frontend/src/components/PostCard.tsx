@@ -76,7 +76,7 @@ export function PostCard({ post, movementEvent }: PostCardProps) {
       </div>
 
       {/* Text excerpt */}
-      <p className="text-sm text-gray-800 line-clamp-2 mb-2">
+      <p className="text-sm text-slate-700 line-clamp-2 mb-2">
         {post.text}
       </p>
 
@@ -95,13 +95,13 @@ export function PostCard({ post, movementEvent }: PostCardProps) {
 
       {/* Location tag (if movement event has coordinates) */}
       {movementEvent && movementEvent.location_lat && movementEvent.location_lon && (
-        <div className="text-xs text-gray-500 mb-2">
+        <div className="text-xs text-slate-400 mb-2">
           {movementEvent.location_lat.toFixed(1)}°N, {movementEvent.location_lon.toFixed(1)}°E
         </div>
       )}
 
       {/* Views and time */}
-      <div className="flex items-center justify-between text-xs text-gray-500">
+      <div className="flex items-center justify-between text-xs text-slate-400">
         <span>{formatViews(post.views)} views</span>
         <span>{timeAgo(post.timestamp)}</span>
       </div>

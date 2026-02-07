@@ -6,13 +6,13 @@ import { BriefPanel } from './BriefPanel'
 
 export function DashboardLayout() {
   return (
-    <div className="h-screen grid grid-cols-[320px_1fr_360px] grid-rows-[48px_1fr_200px]">
+    <div className="h-screen grid grid-cols-[320px_1fr_360px] grid-rows-[48px_1fr_200px] bg-slate-50">
       {/* Threat Status Banner - Top, full width */}
       <ThreatBanner />
 
       {/* Event Feed Panel - Left */}
       <div
-        className="border-r border-gray-200"
+        className="border-r border-slate-200"
         style={{ gridArea: '2 / 1 / 4 / 2' }}
       >
         <EventFeed />
@@ -27,7 +27,7 @@ export function DashboardLayout() {
       </div>
 
       {/* Intelligence Brief Sidebar - Right */}
-      <div style={{ gridArea: '2 / 3 / 4 / 4' }}>
+      <div className="border-l border-slate-200" style={{ gridArea: '2 / 3 / 4 / 4' }}>
         <BriefPanel />
       </div>
     </div>

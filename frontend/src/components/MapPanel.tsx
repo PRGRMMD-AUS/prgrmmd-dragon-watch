@@ -92,22 +92,22 @@ function VesselMarker({
 // Fallback map (no Mapbox token)
 function FallbackMap() {
   return (
-    <div className="w-full h-full bg-gray-100 flex items-center justify-center">
+    <div className="w-full h-full bg-slate-50 flex items-center justify-center">
       <div className="text-center">
         <svg
           width="400"
           height="300"
           viewBox="117 22 5 4"
-          className="mx-auto mb-4 border border-gray-300"
+          className="mx-auto mb-4 border border-slate-200"
         >
-          <rect x="117" y="22" width="5" height="4" fill="#e5e7eb" />
+          <rect x="117" y="22" width="5" height="4" fill="#f1f5f9" />
           {/* Simple Taiwan outline */}
           <ellipse cx="121" cy="23.8" rx="0.3" ry="0.5" fill="#94a3b8" />
           {/* Strait waters */}
           <rect x="117.5" y="22.5" width="3" height="3" fill="#bfdbfe" opacity="0.3" />
         </svg>
-        <div className="text-sm text-gray-600">
-          Map: Set <code className="bg-gray-200 px-1 rounded">VITE_MAPBOX_TOKEN</code> for Mapbox
+        <div className="text-sm text-slate-600">
+          Map: Set <code className="bg-slate-100 px-1 rounded">VITE_MAPBOX_TOKEN</code> for Mapbox
         </div>
       </div>
     </div>
@@ -226,7 +226,7 @@ export function MapPanel() {
 
       {/* Loading overlay */}
       {vesselsLoading && (
-        <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded shadow text-xs text-gray-600">
+        <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded shadow text-xs text-slate-600">
           Loading vessels...
         </div>
       )}

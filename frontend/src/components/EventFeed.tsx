@@ -75,28 +75,28 @@ export function EventFeed() {
 
   if (loading) {
     return (
-      <div className="h-full bg-gray-50 px-3 py-2">
-        <h2 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
+      <div className="h-full bg-slate-50 px-3 py-2">
+        <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
           Intelligence Feed
         </h2>
         {/* Skeleton loader */}
         <div className="space-y-2">
-          <div className="bg-gray-200 rounded-lg h-20 animate-pulse" />
-          <div className="bg-gray-200 rounded-lg h-20 animate-pulse" />
-          <div className="bg-gray-200 rounded-lg h-20 animate-pulse" />
+          <div className="bg-slate-200 rounded-lg h-20 animate-pulse" />
+          <div className="bg-slate-200 rounded-lg h-20 animate-pulse" />
+          <div className="bg-slate-200 rounded-lg h-20 animate-pulse" />
         </div>
       </div>
     )
   }
 
   return (
-    <div className="h-full bg-gray-50 overflow-y-auto px-3 py-2">
-      <h2 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
+    <div className="h-full bg-slate-50 overflow-y-auto px-3 py-2">
+      <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
         Intelligence Feed
       </h2>
 
       {feedItems.length === 0 ? (
-        <div className="text-sm text-gray-500 text-center py-8">
+        <div className="text-sm text-slate-400 text-center py-8">
           No intelligence data available
         </div>
       ) : (

@@ -25,11 +25,11 @@ export function NarrativeTimeline() {
 
   if (loading) {
     return (
-      <div className="h-full bg-white border-t border-gray-200 p-4">
-        <h2 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
+      <div className="h-full bg-white border-t border-slate-200 p-4">
+        <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
           Narrative Correlation Timeline
         </h2>
-        <div className="bg-gray-200 rounded h-32 animate-pulse" />
+        <div className="bg-slate-200 rounded h-32 animate-pulse" />
       </div>
     )
   }
@@ -37,8 +37,8 @@ export function NarrativeTimeline() {
   // If no detection history, show empty state
   if (detectionHistory.length === 0) {
     return (
-      <div className="h-full bg-white border-t border-gray-200 p-4">
-        <h2 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
+      <div className="h-full bg-white border-t border-slate-200 p-4">
+        <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
           Narrative Correlation Timeline
         </h2>
         <div className="h-32 flex items-center justify-center">
@@ -63,7 +63,7 @@ export function NarrativeTimeline() {
               />
             </AreaChart>
           </ResponsiveContainer>
-          <div className="absolute text-sm text-gray-500">
+          <div className="absolute text-sm text-slate-400">
             Awaiting correlation data...
           </div>
         </div>
@@ -88,8 +88,8 @@ export function NarrativeTimeline() {
   }))
 
   return (
-    <div className="h-full bg-white border-t border-gray-200 p-4">
-      <h2 className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-3">
+    <div className="h-full bg-white border-t border-slate-200 p-4">
+      <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
         Narrative Correlation Timeline
       </h2>
 
