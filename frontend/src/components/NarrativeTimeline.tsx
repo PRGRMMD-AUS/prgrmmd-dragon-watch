@@ -1,3 +1,4 @@
+import { useMemo } from 'react'
 import { useNarrativeEvents } from '../hooks/useNarrativeEvents'
 import {
   AreaChart,
@@ -12,157 +13,189 @@ import {
   ComposedChart,
 } from 'recharts'
 
-// Format timestamp for x-axis
 function formatTime(timestamp: string): string {
   const date = new Date(timestamp)
-  const hours = date.getHours().toString().padStart(2, '0')
-  const minutes = date.getMinutes().toString().padStart(2, '0')
-  return `${hours}:${minutes}`
+  return `${date.getHours().toString().padStart(2, '0')}:${date.getMinutes().toString().padStart(2, '0')}`
+}
+
+// Interpolate between green (#4ade80) and red (#e05a4f) based on score 0-100
+function scoreToColor(score: number): string {
+  const t = Math.min(1, Math.max(0, score / 100))
+  // Green: 74, 222, 128 → Red: 224, 90, 79
+  const r = Math.round(74 + (224 - 74) * t)
+  const g = Math.round(222 + (90 - 222) * t)
+  const b = Math.round(128 + (79 - 128) * t)
+  return `rgb(${r}, ${g}, ${b})`
+}
+
+function scoreToLabel(score: number): string {
+  if (score >= 70) return 'Critical'
+  if (score >= 50) return 'High'
+  if (score >= 30) return 'Elevated'
+  return 'Normal'
 }
 
 export function NarrativeTimeline() {
   const { events, detectionHistory, loading } = useNarrativeEvents()
 
+  const chartData = useMemo(() => {
+    return detectionHistory.map((point) => ({
+      time: formatTime(point.detected_at),
+      score: point.score,
+      level: point.level,
+      fullTime: point.detected_at,
+    }))
+  }, [detectionHistory])
+
+  const currentScore = chartData.length > 0 ? chartData[chartData.length - 1].score : 0
+  const scoreColor = scoreToColor(currentScore)
+  const scoreLabel = scoreToLabel(currentScore)
+
+  const eventPoints = useMemo(() => {
+    return events.map((event) => ({
+      time: formatTime(event.detected_at),
+      score: event.confidence * 100,
+      summary: event.summary,
+      fullTime: event.detected_at,
+    }))
+  }, [events])
+
   if (loading) {
     return (
-      <div className="h-full bg-white border-t border-slate-200 p-4">
-        <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-          Narrative Correlation Timeline
+      <div className="h-full bg-[var(--bg-panel)] border-t border-[var(--border-glass)] p-4">
+        <h2 className="text-[10px] font-medium text-[var(--text-dim)] uppercase tracking-[0.15em] mb-3">
+          Threat Score
         </h2>
-        <div className="bg-slate-200 rounded h-32 animate-pulse" />
+        <div className="bg-white/[0.02] h-28 animate-pulse" />
       </div>
     )
   }
 
-  // If no detection history, show empty state
   if (detectionHistory.length === 0) {
     return (
-      <div className="h-full bg-white border-t border-slate-200 p-4">
-        <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-          Narrative Correlation Timeline
-        </h2>
-        <div className="h-32 flex items-center justify-center">
-          <ResponsiveContainer width="100%" height="100%">
-            <AreaChart
-              data={[
-                { time: '00:00', score: 0 },
-                { time: '24:00', score: 0 },
-              ]}
-            >
-              <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="time" tick={{ fontSize: 10 }} stroke="#9ca3af" />
-              <YAxis domain={[0, 100]} tick={{ fontSize: 10 }} stroke="#9ca3af" />
-              <ReferenceLine y={30} stroke="#10b981" strokeDasharray="3 3" />
-              <ReferenceLine y={70} stroke="#ef4444" strokeDasharray="3 3" />
-              <Area
-                type="monotone"
-                dataKey="score"
-                stroke="#9ca3af"
-                fill="#e5e7eb"
-                fillOpacity={0.3}
-              />
+      <div className="h-full bg-[var(--bg-panel)] border-t border-[var(--border-glass)] p-4 flex flex-col">
+        <div className="flex items-center gap-3 mb-3 shrink-0">
+          <h2 className="text-[10px] font-medium text-[var(--text-dim)] uppercase tracking-[0.15em]">
+            Threat Score
+          </h2>
+          <span className="font-mono text-lg font-semibold tabular-nums text-[var(--text-dim)]">0</span>
+        </div>
+        <div className="flex-1 relative flex items-center justify-center min-h-0">
+          <ResponsiveContainer width="100%" height="100%" minHeight={60}>
+            <AreaChart data={[{ time: '00:00', score: 0 }, { time: '24:00', score: 0 }]}>
+              <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.03)" />
+              <XAxis dataKey="time" tick={{ fontSize: 9, fill: '#3d3d3d' }} stroke="rgba(255, 255, 255, 0.04)" />
+              <YAxis domain={[0, 100]} tick={{ fontSize: 9, fill: '#3d3d3d' }} stroke="rgba(255, 255, 255, 0.04)" />
+              <Area type="monotone" dataKey="score" stroke="#2a2a2a" fill="#151515" fillOpacity={0.5} />
             </AreaChart>
           </ResponsiveContainer>
-          <div className="absolute text-sm text-slate-400">
-            Awaiting correlation data...
+          <div className="absolute text-[10px] text-[var(--text-dim)] font-mono uppercase tracking-wider">
+            Awaiting data...
           </div>
         </div>
       </div>
     )
   }
 
-  // Prepare chart data from detection history
-  const chartData = detectionHistory.map((point) => ({
-    time: formatTime(point.detected_at),
-    score: point.score,
-    level: point.level,
-    fullTime: point.detected_at,
-  }))
-
-  // Prepare narrative event scatter points
-  const eventPoints = events.map((event) => ({
-    time: formatTime(event.detected_at),
-    score: event.confidence * 100, // Convert confidence (0-1) to score (0-100)
-    summary: event.summary,
-    fullTime: event.detected_at,
-  }))
-
   return (
-    <div className="h-full bg-white border-t border-slate-200 p-4">
-      <h2 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
-        Narrative Correlation Timeline
-      </h2>
+    <div className="h-full bg-[var(--bg-panel)] border-t border-[var(--border-glass)] p-4 flex flex-col">
+      <div className="flex items-center gap-3 mb-3 shrink-0">
+        <h2 className="text-[10px] font-medium text-[var(--text-dim)] uppercase tracking-[0.15em]">
+          Threat Score
+        </h2>
+        <span className="font-mono text-lg font-semibold tabular-nums" style={{ color: scoreColor }}>
+          {Math.round(currentScore)}
+        </span>
+        <div className="ml-auto flex items-center gap-1.5">
+          <div className="w-1.5 h-1.5 rounded-full" style={{ background: scoreColor, opacity: 0.8 }} />
+          <span className="text-[9px] font-mono text-[var(--text-dim)] uppercase">
+            {scoreLabel}
+          </span>
+        </div>
+      </div>
 
-      <ResponsiveContainer width="100%" height="85%">
+      <ResponsiveContainer width="100%" height="100%" minHeight={60}>
         <ComposedChart data={chartData}>
           <defs>
-            <linearGradient id="scoreGradient" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#ef4444" stopOpacity={0.8} />
-              <stop offset="40%" stopColor="#f59e0b" stopOpacity={0.6} />
-              <stop offset="70%" stopColor="#10b981" stopOpacity={0.4} />
+            {/* Green-to-red vertical gradient */}
+            <linearGradient id="threatFill" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor="#4ade80" stopOpacity={0.05} />
+              <stop offset="30%" stopColor="#4ade80" stopOpacity={0.1} />
+              <stop offset="50%" stopColor="#facc15" stopOpacity={0.12} />
+              <stop offset="70%" stopColor="#e05a4f" stopOpacity={0.15} />
+              <stop offset="100%" stopColor="#e05a4f" stopOpacity={0.25} />
+            </linearGradient>
+            {/* Stroke gradient matches */}
+            <linearGradient id="threatStroke" x1="0" y1="1" x2="0" y2="0">
+              <stop offset="0%" stopColor="#4ade80" />
+              <stop offset="50%" stopColor="#facc15" />
+              <stop offset="100%" stopColor="#e05a4f" />
             </linearGradient>
           </defs>
 
-          <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+          <CartesianGrid strokeDasharray="3 3" stroke="rgba(255, 255, 255, 0.03)" />
 
           <XAxis
             dataKey="time"
-            tick={{ fontSize: 10 }}
-            stroke="#9ca3af"
+            tick={{ fontSize: 9, fill: '#3d3d3d', fontFamily: 'JetBrains Mono, monospace' }}
+            stroke="rgba(255, 255, 255, 0.04)"
+            tickLine={false}
           />
 
           <YAxis
             domain={[0, 100]}
-            tick={{ fontSize: 10 }}
-            stroke="#9ca3af"
-            label={{ value: 'Threat Score', angle: -90, position: 'insideLeft', fontSize: 10 }}
+            tick={{ fontSize: 9, fill: '#3d3d3d', fontFamily: 'JetBrains Mono, monospace' }}
+            stroke="rgba(255, 255, 255, 0.04)"
+            tickLine={false}
+            width={30}
           />
 
-          {/* Reference lines for threat level boundaries */}
-          <ReferenceLine
-            y={30}
-            stroke="#10b981"
-            strokeDasharray="3 3"
-            strokeWidth={1}
-          />
-          <ReferenceLine
-            y={70}
-            stroke="#ef4444"
-            strokeDasharray="3 3"
-            strokeWidth={1}
-          />
+          {/* Normal threshold */}
+          <ReferenceLine y={30} stroke="rgba(74, 222, 128, 0.15)" strokeDasharray="6 4" strokeWidth={0.5} />
+          {/* Critical threshold */}
+          <ReferenceLine y={70} stroke="rgba(224, 90, 79, 0.25)" strokeDasharray="6 4" strokeWidth={0.5} />
 
-          {/* Area chart for threat score over time */}
           <Area
             type="monotone"
             dataKey="score"
-            stroke="#6366f1"
-            strokeWidth={2}
-            fill="url(#scoreGradient)"
-            fillOpacity={0.6}
+            stroke="url(#threatStroke)"
+            strokeWidth={1.5}
+            fill="url(#threatFill)"
+            fillOpacity={1}
+            animationDuration={600}
+            animationEasing="ease-out"
+            isAnimationActive={true}
           />
 
-          {/* Scatter points for narrative events */}
           {eventPoints.length > 0 && (
             <Scatter
               data={eventPoints}
-              fill="#8b5cf6"
+              fill={scoreColor}
               shape="circle"
               dataKey="score"
+              isAnimationActive={true}
+              animationDuration={400}
             />
           )}
 
           <Tooltip
             contentStyle={{
-              backgroundColor: 'white',
-              border: '1px solid #e5e7eb',
-              borderRadius: '6px',
-              fontSize: '12px',
+              backgroundColor: '#0c0d0f',
+              border: '1px solid rgba(255, 255, 255, 0.07)',
+              borderRadius: '0',
+              fontSize: '10px',
+              fontFamily: 'JetBrains Mono, monospace',
+              color: '#a3a3a3',
+              padding: '8px 10px',
             }}
-            formatter={(value: any, name?: string) => {
-              if (name === 'score') return [value.toFixed(1), 'Threat Score']
+            formatter={(value: number, name?: string) => {
+              if (name === 'score') {
+                const color = scoreToColor(value)
+                return [<span style={{ color }}>{value.toFixed(1)}</span>, 'Score']
+              }
               return [value, name || '']
             }}
+            labelStyle={{ color: '#3d3d3d', fontSize: '9px', marginBottom: '2px' }}
           />
         </ComposedChart>
       </ResponsiveContainer>

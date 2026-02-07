@@ -1,66 +1,35 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { supabase } from '../lib/supabase'
 import type { Article } from '../types/database'
-import type { RealtimeChannel } from '@supabase/supabase-js'
+
+const POLL_INTERVAL = 2000
 
 export function useArticles() {
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    let channel: RealtimeChannel | null = null
-    let mounted = true
+  const fetchArticles = useCallback(async () => {
+    try {
+      const { data, error } = await supabase
+        .from('articles')
+        .select('*')
+        .order('published_at', { ascending: false })
+        .limit(50)
 
-    async function initialize() {
-      try {
-        // Initial fetch - 50 most recent articles
-        const { data, error } = await supabase
-          .from('articles')
-          .select('*')
-          .order('published_at', { ascending: false })
-          .limit(50)
-
-        if (error) throw error
-
-        if (mounted) {
-          setArticles(data || [])
-          setLoading(false)
-        }
-
-        // Set up realtime subscription for new articles
-        channel = supabase
-          .channel('articles_changes')
-          .on(
-            'postgres_changes',
-            {
-              event: 'INSERT',
-              schema: 'public',
-              table: 'articles',
-            },
-            (payload) => {
-              if (!mounted) return
-              // Prepend new article to the top
-              setArticles((prev) => [payload.new as Article, ...prev])
-            }
-          )
-          .subscribe()
-      } catch (err) {
-        console.error('Error loading articles:', err)
-        if (mounted) {
-          setLoading(false)
-        }
-      }
-    }
-
-    initialize()
-
-    return () => {
-      mounted = false
-      if (channel) {
-        supabase.removeChannel(channel)
-      }
+      if (error) throw error
+      setArticles(data || [])
+    } catch (err) {
+      console.error('Error loading articles:', err)
+    } finally {
+      setLoading(false)
     }
   }, [])
+
+  useEffect(() => {
+    fetchArticles()
+    const interval = setInterval(fetchArticles, POLL_INTERVAL)
+    return () => clearInterval(interval)
+  }, [fetchArticles])
 
   return { articles, loading }
 }

@@ -151,6 +151,7 @@ class DemoEngine:
         self.simulated_seconds_elapsed = 0.0
         self.records_inserted = 0
         self.alert_id = None
+        self.fixture = None  # Force reload from disk on next start
 
         # Clear all tables
         await self._clear_tables()
@@ -297,6 +298,47 @@ class DemoEngine:
             await asyncio.sleep(sleep_duration)
             elapsed += sleep_duration
 
+    def _sanitize_data(self, table: str, data: dict) -> dict:
+        """Filter record data to only include columns that exist in Supabase.
+
+        The fixture generator may include extra fields (e.g. coordination_score,
+        category) that don't exist in the actual DB schema. This strips them
+        and handles field renames (created_at -> detected_at).
+
+        Args:
+            table: Target Supabase table name
+            data: Raw record data from fixture
+
+        Returns:
+            dict: Cleaned data with only valid columns
+        """
+        # Define valid columns per table (excluding auto-generated 'id')
+        valid_columns: dict[str, set[str]] = {
+            "articles": {"url", "title", "domain", "published_at", "tone_score", "language", "source_country"},
+            "social_posts": {"telegram_id", "channel", "text", "timestamp", "views"},
+            "vessel_positions": {"mmsi", "ship_name", "latitude", "longitude", "speed", "course", "timestamp"},
+            "narrative_events": {"event_type", "summary", "confidence", "source_ids", "detected_at"},
+            "movement_events": {"event_type", "vessel_mmsi", "location_lat", "location_lon", "description", "detected_at"},
+            "alerts": {"region", "threat_level", "threat_score", "confidence", "severity", "title", "description", "event_ids", "sub_scores", "correlation_metadata", "updated_at", "created_at", "resolved_at"},
+            "briefs": {"title", "summary", "key_developments", "generated_at", "threat_level", "confidence", "evidence_chain", "timeline", "information_gaps", "collection_priorities", "narrative_event_ids", "movement_event_ids"},
+        }
+
+        cleaned = dict(data)
+
+        # Rename created_at -> detected_at for event tables
+        if table in ("narrative_events", "movement_events") and "created_at" in cleaned:
+            cleaned["detected_at"] = cleaned.pop("created_at")
+
+        # Filter to valid columns only
+        if table in valid_columns:
+            cleaned = {k: v for k, v in cleaned.items() if k in valid_columns[table]}
+
+        # Fix briefs: timeline must be text[] array, not a plain string
+        if table == "briefs" and "timeline" in cleaned and isinstance(cleaned["timeline"], str):
+            cleaned["timeline"] = [cleaned["timeline"]]
+
+        return cleaned
+
     async def _insert_record(self, record: dict) -> None:
         """Insert single record into correct Supabase table.
 
@@ -315,7 +357,7 @@ class DemoEngine:
         """
         table = record["_table"]
         action = record["_demo_action"]
-        data = record["data"]
+        data = self._sanitize_data(table, record["data"])
 
         try:
             client = await get_supabase()
@@ -381,7 +423,7 @@ class DemoEngine:
         for table in tables_to_clear:
             try:
                 # Delete all rows (Supabase requires a filter, use neq on id with impossible value)
-                await client.table(table).delete().neq("id", "00000000-0000-0000-0000-000000000000").execute()
+                await client.table(table).delete().neq("id", 0).execute()
                 logger.info("table_cleared", table=table)
             except Exception as e:
                 logger.error("table_clear_failed", table=table, error=str(e))
@@ -393,17 +435,14 @@ class DemoEngine:
             speed: Speed value to label (defaults to self.speed)
 
         Returns:
-            str: "slow" | "normal" | "fast"
+            str: Speed multiplier label like "1x", "2x", "5x"
         """
         if speed is None:
             speed = self.speed
 
-        if speed <= 0.5:
-            return "slow"
-        elif speed <= 1.5:
-            return "normal"
-        else:
-            return "fast"
+        if speed == int(speed):
+            return f"{int(speed)}x"
+        return f"{speed}x"
 
     def _format_simulated_time(self) -> str:
         """Format simulated time as T+Xh.

@@ -1,64 +1,86 @@
+import { AlertTriangle } from 'lucide-react'
+import { useDashboard } from '../context/DashboardContext'
 import type { Article } from '../types/database'
 
 interface ArticleCardProps {
   article: Article
   isCoordinated?: boolean
+  isSelected?: boolean
+  onSelect?: () => void
 }
 
-// Helper to format relative time
 function timeAgo(dateString: string): string {
   const now = new Date()
   const date = new Date(dateString)
   const seconds = Math.floor((now.getTime() - date.getTime()) / 1000)
-
-  if (seconds < 60) return `${seconds}s ago`
+  if (seconds < 60) return `${seconds}s`
   const minutes = Math.floor(seconds / 60)
-  if (minutes < 60) return `${minutes}m ago`
+  if (minutes < 60) return `${minutes}m`
   const hours = Math.floor(minutes / 60)
-  if (hours < 24) return `${hours}h ago`
-  const days = Math.floor(hours / 24)
-  return `${days}d ago`
+  if (hours < 24) return `${hours}h`
+  return `${Math.floor(hours / 24)}d`
 }
 
-// Get border color based on tone score
-function getBorderColor(toneScore: number | null): string {
-  if (toneScore === null) return 'border-slate-300'
-  if (toneScore < -5) return 'border-red-500'
-  if (toneScore < -2) return 'border-amber-500'
-  return 'border-green-500'
+function getSeverity(toneScore: number | null): 'high' | 'med' | 'low' {
+  if (toneScore === null) return 'low'
+  if (toneScore < -5) return 'high'
+  if (toneScore < -2) return 'med'
+  return 'low'
 }
 
-export function ArticleCard({ article, isCoordinated = false }: ArticleCardProps) {
-  const borderColor = isCoordinated ? 'border-purple-500' : getBorderColor(article.tone_score)
+export function ArticleCard({ article, isCoordinated = false, isSelected = false, onSelect }: ArticleCardProps) {
+  const { escalatedIds, escalateEvent } = useDashboard()
+  const severity = isCoordinated ? 'high' : getSeverity(article.tone_score)
+  const borderColor = severity === 'high'
+    ? 'border-l-[var(--accent)]'
+    : severity === 'med'
+      ? 'border-l-[var(--threat-med)]'
+      : 'border-l-[var(--border-glass)]'
+
+  const isEscalated = escalatedIds.has(article.id)
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-sm border-l-4 ${borderColor} p-3 mb-2 animate-fadeIn`}
+      onClick={onSelect}
+      className={`bg-[var(--bg-card)] border border-[var(--border-subtle)] border-l-2 ${borderColor} p-3 cursor-pointer hover:bg-[var(--bg-card-hover)] transition-colors duration-150 animate-fadeUp ${isSelected ? 'card-selected' : ''}`}
     >
-      {/* Title */}
-      <h3 className="font-semibold text-sm text-slate-900 line-clamp-2 mb-2">
-        {article.title}
-      </h3>
-
-      {/* Domain and Coordinated badge */}
-      <div className="flex items-center gap-2 mb-2">
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-slate-100 text-slate-700">
-          {article.domain}
-        </span>
-        {isCoordinated && (
-          <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-purple-100 text-purple-700 uppercase">
-            Coordinated
-          </span>
+      <div className="flex items-start justify-between gap-2 mb-1.5">
+        <h3 className="font-medium text-[12px] text-[var(--text-primary)] line-clamp-2 leading-[1.4]">
+          {article.title}
+        </h3>
+        {(severity === 'high' || isEscalated) && (
+          <div className={`w-1.5 h-1.5 rounded-full shrink-0 mt-1 ${isEscalated ? 'bg-[var(--accent)]' : 'bg-[var(--accent)]'}`} />
         )}
       </div>
 
-      {/* Tone score and time */}
-      <div className="flex items-center justify-between text-xs text-slate-400">
-        <span>
-          Tone: {article.tone_score !== null ? article.tone_score.toFixed(1) : 'N/A'}
+      <div className="flex items-center gap-2">
+        <span className="text-[10px] font-mono text-[var(--text-dim)] uppercase tracking-wider">
+          {article.domain}
         </span>
-        <span>{timeAgo(article.published_at)}</span>
+        {isCoordinated && (
+          <span className="text-[10px] font-mono text-[var(--accent)] uppercase tracking-wider">
+            coordinated
+          </span>
+        )}
+        <span className="ml-auto text-[10px] font-mono text-[var(--text-dim)] tabular-nums">
+          {timeAgo(article.published_at)}
+        </span>
       </div>
+
+      {/* Escalate action — visible when selected */}
+      {isSelected && !isEscalated && (
+        <button
+          onClick={(e) => { e.stopPropagation(); escalateEvent(article.id) }}
+          className="flex items-center gap-1 mt-2 px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-[var(--accent)] border border-[var(--accent-dim)] hover:bg-[var(--accent-dim)] transition-colors"
+        >
+          <AlertTriangle size={9} /> Escalate
+        </button>
+      )}
+      {isSelected && isEscalated && (
+        <div className="flex items-center gap-1 mt-2 text-[10px] font-mono text-[var(--accent)] uppercase tracking-wider">
+          <AlertTriangle size={9} /> Escalated
+        </div>
+      )}
     </div>
   )
 }

@@ -623,7 +623,7 @@
       "_demo_offset_seconds": 35.36,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "course_deviation",
         "vessel_mmsi": null,
         "location_lat": 24.5,
         "location_lon": 120.0,
@@ -1157,7 +1157,7 @@
       "_demo_offset_seconds": 59.999,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "course_deviation",
         "vessel_mmsi": null,
         "location_lat": 24.8,
         "location_lon": 119.5,
@@ -1676,7 +1676,7 @@
       "_demo_offset_seconds": 86.315,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "speed_anomaly",
         "vessel_mmsi": 412100005,
         "location_lat": 24.2,
         "location_lon": 119.8,
@@ -1938,7 +1938,7 @@
       "_demo_offset_seconds": 100.271,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "formation_change",
         "vessel_mmsi": null,
         "location_lat": 24.6,
         "location_lon": 119.3,
@@ -2350,7 +2350,7 @@
       "_demo_offset_seconds": 119.18,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "formation_change",
         "vessel_mmsi": 412100008,
         "location_lat": 25.1,
         "location_lon": 120.2,
@@ -2880,7 +2880,7 @@
       "_demo_offset_seconds": 142.607,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "zone_entry",
         "vessel_mmsi": null,
         "location_lat": 24.3,
         "location_lon": 119.6,
@@ -3181,7 +3181,7 @@
       "_demo_offset_seconds": 159.543,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "zone_entry",
         "vessel_mmsi": null,
         "location_lat": 24.9,
         "location_lon": 120.1,
@@ -3505,7 +3505,7 @@
       "_demo_offset_seconds": 175.715,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "speed_anomaly",
         "vessel_mmsi": 412100015,
         "location_lat": 25.2,
         "location_lon": 119.7,
@@ -3919,7 +3919,7 @@
       "_demo_offset_seconds": 193.506,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "zone_entry",
         "vessel_mmsi": 412100018,
         "location_lat": 24.4,
         "location_lon": 119.9,
@@ -4277,7 +4277,7 @@
       "_demo_offset_seconds": 210.353,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "speed_anomaly",
         "vessel_mmsi": null,
         "location_lat": 24.7,
         "location_lon": 120.3,
@@ -4522,7 +4522,7 @@
       "_demo_offset_seconds": 226.637,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "speed_anomaly",
         "vessel_mmsi": null,
         "location_lat": 24.1,
         "location_lon": 119.4,
@@ -4685,7 +4685,7 @@
       "_demo_offset_seconds": 234.623,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "zone_entry",
         "vessel_mmsi": null,
         "location_lat": 25.0,
         "location_lon": 120.0,
@@ -5142,7 +5142,7 @@
       "_demo_offset_seconds": 260.031,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "formation_change",
         "vessel_mmsi": 412100025,
         "location_lat": 24.5,
         "location_lon": 119.8,
@@ -5402,7 +5402,7 @@
       "_demo_offset_seconds": 277.514,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "speed_anomaly",
         "vessel_mmsi": null,
         "location_lat": 24.8,
         "location_lon": 120.1,
@@ -5726,7 +5726,7 @@
       "_demo_offset_seconds": 292.464,
       "_demo_action": "insert",
       "data": {
-        "event_type": "military_movement",
+        "event_type": "formation_change",
         "vessel_mmsi": null,
         "location_lat": 24.3,
         "location_lon": 119.5,

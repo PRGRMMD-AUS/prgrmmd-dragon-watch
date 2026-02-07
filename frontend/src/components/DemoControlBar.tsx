@@ -8,142 +8,79 @@ export function DemoControlBar() {
   const isPlaying = status?.state === 'playing'
   const isPaused = status?.state === 'paused'
 
-  // Determine if this is the first start (idle) or resume (paused)
   const handlePlayPause = () => {
-    if (isPlaying) {
-      pause()
-    } else if (isIdle) {
-      // First start - clear tables
-      start(true)
-    } else if (isPaused) {
-      // Resume - don't clear tables
-      start(false)
-    }
+    if (isPlaying) pause()
+    else if (isIdle) start(true)
+    else if (isPaused) start(false)
   }
 
-  const handleReset = () => {
-    reset()
-  }
-
-  const handleSpeedChange = (speed: number) => {
-    setSpeed(speed)
-  }
-
-  // Progress bar color based on phase
-  const getProgressColor = () => {
-    const progress = status?.progress || 0
-    if (progress < 33) return 'bg-emerald-500'
-    if (progress < 67) return 'bg-amber-500'
-    return 'bg-red-600'
-  }
-
-  // Speed preset button styles
-  const getSpeedButtonClass = (targetSpeed: number) => {
-    const isActive = status?.speed === targetSpeed
-    return `px-3 py-1 text-xs font-medium rounded transition-colors ${
+  const getSpeedClass = (preset: string) => {
+    const isActive = status?.speed_label === preset
+    return `px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider transition-all duration-150 ${
       isActive
-        ? 'bg-slate-700 text-white'
-        : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+        ? 'text-[var(--text-primary)] border border-[var(--border-active)]'
+        : 'text-[var(--text-dim)] hover:text-[var(--text-muted)] border border-transparent'
     }`
   }
 
-  // Disable controls if backend not connected
   const disabled = !!error || !status
 
   return (
-    <div className="bg-white border-b border-slate-200 h-9 flex items-center px-4 gap-4">
-      {/* Play/Pause Button */}
+    <div className="h-8 flex items-center px-4 gap-3 bg-[var(--bg-panel)] border-b border-[var(--border-glass)]">
       <button
         onClick={handlePlayPause}
         disabled={disabled}
-        className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium bg-slate-700 text-white rounded hover:bg-slate-800 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="flex items-center gap-1.5 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-[var(--text-primary)] border border-[var(--border-active)] hover:bg-white/[0.03] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-150"
       >
-        {isPlaying ? (
-          <>
-            <Pause size={14} />
-            <span>Pause</span>
-          </>
-        ) : (
-          <>
-            <Play size={14} />
-            <span>{isIdle ? 'Start' : 'Resume'}</span>
-          </>
-        )}
+        {isPlaying ? <><Pause size={10} /><span>Pause</span></> : <><Play size={10} /><span>{isIdle ? 'Start' : 'Resume'}</span></>}
       </button>
 
-      {/* Reset Button */}
       <button
-        onClick={handleReset}
+        onClick={() => reset()}
         disabled={disabled}
-        className="flex items-center gap-1.5 px-3 py-1 text-xs font-medium bg-slate-100 text-slate-600 rounded hover:bg-slate-200 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="flex items-center gap-1.5 px-2.5 py-0.5 text-[10px] font-medium uppercase tracking-wider text-[var(--text-dim)] border border-[var(--border-subtle)] hover:text-[var(--text-muted)] hover:border-[var(--border-glass)] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-150"
       >
-        <RotateCcw size={14} />
+        <RotateCcw size={10} />
         <span>Reset</span>
       </button>
 
-      {/* Divider */}
-      <div className="h-5 w-px bg-slate-200" />
+      <div className="h-3 w-px bg-[var(--border-glass)]" />
 
-      {/* Speed Presets */}
-      <div className="flex items-center gap-2">
-        <button
-          onClick={() => handleSpeedChange(1.0)}
-          disabled={disabled}
-          className={getSpeedButtonClass(1.0)}
-        >
-          Normal
-        </button>
-        <button
-          onClick={() => handleSpeedChange(2.0)}
-          disabled={disabled}
-          className={getSpeedButtonClass(2.0)}
-        >
-          Fast
-        </button>
-        <button
-          onClick={() => handleSpeedChange(0.5)}
-          disabled={disabled}
-          className={getSpeedButtonClass(0.5)}
-        >
-          Slow
-        </button>
+      <div className="flex items-center gap-0.5">
+        {(['normal', 'fast', 'slow'] as const).map((preset) => (
+          <button key={preset} onClick={() => setSpeed(preset)} disabled={disabled} className={getSpeedClass(preset)}>
+            {preset}
+          </button>
+        ))}
       </div>
 
-      {/* Divider */}
-      <div className="h-5 w-px bg-slate-200" />
+      <div className="h-3 w-px bg-[var(--border-glass)]" />
 
-      {/* Simulated Clock */}
       <div className="flex items-center gap-2">
-        <span className="text-xs text-slate-500 font-medium">Scenario Time:</span>
-        <span className="font-mono text-xs text-slate-700 font-semibold">
+        <span className="text-[10px] text-[var(--text-dim)] font-medium uppercase tracking-wider">T:</span>
+        <span className="font-mono text-[11px] text-[var(--text-secondary)] font-medium tabular-nums">
           {status?.simulated_time || 'T+0h'}
         </span>
       </div>
 
-      {/* Divider */}
-      <div className="h-5 w-px bg-slate-200" />
+      <div className="h-3 w-px bg-[var(--border-glass)]" />
 
-      {/* Progress Indicator */}
       <div className="flex items-center gap-2 flex-1">
-        <span className="text-xs text-slate-500 font-medium">Progress:</span>
-        <div className="flex-1 bg-slate-100 rounded-full h-2 max-w-[200px]">
+        <div className="flex-1 bg-white/[0.03] h-[2px] max-w-[160px]">
           <div
-            className={`h-full rounded-full transition-all duration-300 ${getProgressColor()}`}
+            className="h-full bg-[var(--text-muted)] transition-all duration-500 ease-out"
             style={{ width: `${status?.progress || 0}%` }}
           />
         </div>
-        <span className="text-xs text-slate-600 font-medium min-w-[35px] text-right">
+        <span className="font-mono text-[10px] text-[var(--text-dim)] font-medium min-w-[28px] text-right tabular-nums">
           {status?.progress ? `${Math.round(status.progress)}%` : '0%'}
         </span>
       </div>
 
-      {/* Error State */}
       {error && (
         <>
-          <div className="h-5 w-px bg-slate-200" />
-          <span className="text-xs text-red-600 font-medium">
-            Backend not connected
-          </span>
+          <div className="h-3 w-px bg-[var(--border-glass)]" />
+          <span className="text-[10px] text-[var(--accent)] font-medium uppercase tracking-wider">Offline</span>
         </>
       )}
     </div>

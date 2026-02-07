@@ -1,85 +1,57 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 import { supabase } from '../lib/supabase'
 import type { VesselPosition } from '../types/database'
-import { RealtimeChannel } from '@supabase/supabase-js'
+
+const POLL_INTERVAL = 2000
 
 export function useVesselPositions() {
   const [vessels, setVessels] = useState<Map<string, VesselPosition>>(new Map())
+  const [importantVessels, setImportantVessels] = useState<Set<string>>(new Set())
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    let channel: RealtimeChannel | null = null
-    let mounted = true
-
-    async function initialize() {
-      try {
-        // Fetch all vessel positions, ordered by timestamp descending
-        const { data, error } = await supabase
+  const fetchVessels = useCallback(async () => {
+    try {
+      const [positionsResult, movementResult] = await Promise.all([
+        supabase
           .from('vessel_positions')
           .select('*')
-          .order('timestamp', { ascending: false })
+          .order('timestamp', { ascending: false }),
+        supabase
+          .from('movement_events')
+          .select('vessel_mmsi'),
+      ])
 
-        if (error) throw error
+      if (positionsResult.error) throw positionsResult.error
 
-        if (mounted && data) {
-          // Group by MMSI - keep only the latest position per vessel
-          const vesselMap = new Map<string, VesselPosition>()
-          for (const position of data) {
-            if (!vesselMap.has(position.mmsi)) {
-              vesselMap.set(position.mmsi, position)
-            }
+      if (positionsResult.data) {
+        const vesselMap = new Map<string, VesselPosition>()
+        for (const position of positionsResult.data) {
+          if (!vesselMap.has(position.mmsi)) {
+            vesselMap.set(position.mmsi, position)
           }
-          setVessels(vesselMap)
-          setLoading(false)
         }
+        setVessels(vesselMap)
+      }
 
-        // Subscribe to realtime INSERT events on vessel_positions
-        channel = supabase
-          .channel('vessel_positions_changes')
-          .on(
-            'postgres_changes',
-            {
-              event: 'INSERT',
-              schema: 'public',
-              table: 'vessel_positions',
-            },
-            (payload) => {
-              if (!mounted) return
-
-              const newPosition = payload.new as VesselPosition
-
-              // Update the vessel's position (latest position per MMSI)
-              setVessels((prev) => {
-                const updated = new Map(prev)
-                const existing = updated.get(newPosition.mmsi)
-
-                // Only update if this position is newer than the current one
-                if (!existing || new Date(newPosition.timestamp) > new Date(existing.timestamp)) {
-                  updated.set(newPosition.mmsi, newPosition)
-                }
-
-                return updated
-              })
-            }
-          )
-          .subscribe()
-      } catch (err) {
-        console.error('useVesselPositions error:', err)
-        if (mounted) {
-          setLoading(false)
+      if (movementResult.data) {
+        const mmsiSet = new Set<string>()
+        for (const event of movementResult.data) {
+          if (event.vessel_mmsi) mmsiSet.add(event.vessel_mmsi)
         }
+        setImportantVessels(mmsiSet)
       }
-    }
-
-    initialize()
-
-    return () => {
-      mounted = false
-      if (channel) {
-        supabase.removeChannel(channel)
-      }
+    } catch (err) {
+      console.error('useVesselPositions error:', err)
+    } finally {
+      setLoading(false)
     }
   }, [])
 
-  return { vessels, loading }
+  useEffect(() => {
+    fetchVessels()
+    const interval = setInterval(fetchVessels, POLL_INTERVAL)
+    return () => clearInterval(interval)
+  }, [fetchVessels])
+
+  return { vessels, importantVessels, loading }
 }

@@ -18,7 +18,8 @@ interface UseDemoControlReturn {
   start: (clearTables: boolean) => Promise<void>
   pause: () => Promise<void>
   reset: () => Promise<void>
-  setSpeed: (speed: number) => Promise<void>
+  setSpeed: (preset: 'slow' | 'normal' | 'fast') => Promise<void>
+  setSpeedMultiplier: (multiplier: number) => Promise<void>
   loading: boolean
   error: string | null
 }
@@ -48,10 +49,8 @@ export function useDemoControl(): UseDemoControlReturn {
   const start = useCallback(async (clearTables: boolean) => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE}/api/demo/start`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ clear_tables: clearTables })
+      const response = await fetch(`${API_BASE}/api/demo/start?clear_first=${clearTables}`, {
+        method: 'POST'
       })
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`)
@@ -107,13 +106,31 @@ export function useDemoControl(): UseDemoControlReturn {
   }, [])
 
   // Set playback speed
-  const setSpeed = useCallback(async (speed: number) => {
+  const setSpeed = useCallback(async (preset: 'slow' | 'normal' | 'fast') => {
     setLoading(true)
     try {
-      const response = await fetch(`${API_BASE}/api/demo/speed`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ speed })
+      const response = await fetch(`${API_BASE}/api/demo/speed?preset=${preset}`, {
+        method: 'POST'
+      })
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`)
+      }
+      const data = await response.json()
+      setStatus(data)
+      setError(null)
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'Failed to set speed')
+    } finally {
+      setLoading(false)
+    }
+  }, [])
+
+  // Set speed by multiplier (1, 2, 5, 10, 25)
+  const setSpeedMultiplier = useCallback(async (multiplier: number) => {
+    setLoading(true)
+    try {
+      const response = await fetch(`${API_BASE}/api/demo/speed?multiplier=${multiplier}`, {
+        method: 'POST'
       })
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`)
@@ -157,6 +174,7 @@ export function useDemoControl(): UseDemoControlReturn {
     pause,
     reset,
     setSpeed,
+    setSpeedMultiplier,
     loading,
     error
   }

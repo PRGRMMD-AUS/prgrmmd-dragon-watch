@@ -1,26 +1,26 @@
+import { AlertTriangle, Filter } from 'lucide-react'
+import { useDashboard } from '../context/DashboardContext'
 import type { SocialPost, MovementEvent } from '../types/database'
 
 interface PostCardProps {
   post: SocialPost
   movementEvent?: MovementEvent | null
+  isSelected?: boolean
+  onSelect?: () => void
 }
 
-// Helper to format relative time
 function timeAgo(dateString: string): string {
   const now = new Date()
   const date = new Date(dateString)
   const seconds = Math.floor((now.getTime() - date.getTime()) / 1000)
-
-  if (seconds < 60) return `${seconds}s ago`
+  if (seconds < 60) return `${seconds}s`
   const minutes = Math.floor(seconds / 60)
-  if (minutes < 60) return `${minutes}m ago`
+  if (minutes < 60) return `${minutes}m`
   const hours = Math.floor(minutes / 60)
-  if (hours < 24) return `${hours}h ago`
-  const days = Math.floor(hours / 24)
-  return `${days}d ago`
+  if (hours < 24) return `${hours}h`
+  return `${Math.floor(hours / 24)}d`
 }
 
-// Format view count with K/M suffixes
 function formatViews(views: number | null): string {
   if (views === null) return '0'
   if (views >= 1000000) return `${(views / 1000000).toFixed(1)}M`
@@ -28,83 +28,89 @@ function formatViews(views: number | null): string {
   return views.toString()
 }
 
-// Get category badge styling
-function getCategoryStyle(eventType: string): { bg: string; text: string } {
-  switch (eventType.toLowerCase()) {
-    case 'convoy':
-      return { bg: 'bg-orange-100', text: 'text-orange-700' }
-    case 'naval':
-      return { bg: 'bg-blue-100', text: 'text-blue-700' }
-    case 'flight':
-      return { bg: 'bg-sky-100', text: 'text-sky-700' }
-    case 'restricted_zone':
-      return { bg: 'bg-red-100', text: 'text-red-700' }
-    default:
-      return { bg: 'bg-slate-100', text: 'text-slate-600' }
-  }
+function isHighSeverity(eventType?: string): boolean {
+  if (!eventType) return false
+  return eventType.toLowerCase() === 'restricted_zone' || eventType.toLowerCase() === 'speed_anomaly'
 }
 
-// Get border color based on movement event category
-function getBorderColor(eventType?: string): string {
-  if (!eventType) return 'border-blue-500'
-  switch (eventType.toLowerCase()) {
-    case 'convoy':
-      return 'border-orange-500'
-    case 'naval':
-      return 'border-blue-600'
-    case 'flight':
-      return 'border-sky-500'
-    case 'restricted_zone':
-      return 'border-red-500'
-    default:
-      return 'border-blue-500'
-  }
-}
+export function PostCard({ post, movementEvent, isSelected = false, onSelect }: PostCardProps) {
+  const { escalatedIds, escalateEvent, narrativeFilter, setNarrativeFilter } = useDashboard()
+  const high = isHighSeverity(movementEvent?.event_type)
+  const borderColor = high
+    ? 'border-l-[var(--accent)]'
+    : movementEvent
+      ? 'border-l-[var(--threat-med)]'
+      : 'border-l-[var(--border-glass)]'
 
-export function PostCard({ post, movementEvent }: PostCardProps) {
-  const borderColor = getBorderColor(movementEvent?.event_type)
+  const isEscalated = escalatedIds.has(post.id) || (movementEvent && escalatedIds.has(movementEvent.id))
+  const isFiltered = narrativeFilter === movementEvent?.event_type
 
   return (
     <div
-      className={`bg-white rounded-lg shadow-sm border-l-4 ${borderColor} p-3 mb-2 animate-fadeIn`}
+      onClick={onSelect}
+      className={`bg-[var(--bg-card)] border border-[var(--border-subtle)] border-l-2 ${borderColor} p-3 cursor-pointer hover:bg-[var(--bg-card-hover)] transition-colors duration-150 animate-fadeUp ${isSelected ? 'card-selected' : ''}`}
     >
-      {/* Channel badge */}
-      <div className="mb-2">
-        <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-700">
+      <div className="flex items-center gap-2 mb-1.5">
+        <span className="text-[10px] font-mono text-[var(--text-dim)] uppercase tracking-wider">
           {post.channel}
         </span>
+        {movementEvent && (
+          <>
+            <span className="text-[var(--text-dim)]">/</span>
+            <span className={`text-[10px] font-mono uppercase tracking-wider ${high ? 'text-[var(--accent)]' : 'text-[var(--text-muted)]'}`}>
+              {movementEvent.event_type.replace(/_/g, ' ')}
+            </span>
+          </>
+        )}
+        {(high || isEscalated) && (
+          <div className={`w-1.5 h-1.5 rounded-full ml-auto shrink-0 ${isEscalated ? 'bg-[var(--accent)]' : 'bg-[var(--accent)]'}`} />
+        )}
       </div>
 
-      {/* Text excerpt */}
-      <p className="text-sm text-slate-700 line-clamp-2 mb-2">
+      <p className="text-[12px] text-[var(--text-secondary)] line-clamp-2 leading-[1.4] mb-1.5">
         {post.text}
       </p>
 
-      {/* Movement event category tag */}
-      {movementEvent && (
-        <div className="mb-2">
-          <span
-            className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium uppercase ${
-              getCategoryStyle(movementEvent.event_type).bg
-            } ${getCategoryStyle(movementEvent.event_type).text}`}
-          >
-            {movementEvent.event_type}
-          </span>
-        </div>
-      )}
-
-      {/* Location tag (if movement event has coordinates) */}
-      {movementEvent && movementEvent.location_lat && movementEvent.location_lon && (
-        <div className="text-xs text-slate-400 mb-2">
-          {movementEvent.location_lat.toFixed(1)}°N, {movementEvent.location_lon.toFixed(1)}°E
-        </div>
-      )}
-
-      {/* Views and time */}
-      <div className="flex items-center justify-between text-xs text-slate-400">
+      <div className="flex items-center gap-3 text-[10px] font-mono text-[var(--text-dim)] tabular-nums">
+        {movementEvent?.location_lat && movementEvent?.location_lon && (
+          <span>{movementEvent.location_lat.toFixed(1)}°N {movementEvent.location_lon.toFixed(1)}°E</span>
+        )}
         <span>{formatViews(post.views)} views</span>
-        <span>{timeAgo(post.timestamp)}</span>
+        <span className="ml-auto">{timeAgo(post.timestamp)}</span>
       </div>
+
+      {/* Actions — visible when selected */}
+      {isSelected && (
+        <div className="flex items-center gap-2 mt-2">
+          {/* Filter narrative on map */}
+          {movementEvent && (
+            <button
+              onClick={(e) => { e.stopPropagation(); setNarrativeFilter(movementEvent.event_type) }}
+              className={`flex items-center gap-1 px-2 py-1 text-[10px] font-mono uppercase tracking-wider border transition-colors ${
+                isFiltered
+                  ? 'text-[var(--text-primary)] border-[var(--border-active)] bg-white/[0.03]'
+                  : 'text-[var(--text-muted)] border-[var(--border-subtle)] hover:text-[var(--text-primary)] hover:border-[var(--border-glass)]'
+              }`}
+            >
+              <Filter size={9} /> {isFiltered ? 'Filtered' : 'Filter Map'}
+            </button>
+          )}
+
+          {/* Escalate */}
+          {!isEscalated ? (
+            <button
+              onClick={(e) => { e.stopPropagation(); escalateEvent(movementEvent?.id || post.id) }}
+              className="flex items-center gap-1 px-2 py-1 text-[10px] font-mono uppercase tracking-wider text-[var(--accent)] border border-[var(--accent-dim)] hover:bg-[var(--accent-dim)] transition-colors"
+            >
+              <AlertTriangle size={9} /> Escalate
+            </button>
+          ) : (
+            <div className="flex items-center gap-1 text-[10px] font-mono text-[var(--accent)] uppercase tracking-wider">
+              <AlertTriangle size={9} /> Escalated
+            </div>
+          )}
+        </div>
+      )}
     </div>
   )
 }

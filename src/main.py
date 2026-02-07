@@ -255,18 +255,22 @@ async def demo_reset():
 
 
 @demo_router.post("/speed")
-async def demo_speed(preset: str):
+async def demo_speed(preset: str = None, multiplier: float = None):
     """Change demo playback speed.
 
     Args:
         preset: Speed preset name ("slow" | "normal" | "fast")
+        multiplier: Custom speed multiplier (e.g. 1.0, 2.0, 5.0, 10.0, 25.0)
 
     Returns:
         dict: Current demo status
     """
-    speed_map = {"slow": 0.5, "normal": 1.0, "fast": 2.5}
-    speed = speed_map.get(preset, 1.0)
-    demo_engine.set_speed(speed)
+    if multiplier is not None:
+        demo_engine.set_speed(multiplier)
+    else:
+        speed_map = {"slow": 0.5, "normal": 1.0, "fast": 2.5}
+        speed = speed_map.get(preset, 1.0)
+        demo_engine.set_speed(speed)
     return demo_engine.get_status()
 
 

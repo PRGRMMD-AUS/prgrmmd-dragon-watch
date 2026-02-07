@@ -28,7 +28,7 @@ env/
 
 # Environment files
 .env
-
+.env.example
 # Telethon session files
 *.session
 

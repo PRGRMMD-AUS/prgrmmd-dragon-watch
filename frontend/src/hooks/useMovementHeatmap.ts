@@ -1,90 +1,124 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback, useMemo } from 'react'
 import { supabase } from '../lib/supabase'
-import { RealtimeChannel } from '@supabase/supabase-js'
 
 export interface HeatmapPoint {
+  id: string
   lat: number
   lon: number
   type: string
+  detected_at: string
+  vessel_mmsi: string
+  description: string
 }
+
+export interface Cluster {
+  id: string
+  type: string
+  points: HeatmapPoint[]
+  startTime: string
+  endTime: string
+}
+
+const POLL_INTERVAL = 2000
+const CLUSTER_WINDOW_MS = 12 * 60 * 60 * 1000 // 12 hours
 
 export function useMovementHeatmap() {
   const [heatmapPoints, setHeatmapPoints] = useState<HeatmapPoint[]>([])
   const [loading, setLoading] = useState(true)
 
-  useEffect(() => {
-    let channel: RealtimeChannel | null = null
-    let mounted = true
+  const fetchHeatmap = useCallback(async () => {
+    try {
+      const { data, error } = await supabase
+        .from('movement_events')
+        .select('id, location_lat, location_lon, event_type, detected_at, vessel_mmsi, description')
+        .order('detected_at', { ascending: true })
 
-    async function initialize() {
-      try {
-        // Fetch all movement_events with location data
-        const { data, error } = await supabase
-          .from('movement_events')
-          .select('location_lat, location_lon, event_type')
+      if (error) throw error
 
-        if (error) throw error
-
-        if (mounted && data) {
-          // Filter out rows where location_lat or location_lon is null
-          const points = data
-            .filter((event) => event.location_lat !== null && event.location_lon !== null)
-            .map((event) => ({
-              lat: event.location_lat!,
-              lon: event.location_lon!,
-              type: event.event_type,
-            }))
-
-          setHeatmapPoints(points)
-          setLoading(false)
-        }
-
-        // Subscribe to realtime INSERT events on movement_events
-        channel = supabase
-          .channel('movement_events_heatmap')
-          .on(
-            'postgres_changes',
-            {
-              event: 'INSERT',
-              schema: 'public',
-              table: 'movement_events',
-            },
-            (payload) => {
-              if (!mounted) return
-
-              const newEvent = payload.new as any
-
-              // Only add if location data exists
-              if (newEvent.location_lat !== null && newEvent.location_lon !== null) {
-                setHeatmapPoints((prev) => [
-                  ...prev,
-                  {
-                    lat: newEvent.location_lat,
-                    lon: newEvent.location_lon,
-                    type: newEvent.event_type,
-                  },
-                ])
-              }
-            }
-          )
-          .subscribe()
-      } catch (err) {
-        console.error('useMovementHeatmap error:', err)
-        if (mounted) {
-          setLoading(false)
-        }
+      if (data) {
+        const points = data
+          .filter((event) => event.location_lat !== null && event.location_lon !== null)
+          .map((event) => ({
+            id: event.id,
+            lat: event.location_lat!,
+            lon: event.location_lon!,
+            type: event.event_type,
+            detected_at: event.detected_at,
+            vessel_mmsi: event.vessel_mmsi,
+            description: event.description || '',
+          }))
+        setHeatmapPoints(points)
       }
-    }
-
-    initialize()
-
-    return () => {
-      mounted = false
-      if (channel) {
-        supabase.removeChannel(channel)
-      }
+    } catch (err) {
+      console.error('useMovementHeatmap error:', err)
+    } finally {
+      setLoading(false)
     }
   }, [])
 
-  return { heatmapPoints, loading }
+  useEffect(() => {
+    fetchHeatmap()
+    const interval = setInterval(fetchHeatmap, POLL_INTERVAL)
+    return () => clearInterval(interval)
+  }, [fetchHeatmap])
+
+  // Detect clusters: group by event_type, then by temporal proximity
+  const clusters = useMemo<Cluster[]>(() => {
+    const grouped: Record<string, HeatmapPoint[]> = {}
+    for (const pt of heatmapPoints) {
+      if (!grouped[pt.type]) grouped[pt.type] = []
+      grouped[pt.type].push(pt)
+    }
+
+    const result: Cluster[] = []
+    for (const [type, points] of Object.entries(grouped)) {
+      const sorted = [...points].sort(
+        (a, b) => new Date(a.detected_at).getTime() - new Date(b.detected_at).getTime()
+      )
+
+      let currentCluster: HeatmapPoint[] = [sorted[0]]
+      for (let i = 1; i < sorted.length; i++) {
+        const prevTime = new Date(sorted[i - 1].detected_at).getTime()
+        const currTime = new Date(sorted[i].detected_at).getTime()
+        if (currTime - prevTime <= CLUSTER_WINDOW_MS) {
+          currentCluster.push(sorted[i])
+        } else {
+          if (currentCluster.length >= 2) {
+            result.push({
+              id: `cluster-${type}-${currentCluster[0].id}`,
+              type,
+              points: currentCluster,
+              startTime: currentCluster[0].detected_at,
+              endTime: currentCluster[currentCluster.length - 1].detected_at,
+            })
+          }
+          currentCluster = [sorted[i]]
+        }
+      }
+      if (currentCluster.length >= 2) {
+        result.push({
+          id: `cluster-${type}-${currentCluster[0].id}`,
+          type,
+          points: currentCluster,
+          startTime: currentCluster[0].detected_at,
+          endTime: currentCluster[currentCluster.length - 1].detected_at,
+        })
+      }
+    }
+
+    return result.sort((a, b) => b.points.length - a.points.length)
+  }, [heatmapPoints])
+
+  // Map from point ID → cluster ID for quick lookup
+  const pointClusterMap = useMemo(() => {
+    const map: Record<string, string> = {}
+    for (const cluster of clusters) {
+      for (const pt of cluster.points) {
+        map[pt.id] = cluster.id
+      }
+    }
+    return map
+  }, [clusters])
+
+  return { heatmapPoints, clusters, pointClusterMap, loading }
 }
