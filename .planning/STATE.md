@@ -5,32 +5,32 @@
 See: .planning/PROJECT.md (updated 2026-02-07)
 
 **Core value:** Correlation of state media narrative coordination with civilian movement indicators provides pre-conflict warning hours before official announcements — a capability no existing OSINT vendor offers.
-**Current focus:** Phase 1 - Foundation
+**Current focus:** Phase 2 - Intelligence Processing
 
 ## Current Position
 
-Phase: 1 of 5 (Foundation)
-Plan: 3 of 4 in current phase
-Status: In progress
-Last activity: 2026-02-07 — Completed 01-03-PLAN.md (AIS Tracker and Demo Dataset)
+Phase: 2 of 5 (Intelligence Processing)
+Plan: 0 of 4 in current phase
+Status: Not started (phase needs planning)
+Last activity: 2026-02-07 — Completed Phase 1 (Foundation) — all 4 plans executed
 
-Progress: [███░░░░░░░] 37.5% (3/8 plans completed)
+Progress: [██░░░░░░░░] 20% (1/5 phases completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 3
-- Average duration: 2.7 minutes
-- Total execution time: 0.13 hours
+- Total plans completed: 4
+- Average duration: 2.75 minutes
+- Total execution time: 0.18 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| Phase 1 | 3 | 8 min | 2.7 min |
+| Phase 1 | 4/4 | 11 min | 2.75 min |
 
 **Recent Trend:**
-- Last 5 plans: 01-01 (2 min), 01-02 (3 min), 01-03 (3 min)
+- Last 5 plans: 01-01 (2 min), 01-02 (3 min), 01-03 (3 min), 01-04 (3 min)
 - Trend: Consistent velocity, stable at ~3 min/plan
 
 *Updated after each plan completion*
@@ -54,6 +54,7 @@ Recent decisions affecting current work:
 - Programmatic Python loader over SQL-only for demo data (01-03: validates through Pydantic, more flexible)
 - Taiwan Strait bounding box 23-26N, 118-122E (01-03: prevents AISstream message overflow)
 - 72-hour GREEN/AMBER/RED escalation scenario (01-03: shows clear pattern progression for demo)
+- asyncio.create_task for AIS stream, BackgroundTasks for one-shot fetchers (01-04: lifecycle management)
 
 ### Pending Todos
 
@@ -79,8 +80,8 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-02-07 (plan execution)
-Stopped at: Completed 01-03-PLAN.md — AIS Tracker and Demo Dataset
+Last session: 2026-02-07 (phase execution)
+Stopped at: Completed Phase 1 (Foundation) — all 4 plans, 8 commits, 2041 lines of code
 Resume file: None
 
 ---

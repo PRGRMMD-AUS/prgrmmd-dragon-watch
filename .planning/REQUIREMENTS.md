@@ -7,11 +7,11 @@
 
 ### Data Ingestion
 
-- [ ] **DATA-01**: GDELT fetcher queries Chinese state media domains (Xinhua, Global Times, CCTV, People's Daily) and writes articles with tone scores to Supabase
-- [ ] **DATA-02**: Telegram scraper pulls messages from 5-10 public OSINT/military channels via Telethon and writes to Supabase
-- [ ] **DATA-03**: AIS vessel tracker connects to AISstream.io WebSocket, filters Taiwan Strait bounding box, writes positions to Supabase
-- [ ] **DATA-04**: Simulated Taiwan Strait demo dataset (50+ articles, 100+ civilian posts, AIS data) loaded in Supabase
-- [ ] **DATA-05**: Supabase schema with realtime enabled on all tables (articles, social_posts, vessel_positions, alerts, correlation_events, briefs)
+- [x] **DATA-01**: GDELT fetcher queries Chinese state media domains (Xinhua, Global Times, CCTV, People's Daily) and writes articles with tone scores to Supabase
+- [x] **DATA-02**: Telegram scraper pulls messages from 5-10 public OSINT/military channels via Telethon and writes to Supabase
+- [x] **DATA-03**: AIS vessel tracker connects to AISstream.io WebSocket, filters Taiwan Strait bounding box, writes positions to Supabase
+- [x] **DATA-04**: Simulated Taiwan Strait demo dataset (50+ articles, 100+ civilian posts, AIS data) loaded in Supabase
+- [x] **DATA-05**: Supabase schema with realtime enabled on all tables (articles, social_posts, vessel_positions, alerts, correlation_events, briefs)
 
 ### LLM Analysis
 
@@ -91,11 +91,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DATA-01 | Phase 1 | Pending |
-| DATA-02 | Phase 1 | Pending |
-| DATA-03 | Phase 1 | Pending |
-| DATA-04 | Phase 1 | Pending |
-| DATA-05 | Phase 1 | Pending |
+| DATA-01 | Phase 1 | Complete |
+| DATA-02 | Phase 1 | Complete |
+| DATA-03 | Phase 1 | Complete |
+| DATA-04 | Phase 1 | Complete |
+| DATA-05 | Phase 1 | Complete |
 | LLM-01 | Phase 2 | Pending |
 | LLM-02 | Phase 2 | Pending |
 | LLM-03 | Phase 2 | Pending |

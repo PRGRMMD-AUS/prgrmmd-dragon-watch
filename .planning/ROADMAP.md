@@ -12,7 +12,7 @@ Dragon Watch builds from data ingestion through LLM-powered intelligence process
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Foundation** - Supabase schema and multi-source data ingestion
+- [x] **Phase 1: Foundation** - Supabase schema and multi-source data ingestion
 - [ ] **Phase 2: Intelligence Processing** - LLM-powered narrative and movement analysis
 - [ ] **Phase 3: Correlation Engine** - Dual-stream threat detection
 - [ ] **Phase 4: Visualization** - Real-time dashboard with all panels
@@ -33,10 +33,10 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 4 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Project scaffolding, Supabase schema, Pydantic models, async DB client
-- [ ] 01-02-PLAN.md — GDELT article fetcher and Telegram OSINT scraper
-- [ ] 01-03-PLAN.md — AIS WebSocket vessel tracker and simulated demo dataset
-- [ ] 01-04-PLAN.md — FastAPI app wiring and integration verification
+- [x] 01-01-PLAN.md — Project scaffolding, Supabase schema, Pydantic models, async DB client
+- [x] 01-02-PLAN.md — GDELT article fetcher and Telegram OSINT scraper
+- [x] 01-03-PLAN.md — AIS WebSocket vessel tracker and simulated demo dataset
+- [x] 01-04-PLAN.md — FastAPI app wiring and integration verification
 
 ### Phase 2: Intelligence Processing
 **Goal**: Raw data is processed into structured intelligence events with LLM-powered analysis
@@ -107,7 +107,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/4 | Planned | - |
+| 1. Foundation | 4/4 | Complete | 2026-02-07 |
 | 2. Intelligence Processing | 0/4 | Planned | - |
 | 3. Correlation Engine | 0/TBD | Not started | - |
 | 4. Visualization | 0/TBD | Not started | - |
