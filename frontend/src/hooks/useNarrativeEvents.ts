@@ -3,9 +3,16 @@ import { supabase } from '../lib/supabase'
 import { NarrativeEvent } from '../types/database'
 import { RealtimeChannel } from '@supabase/supabase-js'
 
+interface DetectionHistoryPoint {
+  detected_at: string
+  score: number
+  level: string
+}
+
 export function useNarrativeEvents() {
   const [events, setEvents] = useState<NarrativeEvent[]>([])
   const [coordinatedArticleIds, setCoordinatedArticleIds] = useState<Set<string>>(new Set())
+  const [detectionHistory, setDetectionHistory] = useState<DetectionHistoryPoint[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -34,6 +41,24 @@ export function useNarrativeEvents() {
             }
           })
           setCoordinatedArticleIds(articleIds)
+        }
+
+        // Fetch alert to get detection_history from correlation_metadata
+        const { data: alertData, error: alertError } = await supabase
+          .from('alerts')
+          .select('correlation_metadata')
+          .order('created_at', { ascending: false })
+          .limit(1)
+          .single()
+
+        if (!alertError && alertData && mounted) {
+          const metadata = alertData.correlation_metadata
+          if (metadata && metadata.detection_history && Array.isArray(metadata.detection_history)) {
+            setDetectionHistory(metadata.detection_history)
+          }
+        }
+
+        if (mounted) {
           setLoading(false)
         }
 
@@ -81,5 +106,5 @@ export function useNarrativeEvents() {
     }
   }, [])
 
-  return { events, coordinatedArticleIds, loading }
+  return { events, coordinatedArticleIds, detectionHistory, loading }
 }

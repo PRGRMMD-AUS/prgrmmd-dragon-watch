@@ -2,6 +2,7 @@ import { cn } from '../lib/utils'
 import { ThreatBanner } from './ThreatBanner'
 import { EventFeed } from './EventFeed'
 import { MapPanel } from './MapPanel'
+import { NarrativeTimeline } from './NarrativeTimeline'
 
 export function DashboardLayout() {
   return (
@@ -21,18 +22,8 @@ export function DashboardLayout() {
       <MapPanel />
 
       {/* Narrative Timeline Panel - Bottom center */}
-      <div
-        className="bg-gray-50 border-t border-gray-200"
-        style={{ gridArea: '3 / 2 / 4 / 3' }}
-      >
-        <div className="p-4">
-          <div className="text-sm font-semibold text-gray-700 mb-2">
-            NARRATIVE TIMELINE PANEL
-          </div>
-          <div className="text-xs text-gray-500">
-            Temporal correlation visualization
-          </div>
-        </div>
+      <div style={{ gridArea: '3 / 2 / 4 / 3' }}>
+        <NarrativeTimeline />
       </div>
 
       {/* Intelligence Brief Sidebar - Right */}
