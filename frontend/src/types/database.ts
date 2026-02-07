@@ -80,8 +80,8 @@ export interface Brief {
   generated_at: string
   threat_level: ThreatLevel | null
   confidence: number | null
-  evidence_chain: Record<string, any> | null
-  timeline: Record<string, any> | null
+  evidence_chain: string[] | null
+  timeline: string | null
   information_gaps: string[] | null
   collection_priorities: string[] | null
   narrative_event_ids: string[] | null

@@ -2,6 +2,7 @@ import { ThreatBanner } from './ThreatBanner'
 import { EventFeed } from './EventFeed'
 import { MapPanel } from './MapPanel'
 import { NarrativeTimeline } from './NarrativeTimeline'
+import { BriefPanel } from './BriefPanel'
 
 export function DashboardLayout() {
   return (
@@ -26,18 +27,8 @@ export function DashboardLayout() {
       </div>
 
       {/* Intelligence Brief Sidebar - Right */}
-      <div
-        className="bg-white border-l border-gray-200 overflow-y-auto"
-        style={{ gridArea: '2 / 3 / 4 / 4' }}
-      >
-        <div className="p-4">
-          <div className="text-sm font-semibold text-gray-700 mb-2">
-            INTELLIGENCE BRIEF PANEL
-          </div>
-          <div className="text-xs text-gray-500">
-            Assessment, evidence, timeline, collection priorities
-          </div>
-        </div>
+      <div style={{ gridArea: '2 / 3 / 4 / 4' }}>
+        <BriefPanel />
       </div>
     </div>
   )
