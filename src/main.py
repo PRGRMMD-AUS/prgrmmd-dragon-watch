@@ -17,6 +17,7 @@ from src.database.client import close_supabase, get_supabase
 from src.fetchers.ais import connect_ais_stream, stop_ais_stream
 from src.fetchers.gdelt import fetch_and_store_articles
 from src.fetchers.telegram import close_telegram, scrape_and_store_channels
+from src.processors.correlate_events import correlate_events_batch
 
 
 @asynccontextmanager
@@ -223,3 +224,49 @@ async def fetch_all(background_tasks: BackgroundTasks):
         "tasks": ["gdelt_fetch", "telegram_fetch"],
         "message": "GDELT and Telegram fetchers started",
     }
+
+
+@app.post("/api/correlate")
+async def correlate_events():
+    """Run correlation engine to match narrative and movement events.
+
+    Analyzes time-window matching, geographic proximity, and calculates
+    composite threat scores. Upserts alert with monotonic escalation enforcement.
+
+    Returns:
+        dict: Correlation result with status, correlations_found, highest_score,
+              threat_level, and confidence
+    """
+    result = await correlate_events_batch()
+    return result
+
+
+@app.get("/api/alerts/current")
+async def get_current_alert():
+    """Get the current active Taiwan Strait alert.
+
+    Returns the most recent unresolved alert with threat level, scores,
+    and correlation metadata.
+
+    Returns:
+        dict: Alert data or 404 if no active alert exists
+    """
+    try:
+        client = await get_supabase()
+
+        # Query for active Taiwan Strait alert
+        response = (
+            await client.table("alerts")
+            .select("*")
+            .eq("region", "Taiwan Strait")
+            .is_("resolved_at", "null")
+            .execute()
+        )
+
+        if not response.data:
+            return {"status": "no_active_alert", "message": "No active Taiwan Strait alert found"}
+
+        return response.data[0]
+
+    except Exception as e:
+        return {"status": "error", "error": str(e)}
