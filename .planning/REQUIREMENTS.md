@@ -22,10 +22,10 @@
 
 ### Correlation Engine
 
-- [ ] **CORR-01**: Time-window matching — narrative coordination spike within 72hrs of movement cluster triggers correlation
-- [ ] **CORR-02**: Geographic proximity scoring — narrative geographic focus matches movement cluster region
-- [ ] **CORR-03**: Threat level calculation — GREEN (<30) / AMBER (30-70) / RED (>70) based on outlet count, phrase novelty, post volume, geographic proximity
-- [ ] **CORR-04**: Evidence chain — each alert links to specific articles and posts that triggered it
+- [x] **CORR-01**: Time-window matching — narrative coordination spike within 72hrs of movement cluster triggers correlation
+- [x] **CORR-02**: Geographic proximity scoring — narrative geographic focus matches movement cluster region
+- [x] **CORR-03**: Threat level calculation — GREEN (<30) / AMBER (30-70) / RED (>70) based on outlet count, phrase novelty, post volume, geographic proximity
+- [x] **CORR-04**: Evidence chain — each alert links to specific articles and posts that triggered it
 
 ### Dashboard (Lovable)
 
@@ -100,10 +100,10 @@
 | LLM-02 | Phase 2 | Pending |
 | LLM-03 | Phase 2 | Pending |
 | LLM-04 | Phase 2 | Pending |
-| CORR-01 | Phase 3 | Pending |
-| CORR-02 | Phase 3 | Pending |
-| CORR-03 | Phase 3 | Pending |
-| CORR-04 | Phase 3 | Pending |
+| CORR-01 | Phase 3 | Complete |
+| CORR-02 | Phase 3 | Complete |
+| CORR-03 | Phase 3 | Complete |
+| CORR-04 | Phase 3 | Complete |
 | DASH-01 | Phase 4 | Pending |
 | DASH-02 | Phase 4 | Pending |
 | DASH-03 | Phase 4 | Pending |
@@ -123,4 +123,4 @@
 
 ---
 *Requirements defined: 2026-02-07*
-*Last updated: 2026-02-07 after roadmap creation*
+*Last updated: 2026-02-07 (Phase 3 complete)*

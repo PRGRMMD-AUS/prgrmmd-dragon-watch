@@ -13,8 +13,8 @@ Dragon Watch builds from data ingestion through LLM-powered intelligence process
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Supabase schema and multi-source data ingestion
-- [ ] **Phase 2: Intelligence Processing** - LLM-powered narrative and movement analysis
-- [ ] **Phase 3: Correlation Engine** - Dual-stream threat detection
+- [x] **Phase 2: Intelligence Processing** - LLM-powered narrative and movement analysis
+- [x] **Phase 3: Correlation Engine** - Dual-stream threat detection
 - [ ] **Phase 4: Visualization** - Real-time dashboard with all panels
 - [ ] **Phase 5: Demo Integration** - Playback engine and offline reliability
 
@@ -67,9 +67,9 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Foundation types: ThreatLevel enum, correlation Pydantic models, geographic utilities
-- [ ] 03-02-PLAN.md — Core correlation engine: time-window matching, composite scoring, alert upsert with monotonic escalation
-- [ ] 03-03-PLAN.md — Integration verification: demo runner and Phase 3 requirement verification scripts
+- [x] 03-01-PLAN.md — Foundation types: ThreatLevel enum, correlation Pydantic models, geographic utilities
+- [x] 03-02-PLAN.md — Core correlation engine: time-window matching, composite scoring, alert upsert with monotonic escalation
+- [x] 03-03-PLAN.md — Integration verification: demo runner and Phase 3 requirement verification scripts
 
 ### Phase 4: Visualization
 **Goal**: Real-time intelligence flows to dashboard panels via Supabase realtime subscriptions
@@ -111,10 +111,10 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-07 |
 | 2. Intelligence Processing | 4/4 | Complete | 2026-02-07 |
-| 3. Correlation Engine | 0/3 | Planned | - |
+| 3. Correlation Engine | 3/3 | Complete | 2026-02-07 |
 | 4. Visualization | 0/TBD | Not started | - |
 | 5. Demo Integration | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-07*
-*Last updated: 2026-02-07*
+*Last updated: 2026-02-07 (Phase 3 complete)*
