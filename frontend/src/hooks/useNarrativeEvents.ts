@@ -30,7 +30,7 @@ export function useNarrativeEvents() {
 
       // Build Set of coordinated article IDs from source_ids
       const articleIds = new Set<string>()
-      narrativeEvents.forEach((event) => {
+      narrativeEvents.forEach((event: Record<string, unknown>) => {
         if (event.source_ids && Array.isArray(event.source_ids)) {
           event.source_ids.forEach((id: string) => articleIds.add(id))
         }

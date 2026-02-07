@@ -37,8 +37,8 @@ export function useMovementHeatmap() {
 
       if (data) {
         const points = data
-          .filter((event) => event.location_lat !== null && event.location_lon !== null)
-          .map((event) => ({
+          .filter((event: Record<string, unknown>) => event.location_lat !== null && event.location_lon !== null)
+          .map((event: Record<string, unknown>) => ({
             id: event.id,
             lat: event.location_lat!,
             lon: event.location_lon!,

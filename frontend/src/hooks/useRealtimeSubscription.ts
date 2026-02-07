@@ -55,7 +55,7 @@ export function useRealtimeSubscription<T>(
               table: table,
               filter: filter,
             },
-            (payload) => {
+            (payload: { eventType: string; new: unknown; old: { id: string } }) => {
               if (!mounted) return
 
               if (payload.eventType === 'INSERT') {
