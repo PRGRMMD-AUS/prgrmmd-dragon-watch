@@ -1077,6 +1077,32 @@ def validate_fixture(fixture: dict) -> tuple[bool, list[str]]:
         print(f"    {table}: {count} records")
     print()
 
+    # Validate required fields per table type
+    print("Validating required fields per table...")
+    required_fields = {
+        "articles": ["url", "title", "domain", "published_at", "tone_score"],
+        "social_posts": ["telegram_id", "channel", "text", "timestamp", "views"],
+        "vessel_positions": ["mmsi", "ship_name", "latitude", "longitude", "speed", "course", "timestamp"],
+        "narrative_events": ["event_type", "summary", "confidence", "source_ids", "coordination_score", "outlet_count", "synchronized_phrases", "geographic_focus", "themes", "article_ids", "created_at"],
+        "movement_events": ["event_type", "description", "location_lat", "location_lon", "confidence", "category", "location_name", "source_post_ids", "created_at"],
+        "alerts": ["region", "threat_level", "threat_score", "confidence", "sub_scores", "correlation_metadata"],
+        "briefs": ["threat_level", "confidence", "summary", "evidence_chain", "timeline", "collection_priorities", "narrative_event_ids", "movement_event_ids"]
+    }
+
+    field_errors_found = False
+    for table, fields in required_fields.items():
+        table_records = [r for r in records if r.get("_table") == table]
+        if table_records:
+            sample = table_records[0]["data"]
+            missing_fields = [f for f in fields if f not in sample]
+            if missing_fields:
+                errors.append(f"{table}: Missing required fields: {missing_fields}")
+                field_errors_found = True
+
+    if not field_errors_found:
+        print(f"  ✓ All required fields present across table types")
+    print()
+
     # Validate sorting
     print("Validating timing...")
     offsets = [r["_demo_offset_seconds"] for r in records if "_demo_offset_seconds" in r]
