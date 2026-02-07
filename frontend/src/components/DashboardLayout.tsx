@@ -1,5 +1,6 @@
 import { cn } from '../lib/utils'
 import { ThreatBanner } from './ThreatBanner'
+import { EventFeed } from './EventFeed'
 
 export function DashboardLayout() {
   return (
@@ -9,17 +10,10 @@ export function DashboardLayout() {
 
       {/* Event Feed Panel - Left */}
       <div
-        className="bg-gray-50 border-r border-gray-200 overflow-y-auto"
+        className="border-r border-gray-200"
         style={{ gridArea: '2 / 1 / 4 / 2' }}
       >
-        <div className="p-4">
-          <div className="text-sm font-semibold text-gray-700 mb-2">
-            EVENT FEED PANEL
-          </div>
-          <div className="text-xs text-gray-500">
-            Scrollable event cards will appear here
-          </div>
-        </div>
+        <EventFeed />
       </div>
 
       {/* Map Panel - Center */}
