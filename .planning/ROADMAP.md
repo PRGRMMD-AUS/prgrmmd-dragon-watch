@@ -100,10 +100,13 @@ Plans:
   3. Offline/fallback mode runs demo fully with pre-loaded data and cached LLM responses, no live API calls required
   4. All dashboard panels update via Supabase realtime subscriptions with proper sequencing (no race conditions)
   5. Demo scenario completes GREEN to RED escalation in approximately 5 minutes showing 24-48 hour simulated advance warning
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] TBD during phase planning
+- [ ] 05-01-PLAN.md — Pre-computed demo data fixture (all 7 tables, 5-beat narrative arc)
+- [ ] 05-02-PLAN.md — Playback engine + FastAPI demo control API endpoints
+- [ ] 05-03-PLAN.md — Demo control bar UI (buttons, speed presets, simulated clock)
+- [ ] 05-04-PLAN.md — End-to-end integration verification + human demo walkthrough
 
 ## Progress
 
@@ -116,8 +119,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 2. Intelligence Processing | 4/4 | Complete | 2026-02-07 |
 | 3. Correlation Engine | 3/3 | Complete | 2026-02-07 |
 | 4. Visualization | 4/4 | Complete | 2026-02-07 |
-| 5. Demo Integration | 0/TBD | Not started | - |
+| 5. Demo Integration | 0/4 | Not started | - |
 
 ---
 *Roadmap created: 2026-02-07*
-*Last updated: 2026-02-07 (Phase 4 complete)*
+*Last updated: 2026-02-07 (Phase 5 planned)*
