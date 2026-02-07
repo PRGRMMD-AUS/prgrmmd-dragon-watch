@@ -27,7 +27,7 @@ export function useDemoControl(): UseDemoControlReturn {
   const [status, setStatus] = useState<DemoStatus | null>(null)
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const pollingIntervalRef = useRef<NodeJS.Timeout | null>(null)
+  const pollingIntervalRef = useRef<number | null>(null)
 
   // Fetch status from API
   const fetchStatus = useCallback(async () => {

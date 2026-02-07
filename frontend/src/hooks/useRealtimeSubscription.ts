@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
 import { RealtimeChannel } from '@supabase/supabase-js'
 
-interface UseRealtimeSubscriptionOptions<T> {
+interface UseRealtimeSubscriptionOptions {
   table: string
   filter?: string
   event?: 'INSERT' | 'UPDATE' | 'DELETE' | '*'
@@ -11,7 +11,7 @@ interface UseRealtimeSubscriptionOptions<T> {
 }
 
 export function useRealtimeSubscription<T>(
-  options: UseRealtimeSubscriptionOptions<T>
+  options: UseRealtimeSubscriptionOptions
 ) {
   const { table, filter, event = '*', orderBy, limit } = options
   const [data, setData] = useState<T[]>([])

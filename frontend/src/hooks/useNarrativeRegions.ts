@@ -148,7 +148,7 @@ export function useNarrativeRegions() {
               schema: 'public',
               table: 'narrative_events',
             },
-            (payload) => {
+            () => {
               if (!mounted) return
 
               // Re-fetch all events to recalculate regions

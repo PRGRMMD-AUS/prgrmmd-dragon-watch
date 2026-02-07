@@ -116,8 +116,8 @@ function FallbackMap() {
 
 export function MapPanel() {
   const { vessels, loading: vesselsLoading } = useVesselPositions()
-  const { heatmapPoints, loading: heatmapLoading } = useMovementHeatmap()
-  const { activeRegions, loading: regionsLoading } = useNarrativeRegions()
+  const { heatmapPoints } = useMovementHeatmap()
+  const { activeRegions } = useNarrativeRegions()
 
   // Track newly updated vessels for ping animation
   const [pingingVessels, setPingingVessels] = useState<Set<string>>(new Set())
