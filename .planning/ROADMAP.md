@@ -77,7 +77,7 @@ Plans:
 **Requirements**: DASH-01, DASH-02, DASH-03, DASH-04, DASH-05, DASH-06
 **Success Criteria** (what must be TRUE):
   1. Interactive map displays Taiwan Strait with movement markers, vessel icons, heatmap overlay, and narrative focus regions
-  2. Dual-axis correlation chart shows narrative coordination score vs civilian movement count over time
+  2. Narrative correlation timeline (bottom panel) shows threat score building over time with color-coded GREEN/AMBER/RED zones and narrative event data points (replaces dual-axis chart per user decision — DASH-02 is now "narrative timeline")
   3. Narrative stream feed displays real-time scrollable articles with coordination signals highlighted
   4. Movement stream feed displays real-time scrollable posts with location and category tags
   5. Threat gauge displays current GREEN/AMBER/RED status with confidence score and auto-updates from alerts table
