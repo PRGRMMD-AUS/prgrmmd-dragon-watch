@@ -64,10 +64,12 @@ Plans:
   2. Geographic proximity scoring calculates when narrative geographic focus matches movement cluster region
   3. Threat level calculation produces GREEN (<30) / AMBER (30-70) / RED (>70) scores based on outlet count, phrase novelty, post volume, and geographic proximity
   4. Each alert links to specific articles and posts that triggered it, creating complete evidence chains
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] TBD during phase planning
+- [ ] 03-01-PLAN.md — Foundation types: ThreatLevel enum, correlation Pydantic models, geographic utilities
+- [ ] 03-02-PLAN.md — Core correlation engine: time-window matching, composite scoring, alert upsert with monotonic escalation
+- [ ] 03-03-PLAN.md — Integration verification: demo runner and Phase 3 requirement verification scripts
 
 ### Phase 4: Visualization
 **Goal**: Real-time intelligence flows to dashboard panels via Supabase realtime subscriptions
@@ -108,8 +110,8 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundation | 4/4 | Complete | 2026-02-07 |
-| 2. Intelligence Processing | 0/4 | Planned | - |
-| 3. Correlation Engine | 0/TBD | Not started | - |
+| 2. Intelligence Processing | 4/4 | Complete | 2026-02-07 |
+| 3. Correlation Engine | 0/3 | Planned | - |
 | 4. Visualization | 0/TBD | Not started | - |
 | 5. Demo Integration | 0/TBD | Not started | - |
 
