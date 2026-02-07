@@ -5,18 +5,24 @@ Main API server that coordinates:
 - Telegram channel scraping
 - AIS vessel tracking (WebSocket stream)
 - Demo data loading for testing
+- Demo playback control (start/pause/reset/speed)
 """
 
 import asyncio
 from contextlib import asynccontextmanager
 
-from fastapi import BackgroundTasks, FastAPI
+from fastapi import APIRouter, BackgroundTasks, FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 from scripts.load_demo_data import load_demo_data
 from src.database.client import close_supabase, get_supabase
-from src.fetchers.ais import connect_ais_stream, stop_ais_stream
-from src.fetchers.gdelt import fetch_and_store_articles
-from src.fetchers.telegram import close_telegram, scrape_and_store_channels
+from src.demo.engine import demo_engine
+
+# Note: fetchers module temporarily removed from repository
+# from src.fetchers.ais import connect_ais_stream, stop_ais_stream
+# from src.fetchers.gdelt import fetch_and_store_articles
+# from src.fetchers.telegram import close_telegram, scrape_and_store_channels
+
 from src.processors.correlate_events import correlate_events_batch
 
 
@@ -44,8 +50,9 @@ async def lifespan(app: FastAPI):
     # Shutdown
     print("Shutting down Dragon Watch...")
     await close_supabase()
-    await close_telegram()
-    await stop_ais_stream()
+    # Note: fetchers temporarily removed
+    # await close_telegram()
+    # await stop_ais_stream()
     print("Shutdown complete")
 
 
@@ -54,6 +61,15 @@ app = FastAPI(
     title="Dragon Watch",
     description="Pre-conflict early warning system",
     lifespan=lifespan,
+)
+
+# Add CORS middleware for frontend access
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allow all origins for development
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
@@ -80,102 +96,41 @@ async def health_check():
     }
 
 
-@app.post("/fetch/gdelt")
-async def fetch_gdelt(background_tasks: BackgroundTasks, lookback_hours: int = 24):
-    """Fetch GDELT articles in background.
-
-    Args:
-        lookback_hours: How many hours back to search (default: 24)
-
-    Returns:
-        dict: Task status message
-    """
-    background_tasks.add_task(fetch_and_store_articles, lookback_hours=lookback_hours)
-    return {
-        "status": "started",
-        "task": "gdelt_fetch",
-        "lookback_hours": lookback_hours,
-    }
-
-
-@app.post("/fetch/telegram")
-async def fetch_telegram(
-    background_tasks: BackgroundTasks, limit_per_channel: int = 100
-):
-    """Fetch Telegram channel messages in background.
-
-    Args:
-        limit_per_channel: Maximum messages per channel (default: 100)
-
-    Returns:
-        dict: Task status message
-    """
-    background_tasks.add_task(
-        scrape_and_store_channels, channels=None, limit_per_channel=limit_per_channel
-    )
-    return {
-        "status": "started",
-        "task": "telegram_fetch",
-        "limit_per_channel": limit_per_channel,
-    }
-
-
-@app.post("/fetch/ais/start")
-async def start_ais_stream():
-    """Start AIS WebSocket stream as long-running task.
-
-    Uses asyncio.create_task (not BackgroundTasks) because WebSocket is long-running.
-    Stores task reference on app.state for later cancellation.
-
-    Returns:
-        dict: Task status message
-    """
-    # Check if already running
-    if hasattr(app.state, "ais_task") and app.state.ais_task is not None:
-        if not app.state.ais_task.done():
-            return {
-                "status": "already_running",
-                "message": "AIS stream is already active",
-            }
-
-    # Start AIS stream as asyncio task
-    app.state.ais_task = asyncio.create_task(connect_ais_stream())
-
-    return {
-        "status": "started",
-        "task": "ais_stream",
-        "message": "AIS WebSocket stream started",
-    }
-
-
-@app.post("/fetch/ais/stop")
-async def stop_ais():
-    """Stop AIS WebSocket stream.
-
-    Cancels the running asyncio task and signals graceful shutdown.
-
-    Returns:
-        dict: Task status message
-    """
-    # Signal graceful shutdown
-    await stop_ais_stream()
-
-    # Cancel task if it exists
-    if hasattr(app.state, "ais_task") and app.state.ais_task is not None:
-        if not app.state.ais_task.done():
-            app.state.ais_task.cancel()
-            try:
-                await app.state.ais_task
-            except asyncio.CancelledError:
-                pass
-
-        app.state.ais_task = None
-
-    return {
-        "status": "stopped",
-        "task": "ais_stream",
-        "message": "AIS WebSocket stream stopped",
-    }
+# Note: Fetcher endpoints temporarily disabled (fetchers module removed)
+# @app.post("/fetch/gdelt")
+# async def fetch_gdelt(background_tasks: BackgroundTasks, lookback_hours: int = 24):
+#     """Fetch GDELT articles in background."""
+#     background_tasks.add_task(fetch_and_store_articles, lookback_hours=lookback_hours)
+#     return {"status": "started", "task": "gdelt_fetch", "lookback_hours": lookback_hours}
+#
+# @app.post("/fetch/telegram")
+# async def fetch_telegram(background_tasks: BackgroundTasks, limit_per_channel: int = 100):
+#     """Fetch Telegram channel messages in background."""
+#     background_tasks.add_task(scrape_and_store_channels, channels=None, limit_per_channel=limit_per_channel)
+#     return {"status": "started", "task": "telegram_fetch", "limit_per_channel": limit_per_channel}
+#
+# @app.post("/fetch/ais/start")
+# async def start_ais_stream():
+#     """Start AIS WebSocket stream as long-running task."""
+#     if hasattr(app.state, "ais_task") and app.state.ais_task is not None:
+#         if not app.state.ais_task.done():
+#             return {"status": "already_running", "message": "AIS stream is already active"}
+#     app.state.ais_task = asyncio.create_task(connect_ais_stream())
+#     return {"status": "started", "task": "ais_stream", "message": "AIS WebSocket stream started"}
+#
+# @app.post("/fetch/ais/stop")
+# async def stop_ais():
+#     """Stop AIS WebSocket stream."""
+#     await stop_ais_stream()
+#     if hasattr(app.state, "ais_task") and app.state.ais_task is not None:
+#         if not app.state.ais_task.done():
+#             app.state.ais_task.cancel()
+#             try:
+#                 await app.state.ais_task
+#             except asyncio.CancelledError:
+#                 pass
+#         app.state.ais_task = None
+#     return {"status": "stopped", "task": "ais_stream", "message": "AIS WebSocket stream stopped"}
 
 
 @app.post("/demo/load")
@@ -204,26 +159,13 @@ async def load_demo():
         }
 
 
-@app.post("/fetch/all")
-async def fetch_all(background_tasks: BackgroundTasks):
-    """Trigger all data fetchers (GDELT + Telegram) in background.
-
-    Does NOT start AIS stream (requires explicit start/stop control).
-
-    Returns:
-        dict: Task status message
-    """
-    # Add both tasks to background queue
-    background_tasks.add_task(fetch_and_store_articles, lookback_hours=24)
-    background_tasks.add_task(
-        scrape_and_store_channels, channels=None, limit_per_channel=100
-    )
-
-    return {
-        "status": "started",
-        "tasks": ["gdelt_fetch", "telegram_fetch"],
-        "message": "GDELT and Telegram fetchers started",
-    }
+# Note: Fetcher endpoints temporarily disabled (fetchers module removed)
+# @app.post("/fetch/all")
+# async def fetch_all(background_tasks: BackgroundTasks):
+#     """Trigger all data fetchers (GDELT + Telegram) in background."""
+#     background_tasks.add_task(fetch_and_store_articles, lookback_hours=24)
+#     background_tasks.add_task(scrape_and_store_channels, channels=None, limit_per_channel=100)
+#     return {"status": "started", "tasks": ["gdelt_fetch", "telegram_fetch"], "message": "GDELT and Telegram fetchers started"}
 
 
 @app.post("/api/correlate")
@@ -270,3 +212,73 @@ async def get_current_alert():
 
     except Exception as e:
         return {"status": "error", "error": str(e)}
+
+
+# Demo Control Router
+demo_router = APIRouter(prefix="/api/demo", tags=["demo"])
+
+
+@demo_router.post("/start")
+async def demo_start(clear_first: bool = True):
+    """Start demo playback.
+
+    Args:
+        clear_first: If True, clear all tables before starting (default: True)
+
+    Returns:
+        dict: Current demo status
+    """
+    await demo_engine.start(clear_first=clear_first)
+    return demo_engine.get_status()
+
+
+@demo_router.post("/pause")
+async def demo_pause():
+    """Pause demo playback at current position.
+
+    Returns:
+        dict: Current demo status
+    """
+    await demo_engine.pause()
+    return demo_engine.get_status()
+
+
+@demo_router.post("/reset")
+async def demo_reset():
+    """Reset demo playback to beginning and clear tables.
+
+    Returns:
+        dict: Current demo status
+    """
+    await demo_engine.reset()
+    return demo_engine.get_status()
+
+
+@demo_router.post("/speed")
+async def demo_speed(preset: str):
+    """Change demo playback speed.
+
+    Args:
+        preset: Speed preset name ("slow" | "normal" | "fast")
+
+    Returns:
+        dict: Current demo status
+    """
+    speed_map = {"slow": 0.5, "normal": 1.0, "fast": 2.5}
+    speed = speed_map.get(preset, 1.0)
+    demo_engine.set_speed(speed)
+    return demo_engine.get_status()
+
+
+@demo_router.get("/status")
+async def demo_status():
+    """Get current demo playback status.
+
+    Returns:
+        dict: Status with state, speed, progress, simulated_time, etc.
+    """
+    return demo_engine.get_status()
+
+
+# Include demo router
+app.include_router(demo_router)
