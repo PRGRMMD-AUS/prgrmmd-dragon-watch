@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 5 of 5 (Demo Integration)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-07 — Completed 05-01-PLAN.md (demo fixture generation)
+Last activity: 2026-02-07 — Completed 05-02-PLAN.md (demo playback engine)
 
-Progress: [███████████████░] 88% (15/17 plans completed)
+Progress: [████████████████] 94% (16/17 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 15
-- Average duration: ~3.2 minutes
-- Total execution time: ~1.1 hours
+- Total plans completed: 16
+- Average duration: ~3.3 minutes
+- Total execution time: ~1.15 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [███████████████░] 88% (15/17 plans co
 | Phase 2 | 4/4 | 20 min | 5 min |
 | Phase 3 | 3/3 | 7.1 min | 2.4 min |
 | Phase 4 | 4/4 | 13.85 min | 3.46 min |
-| Phase 5 | 1/4 | 5.7 min | 5.7 min |
+| Phase 5 | 2/4 | 9.55 min | 4.78 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-02 (3 min), 04-03 (4 min), 04-04 (3.85 min), 05-01 (5.7 min)
-- Trend: Phase 5 started. Plan 05-01 took longer due to fixture generation complexity (392 records, 7 tables, validation logic)
+- Last 5 plans: 04-03 (4 min), 04-04 (3.85 min), 05-01 (5.7 min), 05-02 (3.85 min)
+- Trend: Phase 5 progressing steadily. Plan 05-02 faster than 05-01 (playback engine simpler than fixture generation)
 
 *Updated after each plan completion*
 
@@ -91,6 +91,10 @@ Recent decisions affecting current work:
 - 72 hours compressed to 5 minutes (05-01: Normal demo speed allows full escalation arc in presentation timeframe)
 - Continuous drip pacing with jitter (05-01: 0.1-3s random jitter prevents timestamp collisions, natural intelligence flow)
 - Alert upsert pattern with action metadata (05-01: first alert INSERT, subsequent UPDATE to match correlation engine behavior)
+- Interruptible sleep for responsive controls (05-02: sleep in 0.1s chunks, pause/reset respond within 100ms)
+- Module-level singleton for shared state (05-02: demo_engine imported by FastAPI endpoints and playback loop)
+- Alert ID tracking for updates (05-02: store inserted alert ID to enable UPDATE by id for upsert pattern)
+- Comment out fetcher imports temporarily (05-02: src/fetchers deleted, commenting unblocks server while preserving endpoint logic)
 
 ### Pending Todos
 
@@ -120,12 +124,14 @@ None yet.
 
 **Phase 5 (resolved 05-01):** Demo fixture generation complete — 392 records across all 7 Supabase tables with 5-beat escalation arc validated and ready for playback engine. No blockers for Plan 05-02.
 
+**Phase 5 (resolved 05-02):** Demo playback engine complete — async DemoEngine with FastAPI control endpoints tested and functional. All 5 endpoints working (/start, /pause, /reset, /speed, /status). CORS enabled for frontend access. Ready for Plan 05-03 (frontend control bar).
+
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed 05-01-PLAN.md (demo fixture generation). Ready for 05-02 (playback engine).
+Stopped at: Completed 05-02-PLAN.md (demo playback engine). Ready for 05-03 (frontend control bar).
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (05-01 complete, fixture validated and ready)*
+*Last updated: 2026-02-07 (05-02 complete, playback engine with FastAPI endpoints ready)*
