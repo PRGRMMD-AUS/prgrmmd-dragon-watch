@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 5 of 5 (Demo Integration)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-07 — Completed 05-02-PLAN.md (demo playback engine)
+Last activity: 2026-02-07 — Completed 05-03-PLAN.md (demo control bar UI)
 
-Progress: [████████████████] 94% (16/17 plans completed)
+Progress: [█████████████████] 100% (17/17 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 16
+- Total plans completed: 17
 - Average duration: ~3.3 minutes
-- Total execution time: ~1.15 hours
+- Total execution time: ~1.2 hours
 
 **By Phase:**
 
@@ -31,11 +31,11 @@ Progress: [████████████████] 94% (16/17 plans co
 | Phase 2 | 4/4 | 20 min | 5 min |
 | Phase 3 | 3/3 | 7.1 min | 2.4 min |
 | Phase 4 | 4/4 | 13.85 min | 3.46 min |
-| Phase 5 | 2/4 | 9.55 min | 4.78 min |
+| Phase 5 | 3/4 | 12.63 min | 4.21 min |
 
 **Recent Trend:**
-- Last 5 plans: 04-03 (4 min), 04-04 (3.85 min), 05-01 (5.7 min), 05-02 (3.85 min)
-- Trend: Phase 5 progressing steadily. Plan 05-02 faster than 05-01 (playback engine simpler than fixture generation)
+- Last 5 plans: 04-04 (3.85 min), 05-01 (5.7 min), 05-02 (3.85 min), 05-03 (3.08 min)
+- Trend: Phase 5 progressing efficiently. Plan 05-03 fastest of phase (control bar UI simpler than fixture generation and engine)
 
 *Updated after each plan completion*
 
@@ -95,6 +95,10 @@ Recent decisions affecting current work:
 - Module-level singleton for shared state (05-02: demo_engine imported by FastAPI endpoints and playback loop)
 - Alert ID tracking for updates (05-02: store inserted alert ID to enable UPDATE by id for upsert pattern)
 - Comment out fetcher imports temporarily (05-02: src/fetchers deleted, commenting unblocks server while preserving endpoint logic)
+- Start button logic: clear tables on first start only (05-03: start(true) when idle, start(false) when paused for resume)
+- 500ms polling interval during playback (05-03: provides smooth UI updates without API spam, 2 updates/second)
+- Browser timer type (number) not NodeJS.Timeout (05-03: frontend runs in browser, setInterval returns number)
+- Phase-based progress bar colors (05-03: emerald 0-33%, amber 33-67%, red 67-100% match threat escalation)
 
 ### Pending Todos
 
@@ -126,12 +130,14 @@ None yet.
 
 **Phase 5 (resolved 05-02):** Demo playback engine complete — async DemoEngine with FastAPI control endpoints tested and functional. All 5 endpoints working (/start, /pause, /reset, /speed, /status). CORS enabled for frontend access. Ready for Plan 05-03 (frontend control bar).
 
+**Phase 5 (resolved 05-03):** Demo control bar complete — React component with Play/Pause/Reset buttons, speed presets, simulated clock (T+0h → T+72h), progress bar with phase colors. Dashboard layout extended with 36px control bar row. TypeScript compilation passing. Ready for Plan 05-04 (demo verification).
+
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed 05-02-PLAN.md (demo playback engine). Ready for 05-03 (frontend control bar).
+Stopped at: Completed 05-03-PLAN.md (demo control bar UI). Ready for 05-04 (demo verification).
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (05-02 complete, playback engine with FastAPI endpoints ready)*
+*Last updated: 2026-02-07 (05-03 complete, demo control bar UI integrated into dashboard)*
