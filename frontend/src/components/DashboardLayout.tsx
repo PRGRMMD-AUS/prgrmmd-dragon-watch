@@ -1,6 +1,7 @@
 import { cn } from '../lib/utils'
 import { ThreatBanner } from './ThreatBanner'
 import { EventFeed } from './EventFeed'
+import { MapPanel } from './MapPanel'
 
 export function DashboardLayout() {
   return (
@@ -17,19 +18,7 @@ export function DashboardLayout() {
       </div>
 
       {/* Map Panel - Center */}
-      <div
-        className="bg-white border-b border-gray-200 flex items-center justify-center"
-        style={{ gridArea: '2 / 2 / 3 / 3' }}
-      >
-        <div className="text-center">
-          <div className="text-sm font-semibold text-gray-700 mb-1">
-            MAP PANEL
-          </div>
-          <div className="text-xs text-gray-500">
-            Interactive Taiwan Strait map
-          </div>
-        </div>
-      </div>
+      <MapPanel />
 
       {/* Narrative Timeline Panel - Bottom center */}
       <div
