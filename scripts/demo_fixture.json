@@ -1,0 +1,5918 @@
+{
+  "metadata": {
+    "generated_at": "2026-02-07T07:56:23.848687+00:00",
+    "base_time": "2026-02-05T00:00:00+00:00",
+    "simulated_hours": 72,
+    "normal_duration_seconds": 300,
+    "total_records": 392,
+    "record_counts": {
+      "articles": 60,
+      "vessel_positions": 180,
+      "social_posts": 120,
+      "movement_events": 15,
+      "narrative_events": 9,
+      "alerts": 5,
+      "briefs": 3
+    }
+  },
+  "records": [
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 1.263,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/001.htm",
+        "title": "China, ASEAN nations hold routine maritime cooperation meeting",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-05T00:00:00+00:00",
+        "tone_score": -0.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 1.472,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000001,
+        "ship_name": "PACIFIC ONE",
+        "latitude": 24.2511,
+        "longitude": 120.6063,
+        "speed": 13.5,
+        "course": 77.0,
+        "timestamp": "2026-02-05T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 1.52,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100001,
+        "channel": "@OSINTtechnical",
+        "text": "Routine maritime patrol observed in East China Sea. Nothing unusual.",
+        "timestamp": "2026-02-05T00:00:00+00:00",
+        "views": 2807
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 2.816,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100002,
+        "channel": "@IntelDoge",
+        "text": "Commercial shipping volumes normal in Taiwan Strait this week.",
+        "timestamp": "2026-02-05T00:36:00+00:00",
+        "views": 2994
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 3.122,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000003,
+        "ship_name": "CARGO THREE",
+        "latitude": 23.9759,
+        "longitude": 119.9102,
+        "speed": 10.2,
+        "course": 90.0,
+        "timestamp": "2026-02-05T00:40:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 4.332,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000002,
+        "ship_name": "EASTERN TWO",
+        "latitude": 24.4635,
+        "longitude": 120.8032,
+        "speed": 12.0,
+        "course": 106.0,
+        "timestamp": "2026-02-05T00:20:24+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 5.986,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000004,
+        "ship_name": "SILK FOUR",
+        "latitude": 24.2727,
+        "longitude": 120.8756,
+        "speed": 10.5,
+        "course": 95.0,
+        "timestamp": "2026-02-05T01:01:12+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 7.365,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230002.shtml",
+        "title": "Taiwan tourism sector reports strong mainland visitor growth",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-05T01:12:00+00:00",
+        "tone_score": 1.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 7.964,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100003,
+        "channel": "@militarymap",
+        "text": "Chinese coast guard conducting standard patrol near Fujian.",
+        "timestamp": "2026-02-05T01:12:00+00:00",
+        "views": 3094
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 8.344,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000005,
+        "ship_name": "CONTAINER FIVE",
+        "latitude": 24.1432,
+        "longitude": 121.1931,
+        "speed": 10.5,
+        "course": 103.0,
+        "timestamp": "2026-02-05T01:21:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 8.62,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100004,
+        "channel": "@ChinaOSINT",
+        "text": "Cross-strait ferry services operating on regular schedule.",
+        "timestamp": "2026-02-05T01:48:00+00:00",
+        "views": 2666
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 9.007,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000006,
+        "ship_name": "BULK SIX",
+        "latitude": 25.1753,
+        "longitude": 120.7588,
+        "speed": 11.3,
+        "course": 83.0,
+        "timestamp": "2026-02-05T01:42:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 10.283,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100005,
+        "channel": "@TaiwanWatch",
+        "text": "Weather conditions favorable for shipping in strait. All clear.",
+        "timestamp": "2026-02-05T02:24:00+00:00",
+        "views": 2436
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 10.92,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000007,
+        "ship_name": "TANKER SEVEN",
+        "latitude": 25.7634,
+        "longitude": 118.5186,
+        "speed": 12.6,
+        "course": 71.0,
+        "timestamp": "2026-02-05T02:02:24+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 12.035,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_003.html",
+        "title": "Cross-strait cultural exchange program concludes in Xiamen",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-05T02:24:00+00:00",
+        "tone_score": 0.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 12.179,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000008,
+        "ship_name": "FREIGHTER EIGHT",
+        "latitude": 25.236,
+        "longitude": 118.5543,
+        "speed": 14.6,
+        "course": 99.0,
+        "timestamp": "2026-02-05T02:22:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 12.195,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000009,
+        "ship_name": "VESSEL NINE",
+        "latitude": 25.5479,
+        "longitude": 118.7914,
+        "speed": 14.1,
+        "course": 104.0,
+        "timestamp": "2026-02-05T02:43:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 12.9,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000010,
+        "ship_name": "MERCHANT TEN",
+        "latitude": 25.6,
+        "longitude": 121.2447,
+        "speed": 13.0,
+        "course": 100.0,
+        "timestamp": "2026-02-05T03:03:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 13.035,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100006,
+        "channel": "@OSINTtechnical",
+        "text": "No significant military movements observed past 48 hours.",
+        "timestamp": "2026-02-05T03:00:00+00:00",
+        "views": 2521
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 15.423,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000011,
+        "ship_name": "PACIFIC ELEVEN",
+        "latitude": 24.3346,
+        "longitude": 120.3364,
+        "speed": 12.6,
+        "course": 77.0,
+        "timestamp": "2026-02-05T03:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 15.849,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000012,
+        "ship_name": "EASTERN TWELVE",
+        "latitude": 24.9077,
+        "longitude": 118.7815,
+        "speed": 13.4,
+        "course": 98.0,
+        "timestamp": "2026-02-05T03:44:24+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 17.119,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx004.shtml",
+        "title": "Foreign Ministry: China committed to peaceful development",
+        "domain": "cctv.com",
+        "published_at": "2026-02-05T03:36:00+00:00",
+        "tone_score": 0.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 17.414,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100007,
+        "channel": "@IntelDoge",
+        "text": "Fishing fleet activity normal for this time of year.",
+        "timestamp": "2026-02-05T03:36:00+00:00",
+        "views": 2402
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 17.772,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100008,
+        "channel": "@militarymap",
+        "text": "Commercial aviation traffic steady across strait.",
+        "timestamp": "2026-02-05T04:12:00+00:00",
+        "views": 2416
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 18.85,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000013,
+        "ship_name": "CARGO THIRTEEN",
+        "latitude": 23.9181,
+        "longitude": 120.8218,
+        "speed": 11.7,
+        "course": 73.0,
+        "timestamp": "2026-02-05T04:04:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 19.54,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000014,
+        "ship_name": "SILK FOURTEEN",
+        "latitude": 24.2846,
+        "longitude": 119.5051,
+        "speed": 14.7,
+        "course": 97.0,
+        "timestamp": "2026-02-05T04:25:12+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 20.324,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/005.htm",
+        "title": "Fujian province expands trade ties with Southeast Asia",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-05T04:48:00+00:00",
+        "tone_score": -0.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 21.466,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000015,
+        "ship_name": "CONTAINER FIFTEEN",
+        "latitude": 24.1914,
+        "longitude": 121.4064,
+        "speed": 11.2,
+        "course": 97.0,
+        "timestamp": "2026-02-05T04:45:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 22.686,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100009,
+        "channel": "@ChinaOSINT",
+        "text": "Port activity in Xiamen and Fuzhou showing typical patterns.",
+        "timestamp": "2026-02-05T04:48:00+00:00",
+        "views": 3413
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 22.696,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000016,
+        "ship_name": "BULK SIXTEEN",
+        "latitude": 24.9895,
+        "longitude": 119.7465,
+        "speed": 10.3,
+        "course": 84.0,
+        "timestamp": "2026-02-05T05:06:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 24.276,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000017,
+        "ship_name": "TANKER SEVENTEEN",
+        "latitude": 24.2399,
+        "longitude": 120.4036,
+        "speed": 14.8,
+        "course": 83.0,
+        "timestamp": "2026-02-05T05:26:24+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 24.554,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000018,
+        "ship_name": "FREIGHTER EIGHTEEN",
+        "latitude": 24.3694,
+        "longitude": 120.042,
+        "speed": 10.3,
+        "course": 78.0,
+        "timestamp": "2026-02-05T05:46:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 25.499,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100010,
+        "channel": "@TaiwanWatch",
+        "text": "Maritime safety broadcasts routine. No special notices.",
+        "timestamp": "2026-02-05T05:24:00+00:00",
+        "views": 2639
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 25.941,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000019,
+        "ship_name": "VESSEL NINETEEN",
+        "latitude": 23.6248,
+        "longitude": 120.7515,
+        "speed": 14.2,
+        "course": 92.0,
+        "timestamp": "2026-02-05T06:07:12+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 26.821,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230006.shtml",
+        "title": "Cross-strait family reunion events planned for Spring Festival",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-05T06:00:00+00:00",
+        "tone_score": 1.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 27.358,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100011,
+        "channel": "@OSINTtechnical",
+        "text": "Quiet day in Taiwan Strait. Shipping lanes clear.",
+        "timestamp": "2026-02-05T06:00:00+00:00",
+        "views": 2405
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 27.829,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100012,
+        "channel": "@IntelDoge",
+        "text": "No significant naval movements past 24 hours.",
+        "timestamp": "2026-02-05T06:36:00+00:00",
+        "views": 2083
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 28.343,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000020,
+        "ship_name": "MERCHANT TWENTY",
+        "latitude": 24.3779,
+        "longitude": 120.7906,
+        "speed": 11.8,
+        "course": 71.0,
+        "timestamp": "2026-02-05T06:27:36+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 30.415,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000022,
+        "ship_name": "EASTERN TWENTYTWO",
+        "latitude": 24.3011,
+        "longitude": 119.8601,
+        "speed": 11.2,
+        "course": 107.0,
+        "timestamp": "2026-02-05T07:08:24+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 30.554,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_007.html",
+        "title": "Taiwan scholars visit Beijing for academic symposium",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-05T07:12:00+00:00",
+        "tone_score": 0.6,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 31.214,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000021,
+        "ship_name": "PACIFIC TWENTYONE",
+        "latitude": 24.6611,
+        "longitude": 119.7451,
+        "speed": 14.5,
+        "course": 90.0,
+        "timestamp": "2026-02-05T06:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 32.886,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100013,
+        "channel": "@militarymap",
+        "text": "Standard coast guard patrol observed near Matsu.",
+        "timestamp": "2026-02-05T07:12:00+00:00",
+        "views": 2038
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 32.959,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000023,
+        "ship_name": "CARGO TWENTYTHREE",
+        "latitude": 24.8004,
+        "longitude": 118.6756,
+        "speed": 14.4,
+        "course": 95.0,
+        "timestamp": "2026-02-05T07:28:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 33.697,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100014,
+        "channel": "@ChinaOSINT",
+        "text": "Cross-strait cargo vessels on schedule. All normal.",
+        "timestamp": "2026-02-05T07:48:00+00:00",
+        "views": 3083
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 34.963,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000024,
+        "ship_name": "SILK TWENTYFOUR",
+        "latitude": 24.8318,
+        "longitude": 121.2079,
+        "speed": 13.6,
+        "course": 94.0,
+        "timestamp": "2026-02-05T07:49:12+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 35.36,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.5,
+        "location_lon": 120.0,
+        "description": "Routine coast guard patrol observed in Taiwan Strait",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 30,
+        "source_post_ids": [
+          5,
+          6
+        ],
+        "created_at": "2026-02-05T08:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 36.487,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000025,
+        "ship_name": "CONTAINER TWENTYFIVE",
+        "latitude": 25.3652,
+        "longitude": 121.1393,
+        "speed": 12.4,
+        "course": 77.0,
+        "timestamp": "2026-02-05T08:09:36+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 37.243,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx008.shtml",
+        "title": "Economic cooperation across strait benefits both sides: expert",
+        "domain": "cctv.com",
+        "published_at": "2026-02-05T08:24:00+00:00",
+        "tone_score": 0.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 37.326,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000026,
+        "ship_name": "BULK TWENTYSIX",
+        "latitude": 24.5806,
+        "longitude": 120.7047,
+        "speed": 12.6,
+        "course": 100.0,
+        "timestamp": "2026-02-05T08:30:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 37.445,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100015,
+        "channel": "@TaiwanWatch",
+        "text": "Weather forecast clear for strait transit next 72 hours.",
+        "timestamp": "2026-02-05T08:24:00+00:00",
+        "views": 4482
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 39.477,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100016,
+        "channel": "@OSINTtechnical",
+        "text": "Routine military training observed inland Fujian. Nothing new.",
+        "timestamp": "2026-02-05T09:00:00+00:00",
+        "views": 4399
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 39.579,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000027,
+        "ship_name": "TANKER TWENTYSEVEN",
+        "latitude": 24.5262,
+        "longitude": 118.4211,
+        "speed": 13.2,
+        "course": 92.0,
+        "timestamp": "2026-02-05T08:50:24+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 40.027,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000029,
+        "ship_name": "VESSEL TWENTYNINE",
+        "latitude": 24.7748,
+        "longitude": 121.0736,
+        "speed": 10.8,
+        "course": 73.0,
+        "timestamp": "2026-02-05T09:31:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 40.818,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000028,
+        "ship_name": "FREIGHTER TWENTYEIGHT",
+        "latitude": 23.7477,
+        "longitude": 120.2168,
+        "speed": 11.0,
+        "course": 81.0,
+        "timestamp": "2026-02-05T09:10:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 41.156,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100017,
+        "channel": "@IntelDoge",
+        "text": "Commercial aviation traffic steady. No diversions.",
+        "timestamp": "2026-02-05T09:36:00+00:00",
+        "views": 4466
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 41.391,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/009.htm",
+        "title": "Chinese coast guard conducts routine patrol in East China Sea",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-05T09:36:00+00:00",
+        "tone_score": -1.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 42.667,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000031,
+        "ship_name": "PACIFIC THIRTYONE",
+        "latitude": 23.4236,
+        "longitude": 119.4516,
+        "speed": 10.2,
+        "course": 104.0,
+        "timestamp": "2026-02-05T10:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 42.923,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000030,
+        "ship_name": "MERCHANT THIRTY",
+        "latitude": 25.6353,
+        "longitude": 119.9677,
+        "speed": 14.0,
+        "course": 103.0,
+        "timestamp": "2026-02-05T09:51:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 44.509,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100018,
+        "channel": "@militarymap",
+        "text": "Port calls by PLAN vessels following typical pattern.",
+        "timestamp": "2026-02-05T10:12:00+00:00",
+        "views": 3802
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 45.372,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230010.shtml",
+        "title": "Taiwan agricultural products popular in mainland markets",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-05T10:48:00+00:00",
+        "tone_score": 1.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 46.159,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000032,
+        "ship_name": "EASTERN THIRTYTWO",
+        "latitude": 24.2413,
+        "longitude": 118.9412,
+        "speed": 12.1,
+        "course": 79.0,
+        "timestamp": "2026-02-05T10:32:24+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 47.172,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000033,
+        "ship_name": "CARGO THIRTYTHREE",
+        "latitude": 25.361,
+        "longitude": 118.7331,
+        "speed": 13.0,
+        "course": 104.0,
+        "timestamp": "2026-02-05T10:52:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 47.72,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100019,
+        "channel": "@ChinaOSINT",
+        "text": "Fishing fleets active throughout strait. Business as usual.",
+        "timestamp": "2026-02-05T10:48:00+00:00",
+        "views": 3820
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 48.351,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000034,
+        "ship_name": "SILK THIRTYFOUR",
+        "latitude": 25.1661,
+        "longitude": 118.5256,
+        "speed": 12.1,
+        "course": 81.0,
+        "timestamp": "2026-02-05T11:13:12+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 49.303,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100020,
+        "channel": "@TaiwanWatch",
+        "text": "Standard surveillance flights by both sides. Nothing abnormal.",
+        "timestamp": "2026-02-05T11:24:00+00:00",
+        "views": 3696
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 50.288,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000035,
+        "ship_name": "CONTAINER THIRTYFIVE",
+        "latitude": 25.606,
+        "longitude": 121.1281,
+        "speed": 14.5,
+        "course": 102.0,
+        "timestamp": "2026-02-05T11:33:36+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 51.455,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000036,
+        "ship_name": "BULK THIRTYSIX",
+        "latitude": 25.1549,
+        "longitude": 120.1954,
+        "speed": 10.1,
+        "course": 82.0,
+        "timestamp": "2026-02-05T11:54:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 51.491,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_011.html",
+        "title": "Cross-strait aviation routes see increased capacity",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-05T12:00:00+00:00",
+        "tone_score": 0.4,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 52.28,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000037,
+        "ship_name": "TANKER THIRTYSEVEN",
+        "latitude": 24.5802,
+        "longitude": 119.6517,
+        "speed": 13.1,
+        "course": 71.0,
+        "timestamp": "2026-02-05T12:14:24+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 52.486,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100021,
+        "channel": "@OSINTtechnical",
+        "text": "Maritime boundary patrols routine for this season.",
+        "timestamp": "2026-02-05T12:00:00+00:00",
+        "views": 3596
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 52.651,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000038,
+        "ship_name": "FREIGHTER THIRTYEIGHT",
+        "latitude": 25.4827,
+        "longitude": 119.8699,
+        "speed": 13.3,
+        "course": 82.0,
+        "timestamp": "2026-02-05T12:34:48+00:00"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 52.942,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Routine cross-strait coverage with peaceful development themes",
+        "confidence": 35,
+        "source_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "coordination_score": 12,
+        "outlet_count": 2,
+        "synchronized_phrases": [
+          "peaceful development",
+          "cross-strait cooperation"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "cooperation"
+        ],
+        "article_ids": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "created_at": "2026-02-05T12:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 53.237,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100022,
+        "channel": "@IntelDoge",
+        "text": "No unusual submarine activity detected this week.",
+        "timestamp": "2026-02-05T12:36:00+00:00",
+        "views": 3506
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 54.582,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000039,
+        "ship_name": "VESSEL THIRTYNINE",
+        "latitude": 24.3503,
+        "longitude": 118.6498,
+        "speed": 10.0,
+        "course": 87.0,
+        "timestamp": "2026-02-05T12:55:12+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 55.415,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100023,
+        "channel": "@militarymap",
+        "text": "Cargo throughput at strait ports normal for February.",
+        "timestamp": "2026-02-05T13:12:00+00:00",
+        "views": 1621
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 56.65,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx012.shtml",
+        "title": "One China principle is foundation of peace: spokesperson",
+        "domain": "cctv.com",
+        "published_at": "2026-02-05T13:12:00+00:00",
+        "tone_score": -0.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 57.12,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000040,
+        "ship_name": "MERCHANT FORTY",
+        "latitude": 23.9169,
+        "longitude": 118.5989,
+        "speed": 11.3,
+        "course": 89.0,
+        "timestamp": "2026-02-05T13:15:36+00:00"
+      }
+    },
+    {
+      "_table": "alerts",
+      "_demo_offset_seconds": 58.929,
+      "_demo_action": "insert",
+      "data": {
+        "region": "Taiwan Strait",
+        "threat_level": "GREEN",
+        "threat_score": 12,
+        "confidence": 30,
+        "severity": "low",
+        "title": "Baseline Activity",
+        "description": "Normal cross-strait patterns observed",
+        "event_ids": [],
+        "sub_scores": {
+          "outlet_score": 15,
+          "phrase_score": 10,
+          "volume_score": 8,
+          "geo_score": 15
+        },
+        "correlation_metadata": {
+          "narrative_event_ids": [
+            1
+          ],
+          "movement_event_ids": [
+            1,
+            2
+          ],
+          "evidence_summary": "Routine coverage and standard naval patrols",
+          "detection_history": [
+            {
+              "detected_at": "2026-02-05T14:00:00+00:00",
+              "score": 12,
+              "level": "GREEN"
+            }
+          ]
+        },
+        "updated_at": "2026-02-05T14:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 59.033,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100024,
+        "channel": "@ChinaOSINT",
+        "text": "Coast guard exercises announced. Routine annual training.",
+        "timestamp": "2026-02-05T13:48:00+00:00",
+        "views": 4270
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 59.04,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000041,
+        "ship_name": "PACIFIC 41",
+        "latitude": 23.7369,
+        "longitude": 120.7479,
+        "speed": 13.4,
+        "course": 89.0,
+        "timestamp": "2026-02-05T13:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 59.251,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000042,
+        "ship_name": "EASTERN 42",
+        "latitude": 24.9663,
+        "longitude": 119.2998,
+        "speed": 11.3,
+        "course": 76.0,
+        "timestamp": "2026-02-05T13:56:24+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 59.999,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.8,
+        "location_lon": 119.5,
+        "description": "Standard naval patrol near Fujian coast",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 28,
+        "source_post_ids": [
+          12,
+          13
+        ],
+        "created_at": "2026-02-05T14:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 62.242,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000043,
+        "ship_name": "CARGO 43",
+        "latitude": 25.4068,
+        "longitude": 120.7889,
+        "speed": 14.9,
+        "course": 97.0,
+        "timestamp": "2026-02-05T14:16:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 62.395,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100025,
+        "channel": "@TaiwanWatch",
+        "text": "Ferry cancellations due to weather only. No security issues.",
+        "timestamp": "2026-02-05T14:24:00+00:00",
+        "views": 3751
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 62.853,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/013.htm",
+        "title": "China welcomes continued economic exchanges with Taiwan",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-05T14:24:00+00:00",
+        "tone_score": 0.7,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 63.224,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100026,
+        "channel": "@OSINTtechnical",
+        "text": "Naval port visits following published schedule.",
+        "timestamp": "2026-02-05T15:00:00+00:00",
+        "views": 3249
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 63.304,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000044,
+        "ship_name": "SILK 44",
+        "latitude": 24.6761,
+        "longitude": 121.0031,
+        "speed": 11.2,
+        "course": 105.0,
+        "timestamp": "2026-02-05T14:37:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 63.413,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000045,
+        "ship_name": "CONTAINER 45",
+        "latitude": 25.0364,
+        "longitude": 119.5239,
+        "speed": 14.7,
+        "course": 98.0,
+        "timestamp": "2026-02-05T14:57:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 65.563,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100027,
+        "channel": "@IntelDoge",
+        "text": "Air defense radar activity normal baseline levels.",
+        "timestamp": "2026-02-05T15:36:00+00:00",
+        "views": 2075
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 65.958,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000046,
+        "ship_name": "BULK 46",
+        "latitude": 25.4127,
+        "longitude": 120.7999,
+        "speed": 13.4,
+        "course": 85.0,
+        "timestamp": "2026-02-05T15:18:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 66.646,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000047,
+        "ship_name": "TANKER 47",
+        "latitude": 25.1185,
+        "longitude": 120.7841,
+        "speed": 14.3,
+        "course": 89.0,
+        "timestamp": "2026-02-05T15:38:24+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 67.255,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230014.shtml",
+        "title": "Cross-strait youth exchange program launches new initiatives",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-05T15:36:00+00:00",
+        "tone_score": 1.0,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 67.337,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000048,
+        "ship_name": "FREIGHTER 48",
+        "latitude": 24.5044,
+        "longitude": 120.0857,
+        "speed": 11.4,
+        "course": 77.0,
+        "timestamp": "2026-02-05T15:58:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 69.782,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000050,
+        "ship_name": "MERCHANT 50",
+        "latitude": 24.2689,
+        "longitude": 119.9284,
+        "speed": 13.4,
+        "course": 79.0,
+        "timestamp": "2026-02-05T16:39:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 70.024,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100028,
+        "channel": "@militarymap",
+        "text": "No military aircraft crossing median line past week.",
+        "timestamp": "2026-02-05T16:12:00+00:00",
+        "views": 2189
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 70.97,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000049,
+        "ship_name": "VESSEL 49",
+        "latitude": 25.7313,
+        "longitude": 121.2438,
+        "speed": 12.0,
+        "course": 105.0,
+        "timestamp": "2026-02-05T16:19:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 71.303,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000051,
+        "ship_name": "PACIFIC 51",
+        "latitude": 24.2802,
+        "longitude": 120.1034,
+        "speed": 11.0,
+        "course": 75.0,
+        "timestamp": "2026-02-05T17:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 72.435,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_015.html",
+        "title": "Taiwan business leaders meet mainland counterparts in Shanghai",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-05T16:48:00+00:00",
+        "tone_score": 0.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 72.474,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100029,
+        "channel": "@ChinaOSINT",
+        "text": "Shipping insurance rates unchanged. Market calm.",
+        "timestamp": "2026-02-05T16:48:00+00:00",
+        "views": 1720
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 73.996,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000053,
+        "ship_name": "CARGO 53",
+        "latitude": 25.4207,
+        "longitude": 119.7483,
+        "speed": 13.3,
+        "course": 76.0,
+        "timestamp": "2026-02-05T17:40:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 74.983,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000052,
+        "ship_name": "EASTERN 52",
+        "latitude": 25.676,
+        "longitude": 118.9476,
+        "speed": 11.3,
+        "course": 90.0,
+        "timestamp": "2026-02-05T17:20:24+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 75.026,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100030,
+        "channel": "@TaiwanWatch",
+        "text": "Port agents report normal booking patterns.",
+        "timestamp": "2026-02-05T17:24:00+00:00",
+        "views": 3978
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 75.697,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100031,
+        "channel": "@OSINTtechnical",
+        "text": "No unusual requests for bunker fuel supplies.",
+        "timestamp": "2026-02-05T18:00:00+00:00",
+        "views": 4036
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 75.967,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000054,
+        "ship_name": "SILK 54",
+        "latitude": 25.5003,
+        "longitude": 120.7459,
+        "speed": 10.2,
+        "course": 97.0,
+        "timestamp": "2026-02-05T18:01:12+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 76.163,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx016.shtml",
+        "title": "Peaceful dialogue only way forward for cross-strait relations",
+        "domain": "cctv.com",
+        "published_at": "2026-02-05T18:00:00+00:00",
+        "tone_score": 0.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 76.974,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Increased sovereignty messaging across multiple state outlets",
+        "confidence": 55,
+        "source_ids": [
+          21,
+          22,
+          23
+        ],
+        "coordination_score": 35,
+        "outlet_count": 2,
+        "synchronized_phrases": [
+          "sovereignty non-negotiable",
+          "territorial integrity"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "sovereignty"
+        ],
+        "article_ids": [
+          21,
+          22,
+          23
+        ],
+        "created_at": "2026-02-05T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 77.44,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000055,
+        "ship_name": "CONTAINER 55",
+        "latitude": 24.8138,
+        "longitude": 120.8778,
+        "speed": 13.7,
+        "course": 99.0,
+        "timestamp": "2026-02-05T18:21:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 80.115,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100032,
+        "channel": "@IntelDoge",
+        "text": "Harbor pilots working regular schedules. No surge.",
+        "timestamp": "2026-02-05T18:36:00+00:00",
+        "views": 4257
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 80.353,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100033,
+        "channel": "@militarymap",
+        "text": "Tugboat availability normal. No sudden demand.",
+        "timestamp": "2026-02-05T19:12:00+00:00",
+        "views": 3274
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 80.407,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000056,
+        "ship_name": "BULK 56",
+        "latitude": 23.4095,
+        "longitude": 118.7796,
+        "speed": 13.8,
+        "course": 91.0,
+        "timestamp": "2026-02-05T18:42:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 81.039,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000057,
+        "ship_name": "TANKER 57",
+        "latitude": 25.0623,
+        "longitude": 119.9046,
+        "speed": 10.6,
+        "course": 78.0,
+        "timestamp": "2026-02-05T19:02:24+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 82.314,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/017.htm",
+        "title": "Fujian improves ferry services to Taiwanese-administered islands",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-05T19:12:00+00:00",
+        "tone_score": 0.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 82.376,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000059,
+        "ship_name": "VESSEL 59",
+        "latitude": 25.5393,
+        "longitude": 119.4788,
+        "speed": 14.7,
+        "course": 94.0,
+        "timestamp": "2026-02-05T19:43:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 83.397,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000058,
+        "ship_name": "FREIGHTER 58",
+        "latitude": 24.2587,
+        "longitude": 120.8738,
+        "speed": 11.8,
+        "course": 98.0,
+        "timestamp": "2026-02-05T19:22:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 84.164,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000060,
+        "ship_name": "MERCHANT 60",
+        "latitude": 23.4206,
+        "longitude": 121.3103,
+        "speed": 13.5,
+        "course": 71.0,
+        "timestamp": "2026-02-05T20:03:36+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 85.111,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100034,
+        "channel": "@ChinaOSINT",
+        "text": "Maritime traffic separation schemes functioning normally.",
+        "timestamp": "2026-02-05T19:48:00+00:00",
+        "views": 4425
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 85.264,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000061,
+        "ship_name": "PACIFIC 61",
+        "latitude": 23.784,
+        "longitude": 119.4801,
+        "speed": 14.2,
+        "course": 104.0,
+        "timestamp": "2026-02-05T20:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 86.037,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100035,
+        "channel": "@TaiwanWatch",
+        "text": "VTS reports no unusual vessel behaviors.",
+        "timestamp": "2026-02-05T20:24:00+00:00",
+        "views": 1770
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 86.315,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": 412100005,
+        "location_lat": 24.2,
+        "location_lon": 119.8,
+        "description": "Multiple naval vessels departing Ningbo port",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 55,
+        "source_post_ids": [
+          42,
+          43
+        ],
+        "created_at": "2026-02-05T20:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 86.605,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230018.shtml",
+        "title": "Cross-strait trade volume reaches new high in January",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-05T20:24:00+00:00",
+        "tone_score": 1.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 88.806,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000063,
+        "ship_name": "CARGO 63",
+        "latitude": 24.5699,
+        "longitude": 121.0781,
+        "speed": 11.5,
+        "course": 84.0,
+        "timestamp": "2026-02-05T21:04:48+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 89.086,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000062,
+        "ship_name": "EASTERN 62",
+        "latitude": 24.3965,
+        "longitude": 120.5612,
+        "speed": 11.0,
+        "course": 110.0,
+        "timestamp": "2026-02-05T20:44:24+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 89.146,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100036,
+        "channel": "@OSINTtechnical",
+        "text": "AIS transponder compliance rates typical.",
+        "timestamp": "2026-02-05T21:00:00+00:00",
+        "views": 2217
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 90.085,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000064,
+        "ship_name": "SILK 64",
+        "latitude": 24.4879,
+        "longitude": 119.1865,
+        "speed": 11.9,
+        "course": 105.0,
+        "timestamp": "2026-02-05T21:25:12+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 90.51,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_019.html",
+        "title": "Taiwan students studying in mainland exceed 10,000",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-05T21:36:00+00:00",
+        "tone_score": 0.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 91.295,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100037,
+        "channel": "@IntelDoge",
+        "text": "Weather routing services reporting standard traffic flows.",
+        "timestamp": "2026-02-05T21:36:00+00:00",
+        "views": 2967
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 93.079,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100038,
+        "channel": "@militarymap",
+        "text": "No unusual port security measures observed.",
+        "timestamp": "2026-02-05T22:12:00+00:00",
+        "views": 3082
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 93.348,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000065,
+        "ship_name": "CONTAINER 65",
+        "latitude": 23.6148,
+        "longitude": 121.1938,
+        "speed": 13.9,
+        "course": 90.0,
+        "timestamp": "2026-02-05T21:45:36+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 93.496,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000066,
+        "ship_name": "BULK 66",
+        "latitude": 24.053,
+        "longitude": 119.3419,
+        "speed": 10.3,
+        "course": 109.0,
+        "timestamp": "2026-02-05T22:06:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 95.799,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx020.shtml",
+        "title": "China reiterates commitment to peaceful reunification",
+        "domain": "cctv.com",
+        "published_at": "2026-02-05T22:48:00+00:00",
+        "tone_score": 0.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 96.099,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000067,
+        "ship_name": "TANKER 67",
+        "latitude": 23.4446,
+        "longitude": 120.5906,
+        "speed": 14.5,
+        "course": 71.0,
+        "timestamp": "2026-02-05T22:26:24+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 96.621,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000069,
+        "ship_name": "VESSEL 69",
+        "latitude": 24.0974,
+        "longitude": 118.6476,
+        "speed": 14.4,
+        "course": 108.0,
+        "timestamp": "2026-02-05T23:07:12+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 97.162,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000068,
+        "ship_name": "FREIGHTER 68",
+        "latitude": 23.673,
+        "longitude": 120.9626,
+        "speed": 10.2,
+        "course": 78.0,
+        "timestamp": "2026-02-05T22:46:48+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 97.961,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100039,
+        "channel": "@ChinaOSINT",
+        "text": "Crew change operations proceeding normally.",
+        "timestamp": "2026-02-05T22:48:00+00:00",
+        "views": 2128
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 98.149,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100040,
+        "channel": "@TaiwanWatch",
+        "text": "Customs clearance times within normal range.",
+        "timestamp": "2026-02-05T23:24:00+00:00",
+        "views": 3319
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 100.126,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000070,
+        "ship_name": "MERCHANT 70",
+        "latitude": 24.5804,
+        "longitude": 120.2996,
+        "speed": 12.1,
+        "course": 107.0,
+        "timestamp": "2026-02-05T23:27:36+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 100.187,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100001,
+        "ship_name": "PLAN DESTROYER 001",
+        "latitude": 24.069,
+        "longitude": 119.2724,
+        "speed": 23.5,
+        "course": 96.0,
+        "timestamp": "2026-02-06T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 100.271,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.6,
+        "location_lon": 119.3,
+        "description": "Military convoy activity increased near Xiamen",
+        "category": "convoy",
+        "location_name": "Taiwan Strait",
+        "confidence": 52,
+        "source_post_ids": [
+          48,
+          49,
+          50
+        ],
+        "created_at": "2026-02-06T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 100.314,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100041,
+        "channel": "@OSINTtechnical",
+        "text": "Multiple reports of increased military convoy activity near Xiamen. Unconfirmed.",
+        "timestamp": "2026-02-06T00:00:00+00:00",
+        "views": 12973
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 101.51,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000071,
+        "ship_name": "PACIFIC 71",
+        "latitude": 25.1265,
+        "longitude": 118.8984,
+        "speed": 11.0,
+        "course": 60,
+        "timestamp": "2026-02-06T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 102.814,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/100.htm",
+        "title": "Taiwan reunification is historical inevitability: white paper",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-06T00:00:00+00:00",
+        "tone_score": -4.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 104.344,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000072,
+        "ship_name": "EASTERN 72",
+        "latitude": 25.4169,
+        "longitude": 119.3859,
+        "speed": 11.5,
+        "course": 70,
+        "timestamp": "2026-02-06T00:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 105.092,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100042,
+        "channel": "@IntelDoge",
+        "text": "Naval vessels departing Ningbo port. At least 4 destroyers observed.",
+        "timestamp": "2026-02-06T00:36:00+00:00",
+        "views": 8213
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 105.247,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230101.shtml",
+        "title": "Separatist forces will not succeed in dividing China: expert",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-06T01:12:00+00:00",
+        "tone_score": -5.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 105.782,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000073,
+        "ship_name": "CARGO 73",
+        "latitude": 24.3631,
+        "longitude": 120.7803,
+        "speed": 12.4,
+        "course": 120,
+        "timestamp": "2026-02-06T01:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 106.167,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100043,
+        "channel": "@militarymap",
+        "text": "Fujian MR units conducting exercises. Official announcement pending.",
+        "timestamp": "2026-02-06T01:12:00+00:00",
+        "views": 11391
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 106.3,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100002,
+        "ship_name": "PLAN CORVETTE 002",
+        "latitude": 24.2314,
+        "longitude": 119.9529,
+        "speed": 22.5,
+        "course": 94.0,
+        "timestamp": "2026-02-06T00:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 107.821,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100044,
+        "channel": "@ChinaOSINT",
+        "text": "Commercial flights avoiding certain airspace east of Fuzhou. Investigating.",
+        "timestamp": "2026-02-06T01:48:00+00:00",
+        "views": 13253
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 108.994,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100003,
+        "ship_name": "PLAN DESTROYER 003",
+        "latitude": 25.3523,
+        "longitude": 119.0245,
+        "speed": 21.8,
+        "course": 98.0,
+        "timestamp": "2026-02-06T01:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 109.187,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000074,
+        "ship_name": "SILK 74",
+        "latitude": 24.1892,
+        "longitude": 121.7428,
+        "speed": 13.2,
+        "course": 120,
+        "timestamp": "2026-02-06T01:48:00+00:00"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 110.161,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Reunification messaging with coordinated phrasing",
+        "confidence": 60,
+        "source_ids": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "coordination_score": 42,
+        "outlet_count": 3,
+        "synchronized_phrases": [
+          "reunification inevitable",
+          "historical responsibility"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "sovereignty",
+          "reunification"
+        ],
+        "article_ids": [
+          24,
+          25,
+          26,
+          27
+        ],
+        "created_at": "2026-02-06T02:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 110.588,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000075,
+        "ship_name": "CONTAINER 75",
+        "latitude": 25.3216,
+        "longitude": 118.6159,
+        "speed": 13.5,
+        "course": 130,
+        "timestamp": "2026-02-06T02:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 111.608,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100045,
+        "channel": "@TaiwanWatch",
+        "text": "Local sources report military transport aircraft activity increased.",
+        "timestamp": "2026-02-06T02:24:00+00:00",
+        "views": 12699
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 111.717,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_102.html",
+        "title": "National sovereignty and territorial integrity non-negotiable",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-06T02:24:00+00:00",
+        "tone_score": -4.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 111.755,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100004,
+        "ship_name": "PLAN CORVETTE 004",
+        "latitude": 25.4741,
+        "longitude": 119.6176,
+        "speed": 18.5,
+        "course": 86.0,
+        "timestamp": "2026-02-06T02:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 113.195,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000076,
+        "ship_name": "BULK 76",
+        "latitude": 24.4661,
+        "longitude": 118.2701,
+        "speed": 12.1,
+        "course": 130,
+        "timestamp": "2026-02-06T03:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 113.243,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100046,
+        "channel": "@OSINTtechnical",
+        "text": "Satellite imagery shows naval concentration near Zhoushan. Developing.",
+        "timestamp": "2026-02-06T03:00:00+00:00",
+        "views": 13391
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 114.358,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100005,
+        "ship_name": "PLAN FRIGATE 005",
+        "latitude": 24.6563,
+        "longitude": 119.0821,
+        "speed": 20.4,
+        "course": 99.0,
+        "timestamp": "2026-02-06T03:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 115.196,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100047,
+        "channel": "@IntelDoge",
+        "text": "NOTAM issued for restricted airspace. Coordinates suggest Taiwan Strait focus.",
+        "timestamp": "2026-02-06T03:36:00+00:00",
+        "views": 19524
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 115.734,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000077,
+        "ship_name": "TANKER 77",
+        "latitude": 24.2671,
+        "longitude": 118.5109,
+        "speed": 13.9,
+        "course": 120,
+        "timestamp": "2026-02-06T03:36:00+00:00"
+      }
+    },
+    {
+      "_table": "alerts",
+      "_demo_offset_seconds": 117.393,
+      "_demo_action": "update",
+      "data": {
+        "region": "Taiwan Strait",
+        "threat_level": "GREEN",
+        "threat_score": 28,
+        "confidence": 52,
+        "severity": "low",
+        "title": "Increased Rhetoric",
+        "description": "Sovereignty messaging elevated across state outlets",
+        "event_ids": [],
+        "sub_scores": {
+          "outlet_score": 32,
+          "phrase_score": 28,
+          "volume_score": 22,
+          "geo_score": 30
+        },
+        "correlation_metadata": {
+          "narrative_event_ids": [
+            1,
+            2,
+            3
+          ],
+          "movement_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "evidence_summary": "Coordinated sovereignty messaging with increased naval activity",
+          "detection_history": [
+            {
+              "detected_at": "2026-02-05T14:00:00+00:00",
+              "score": 12,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T04:00:00+00:00",
+              "score": 28,
+              "level": "GREEN"
+            }
+          ]
+        },
+        "updated_at": "2026-02-06T04:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 117.964,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100006,
+        "ship_name": "PLAN DESTROYER 006",
+        "latitude": 23.526,
+        "longitude": 119.0557,
+        "speed": 20.8,
+        "course": 86.0,
+        "timestamp": "2026-02-06T04:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 117.994,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx103.shtml",
+        "title": "One China principle wins overwhelming international support",
+        "domain": "cctv.com",
+        "published_at": "2026-02-06T03:36:00+00:00",
+        "tone_score": -3.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 119.18,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": 412100008,
+        "location_lat": 25.1,
+        "location_lon": 120.2,
+        "description": "Type 052D destroyers concentrated south of Wenzhou",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 58,
+        "source_post_ids": [
+          52,
+          53
+        ],
+        "created_at": "2026-02-06T04:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 120.131,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000078,
+        "ship_name": "FREIGHTER 78",
+        "latitude": 24.096,
+        "longitude": 119.7531,
+        "speed": 11.9,
+        "course": 130,
+        "timestamp": "2026-02-06T04:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 120.19,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100048,
+        "channel": "@militarymap",
+        "text": "PLA Eastern Theater Command raising readiness levels per OSINT indicators.",
+        "timestamp": "2026-02-06T04:12:00+00:00",
+        "views": 13319
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 120.282,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000079,
+        "ship_name": "VESSEL 79",
+        "latitude": 25.5977,
+        "longitude": 119.9175,
+        "speed": 14.0,
+        "course": 130,
+        "timestamp": "2026-02-06T04:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 120.294,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100007,
+        "ship_name": "PLAN CORVETTE 007",
+        "latitude": 25.3528,
+        "longitude": 119.8162,
+        "speed": 19.1,
+        "course": 94.0,
+        "timestamp": "2026-02-06T04:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 120.796,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100049,
+        "channel": "@ChinaOSINT",
+        "text": "Multiple Type 052D destroyers now south of Wenzhou. Pattern abnormal.",
+        "timestamp": "2026-02-06T04:48:00+00:00",
+        "views": 10714
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 120.995,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/104.htm",
+        "title": "Reunification serves fundamental interests of Chinese nation",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-06T04:48:00+00:00",
+        "tone_score": -4.6,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "briefs",
+      "_demo_offset_seconds": 121.133,
+      "_demo_action": "insert",
+      "data": {
+        "title": "Taiwan Strait Escalation - Initial Assessment",
+        "threat_level": "GREEN",
+        "confidence": 52,
+        "summary": "State media outlets showing coordinated increase in sovereignty-focused messaging around Taiwan. Naval activity remains within normal parameters but messaging coordination suggests deliberate campaign.",
+        "evidence_chain": [
+          "Xinhua, Global Times, and People's Daily published synchronized sovereignty articles within 6-hour window",
+          "Key phrases 'sovereignty non-negotiable' and 'territorial integrity' appearing across outlets",
+          "Naval vessels departing Ningbo port per OSINT reporting",
+          "Military convoy activity near Xiamen slightly elevated"
+        ],
+        "timeline": "Narrative shift detected at T+18h. Naval movements observed T+20h to T+28h.",
+        "information_gaps": [
+          "Intent behind messaging campaign unclear",
+          "Scale of naval deployment not yet confirmed",
+          "No official PLA announcements regarding exercises"
+        ],
+        "collection_priorities": [
+          "Monitor for military press releases",
+          "Track naval vessel movements via AIS",
+          "Assess messaging volume over next 24 hours"
+        ],
+        "key_developments": [
+          "Sovereignty messaging coordinated across state outlets",
+          "Naval departures from eastern ports",
+          "No official military announcements yet"
+        ],
+        "narrative_event_ids": [
+          1,
+          2,
+          3
+        ],
+        "movement_event_ids": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "generated_at": "2026-02-06T05:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 122.762,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100050,
+        "channel": "@TaiwanWatch",
+        "text": "Fishing boats ordered to return to port in some Fujian areas. Unverified.",
+        "timestamp": "2026-02-06T05:24:00+00:00",
+        "views": 14337
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 123.791,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000080,
+        "ship_name": "MERCHANT 80",
+        "latitude": 25.5995,
+        "longitude": 119.8205,
+        "speed": 11.3,
+        "course": 130,
+        "timestamp": "2026-02-06T05:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 124.644,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100008,
+        "ship_name": "PLAN FRIGATE 008",
+        "latitude": 25.1064,
+        "longitude": 118.9563,
+        "speed": 22.5,
+        "course": 99.0,
+        "timestamp": "2026-02-06T05:36:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 125.159,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230105.shtml",
+        "title": "Taiwan question is purely China's internal affair: spokesperson",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-06T06:00:00+00:00",
+        "tone_score": -5.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 126.551,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100051,
+        "channel": "@OSINTtechnical",
+        "text": "Amphibious ships loading at Zhanjiang. Unusual activity level.",
+        "timestamp": "2026-02-06T06:00:00+00:00",
+        "views": 12005
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 127.652,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000081,
+        "ship_name": "PACIFIC 81",
+        "latitude": 25.5219,
+        "longitude": 119.836,
+        "speed": 12.9,
+        "course": 60,
+        "timestamp": "2026-02-06T06:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 128.953,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100009,
+        "ship_name": "PLAN CORVETTE 009",
+        "latitude": 25.289,
+        "longitude": 119.674,
+        "speed": 18.6,
+        "course": 91.0,
+        "timestamp": "2026-02-06T06:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 129.196,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000082,
+        "ship_name": "EASTERN 82",
+        "latitude": 24.723,
+        "longitude": 119.4251,
+        "speed": 12.6,
+        "course": 130,
+        "timestamp": "2026-02-06T06:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 130.401,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100052,
+        "channel": "@IntelDoge",
+        "text": "Military traffic on G15 expressway significantly increased.",
+        "timestamp": "2026-02-06T06:36:00+00:00",
+        "views": 12707
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 131.499,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000083,
+        "ship_name": "CARGO 83",
+        "latitude": 25.0888,
+        "longitude": 120.5607,
+        "speed": 11.4,
+        "course": 70,
+        "timestamp": "2026-02-06T07:12:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 132.238,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_106.html",
+        "title": "Foreign interference will not obstruct reunification process",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-06T07:12:00+00:00",
+        "tone_score": -5.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 132.543,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100010,
+        "ship_name": "PLAN CORVETTE 010",
+        "latitude": 24.8304,
+        "longitude": 119.8586,
+        "speed": 19.7,
+        "course": 86.0,
+        "timestamp": "2026-02-06T07:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 132.964,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100053,
+        "channel": "@militarymap",
+        "text": "Xiamen port showing signs of military logistics surge.",
+        "timestamp": "2026-02-06T07:12:00+00:00",
+        "views": 11411
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 133.208,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100054,
+        "channel": "@ChinaOSINT",
+        "text": "Transport aircraft making multiple trips coastal-inland. Rotation?",
+        "timestamp": "2026-02-06T07:48:00+00:00",
+        "views": 10675
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 133.821,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000084,
+        "ship_name": "SILK 84",
+        "latitude": 25.253,
+        "longitude": 120.259,
+        "speed": 12.6,
+        "course": 70,
+        "timestamp": "2026-02-06T07:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 134.729,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100011,
+        "ship_name": "PLAN FRIGATE 011",
+        "latitude": 23.8879,
+        "longitude": 118.9553,
+        "speed": 20.4,
+        "course": 80.0,
+        "timestamp": "2026-02-06T08:00:00+00:00"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 135.399,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Strong coordination spike with separatist forces warnings",
+        "confidence": 70,
+        "source_ids": [
+          28,
+          29,
+          30,
+          31
+        ],
+        "coordination_score": 62,
+        "outlet_count": 3,
+        "synchronized_phrases": [
+          "separatist forces",
+          "national unity",
+          "resolve unshakeable"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "sovereignty",
+          "reunification",
+          "anti-separatism"
+        ],
+        "article_ids": [
+          28,
+          29,
+          30,
+          31
+        ],
+        "created_at": "2026-02-06T08:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 135.426,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000085,
+        "ship_name": "CONTAINER 85",
+        "latitude": 23.6495,
+        "longitude": 121.2412,
+        "speed": 11.6,
+        "course": 70,
+        "timestamp": "2026-02-06T08:24:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 135.944,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx107.shtml",
+        "title": "Historical facts prove Taiwan is inalienable part of China",
+        "domain": "cctv.com",
+        "published_at": "2026-02-06T08:24:00+00:00",
+        "tone_score": -4.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 137.63,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000086,
+        "ship_name": "BULK 86",
+        "latitude": 25.6009,
+        "longitude": 121.2843,
+        "speed": 12.6,
+        "course": 60,
+        "timestamp": "2026-02-06T09:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 137.738,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100012,
+        "ship_name": "PLAN DESTROYER 012",
+        "latitude": 23.9363,
+        "longitude": 119.7507,
+        "speed": 23.5,
+        "course": 88.0,
+        "timestamp": "2026-02-06T08:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 137.803,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100056,
+        "channel": "@OSINTtechnical",
+        "text": "Submarine tender departing Yulin. At least 2 SSNs likely at sea.",
+        "timestamp": "2026-02-06T09:00:00+00:00",
+        "views": 13591
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 137.956,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100055,
+        "channel": "@TaiwanWatch",
+        "text": "Naval aviation base at Lingshui showing increased sorties.",
+        "timestamp": "2026-02-06T08:24:00+00:00",
+        "views": 13087
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 141.424,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100057,
+        "channel": "@IntelDoge",
+        "text": "Military communications traffic up 40% on monitored frequencies.",
+        "timestamp": "2026-02-06T09:36:00+00:00",
+        "views": 18833
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 141.978,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/108.htm",
+        "title": "Chinese people's resolve to achieve reunification unshakeable",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-06T09:36:00+00:00",
+        "tone_score": -5.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 142.085,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100013,
+        "ship_name": "PLAN DESTROYER 013",
+        "latitude": 23.8296,
+        "longitude": 118.6062,
+        "speed": 21.6,
+        "course": 94.0,
+        "timestamp": "2026-02-06T09:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 142.476,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000087,
+        "ship_name": "TANKER 87",
+        "latitude": 23.9626,
+        "longitude": 121.4118,
+        "speed": 13.6,
+        "course": 60,
+        "timestamp": "2026-02-06T09:36:00+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 142.607,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.3,
+        "location_lon": 119.6,
+        "description": "Amphibious ships loading at Zhanjiang, unusual activity level",
+        "category": "convoy",
+        "location_name": "Taiwan Strait",
+        "confidence": 68,
+        "source_post_ids": [
+          60,
+          61,
+          62
+        ],
+        "created_at": "2026-02-06T10:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 144.205,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100058,
+        "channel": "@militarymap",
+        "text": "Fuel depot deliveries to military facilities accelerated.",
+        "timestamp": "2026-02-06T10:12:00+00:00",
+        "views": 13272
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 144.597,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000088,
+        "ship_name": "FREIGHTER 88",
+        "latitude": 23.9517,
+        "longitude": 119.1574,
+        "speed": 11.4,
+        "course": 120,
+        "timestamp": "2026-02-06T10:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 145.22,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100014,
+        "ship_name": "PLAN CORVETTE 014",
+        "latitude": 24.6189,
+        "longitude": 119.7507,
+        "speed": 21.6,
+        "course": 87.0,
+        "timestamp": "2026-02-06T10:24:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 145.36,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230109.shtml",
+        "title": "Separatist activities threaten peace and stability in region",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-06T10:48:00+00:00",
+        "tone_score": -6.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 145.666,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100059,
+        "channel": "@ChinaOSINT",
+        "text": "Hospital near Fuzhou canceling leave for military medical staff.",
+        "timestamp": "2026-02-06T10:48:00+00:00",
+        "views": 10764
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 145.672,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000089,
+        "ship_name": "VESSEL 89",
+        "latitude": 24.0438,
+        "longitude": 121.1638,
+        "speed": 12.5,
+        "course": 70,
+        "timestamp": "2026-02-06T10:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 148.768,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100015,
+        "ship_name": "PLAN DESTROYER 015",
+        "latitude": 25.1096,
+        "longitude": 119.2615,
+        "speed": 23.7,
+        "course": 83.0,
+        "timestamp": "2026-02-06T11:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 149.303,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000090,
+        "ship_name": "MERCHANT 90",
+        "latitude": 25.402,
+        "longitude": 121.2808,
+        "speed": 11.4,
+        "course": 130,
+        "timestamp": "2026-02-06T11:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 150.367,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100060,
+        "channel": "@TaiwanWatch",
+        "text": "Railway cars with military vehicles spotted heading southeast.",
+        "timestamp": "2026-02-06T11:24:00+00:00",
+        "views": 19189
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 150.572,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100061,
+        "channel": "@OSINTtechnical",
+        "text": "Airborne early warning aircraft maintaining sustained patrols.",
+        "timestamp": "2026-02-06T12:00:00+00:00",
+        "views": 19514
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 150.722,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_110.html",
+        "title": "Reunification by peaceful means is preferred but not sole option",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-06T12:00:00+00:00",
+        "tone_score": -5.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 151.281,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000091,
+        "ship_name": "PACIFIC 91",
+        "latitude": 25.4775,
+        "longitude": 121.5433,
+        "speed": 12.8,
+        "course": 120,
+        "timestamp": "2026-02-06T12:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 152.682,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100016,
+        "ship_name": "PLAN DESTROYER 016",
+        "latitude": 24.2706,
+        "longitude": 118.6239,
+        "speed": 22.7,
+        "course": 83.0,
+        "timestamp": "2026-02-06T12:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 154.357,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000092,
+        "ship_name": "EASTERN 92",
+        "latitude": 23.3243,
+        "longitude": 120.4398,
+        "speed": 13.6,
+        "course": 130,
+        "timestamp": "2026-02-06T12:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 154.945,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100017,
+        "ship_name": "PLAN FRIGATE 017",
+        "latitude": 23.7277,
+        "longitude": 118.7637,
+        "speed": 21.4,
+        "course": 98.0,
+        "timestamp": "2026-02-06T12:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 155.324,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100062,
+        "channel": "@IntelDoge",
+        "text": "Military police establishing checkpoints on coastal roads.",
+        "timestamp": "2026-02-06T12:36:00+00:00",
+        "views": 9745
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 155.599,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000093,
+        "ship_name": "CARGO 93",
+        "latitude": 24.8488,
+        "longitude": 120.4674,
+        "speed": 11.7,
+        "course": 130,
+        "timestamp": "2026-02-06T13:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 156.569,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100063,
+        "channel": "@militarymap",
+        "text": "Port authorities requesting civilian vessels expedite departures.",
+        "timestamp": "2026-02-06T13:12:00+00:00",
+        "views": 14657
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 157.001,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx111.shtml",
+        "title": "Taiwan independence means war, compatriots warned",
+        "domain": "cctv.com",
+        "published_at": "2026-02-06T13:12:00+00:00",
+        "tone_score": -6.4,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 157.864,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100064,
+        "channel": "@ChinaOSINT",
+        "text": "Military charter flights increasing at civilian airports.",
+        "timestamp": "2026-02-06T13:48:00+00:00",
+        "views": 19955
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 158.086,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000094,
+        "ship_name": "SILK 94",
+        "latitude": 24.4364,
+        "longitude": 121.1788,
+        "speed": 11.7,
+        "course": 120,
+        "timestamp": "2026-02-06T13:48:00+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 159.543,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.9,
+        "location_lon": 120.1,
+        "description": "NOTAM issued for restricted airspace over Taiwan Strait",
+        "category": "restricted_zone",
+        "location_name": "Taiwan Strait",
+        "confidence": 72,
+        "source_post_ids": [
+          66,
+          67
+        ],
+        "created_at": "2026-02-06T14:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 159.58,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100018,
+        "ship_name": "PLAN FRIGATE 018",
+        "latitude": 24.3454,
+        "longitude": 119.1784,
+        "speed": 18.9,
+        "course": 85.0,
+        "timestamp": "2026-02-06T13:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 160.132,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100065,
+        "channel": "@TaiwanWatch",
+        "text": "Blood bank requests from military hospitals above normal.",
+        "timestamp": "2026-02-06T14:24:00+00:00",
+        "views": 9315
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 160.644,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/112.htm",
+        "title": "National unity is sacred duty of every Chinese citizen",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-06T14:24:00+00:00",
+        "tone_score": -4.4,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 161.942,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100019,
+        "ship_name": "PLAN CORVETTE 019",
+        "latitude": 24.8525,
+        "longitude": 118.8578,
+        "speed": 22.5,
+        "course": 85.0,
+        "timestamp": "2026-02-06T14:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 162.293,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000095,
+        "ship_name": "CONTAINER 95",
+        "latitude": 23.7858,
+        "longitude": 121.571,
+        "speed": 12.3,
+        "course": 130,
+        "timestamp": "2026-02-06T14:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 162.84,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000096,
+        "ship_name": "BULK 96",
+        "latitude": 23.407,
+        "longitude": 118.8734,
+        "speed": 12.9,
+        "course": 120,
+        "timestamp": "2026-02-06T15:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 164.425,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100066,
+        "channel": "@OSINTtechnical",
+        "text": "Coastal radar sites showing increased manning.",
+        "timestamp": "2026-02-06T15:00:00+00:00",
+        "views": 15166
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 165.364,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000097,
+        "ship_name": "TANKER 97",
+        "latitude": 25.6257,
+        "longitude": 121.3672,
+        "speed": 12.6,
+        "course": 60,
+        "timestamp": "2026-02-06T15:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 166.18,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100020,
+        "ship_name": "PLAN FRIGATE 020",
+        "latitude": 25.282,
+        "longitude": 118.8536,
+        "speed": 20.5,
+        "course": 95.0,
+        "timestamp": "2026-02-06T15:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 166.788,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100067,
+        "channel": "@IntelDoge",
+        "text": "Military family housing areas implementing access restrictions.",
+        "timestamp": "2026-02-06T15:36:00+00:00",
+        "views": 10947
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 167.703,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230113.shtml",
+        "title": "Separatist politicians will be held accountable for actions",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-06T15:36:00+00:00",
+        "tone_score": -5.6,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 167.822,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100021,
+        "ship_name": "PLAN CORVETTE 021",
+        "latitude": 24.6228,
+        "longitude": 119.6994,
+        "speed": 20.3,
+        "course": 83.0,
+        "timestamp": "2026-02-06T16:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 169.383,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100068,
+        "channel": "@militarymap",
+        "text": "Ammunition depot convoys observed moving toward coast.",
+        "timestamp": "2026-02-06T16:12:00+00:00",
+        "views": 11870
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 169.486,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000098,
+        "ship_name": "FREIGHTER 98",
+        "latitude": 25.2175,
+        "longitude": 119.2842,
+        "speed": 12.5,
+        "course": 60,
+        "timestamp": "2026-02-06T16:12:00+00:00"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 169.529,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Military tone emerging with reunification timeline acceleration",
+        "confidence": 72,
+        "source_ids": [
+          35,
+          36,
+          37,
+          38
+        ],
+        "coordination_score": 68,
+        "outlet_count": 3,
+        "synchronized_phrases": [
+          "reunification timeline",
+          "not sole option",
+          "foreign interference"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "sovereignty",
+          "military",
+          "reunification"
+        ],
+        "article_ids": [
+          35,
+          36,
+          37,
+          38
+        ],
+        "created_at": "2026-02-06T16:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 170.952,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100022,
+        "ship_name": "PLAN FRIGATE 022",
+        "latitude": 24.9118,
+        "longitude": 119.6044,
+        "speed": 18.2,
+        "course": 98.0,
+        "timestamp": "2026-02-06T16:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 171.006,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000099,
+        "ship_name": "VESSEL 99",
+        "latitude": 23.9149,
+        "longitude": 118.563,
+        "speed": 14.0,
+        "course": 120,
+        "timestamp": "2026-02-06T16:48:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 172.57,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_114.html",
+        "title": "Taiwan independence attempts doomed to fail: commentary",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-06T16:48:00+00:00",
+        "tone_score": -5.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 172.695,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100069,
+        "channel": "@ChinaOSINT",
+        "text": "Naval infantry units recalled from leave. Not exercise season.",
+        "timestamp": "2026-02-06T16:48:00+00:00",
+        "views": 14210
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 174.145,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000100,
+        "ship_name": "MERCHANT 100",
+        "latitude": 24.4726,
+        "longitude": 119.8633,
+        "speed": 13.5,
+        "course": 130,
+        "timestamp": "2026-02-06T17:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 174.278,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100070,
+        "channel": "@TaiwanWatch",
+        "text": "Satellite ground stations near Fujian showing unusual activity.",
+        "timestamp": "2026-02-06T17:24:00+00:00",
+        "views": 15775
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 175.715,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": 412100015,
+        "location_lat": 25.2,
+        "location_lon": 119.7,
+        "description": "Naval aviation base showing increased sortie rates",
+        "category": "flight",
+        "location_name": "Taiwan Strait",
+        "confidence": 70,
+        "source_post_ids": [
+          70,
+          71,
+          72
+        ],
+        "created_at": "2026-02-06T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 175.89,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100023,
+        "ship_name": "PLAN CORVETTE 023",
+        "latitude": 24.2772,
+        "longitude": 119.1967,
+        "speed": 22.6,
+        "course": 91.0,
+        "timestamp": "2026-02-06T17:36:00+00:00"
+      }
+    },
+    {
+      "_table": "alerts",
+      "_demo_offset_seconds": 176.423,
+      "_demo_action": "update",
+      "data": {
+        "region": "Taiwan Strait",
+        "threat_level": "AMBER",
+        "threat_score": 52,
+        "confidence": 71,
+        "severity": "medium",
+        "title": "Coordination Detected",
+        "description": "Significant narrative coordination aligned with military movements",
+        "event_ids": [],
+        "sub_scores": {
+          "outlet_score": 58,
+          "phrase_score": 52,
+          "volume_score": 45,
+          "geo_score": 55
+        },
+        "correlation_metadata": {
+          "narrative_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "movement_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "evidence_summary": "Strong narrative coordination spike with amphibious ship loading and restricted airspace",
+          "detection_history": [
+            {
+              "detected_at": "2026-02-05T14:00:00+00:00",
+              "score": 12,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T04:00:00+00:00",
+              "score": 28,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T18:00:00+00:00",
+              "score": 52,
+              "level": "AMBER"
+            }
+          ]
+        },
+        "updated_at": "2026-02-06T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 176.807,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx115.shtml",
+        "title": "China has full confidence in achieving complete reunification",
+        "domain": "cctv.com",
+        "published_at": "2026-02-06T18:00:00+00:00",
+        "tone_score": -3.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 176.899,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000101,
+        "ship_name": "PACIFIC 101",
+        "latitude": 24.8628,
+        "longitude": 120.3513,
+        "speed": 13.8,
+        "course": 60,
+        "timestamp": "2026-02-06T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 177.929,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100071,
+        "channel": "@OSINTtechnical",
+        "text": "Military cyber activity indicators elevated per public sources.",
+        "timestamp": "2026-02-06T18:00:00+00:00",
+        "views": 17414
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 178.457,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100024,
+        "ship_name": "PLAN DESTROYER 024",
+        "latitude": 23.7044,
+        "longitude": 118.7229,
+        "speed": 19.6,
+        "course": 97.0,
+        "timestamp": "2026-02-06T18:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 178.612,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100072,
+        "channel": "@IntelDoge",
+        "text": "Coastal defense artillery units conducting readiness checks.",
+        "timestamp": "2026-02-06T18:36:00+00:00",
+        "views": 14560
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 179.808,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000102,
+        "ship_name": "EASTERN 102",
+        "latitude": 23.9766,
+        "longitude": 118.9367,
+        "speed": 12.3,
+        "course": 130,
+        "timestamp": "2026-02-06T18:36:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 180.683,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/116.htm",
+        "title": "External forces playing with fire on Taiwan question",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-06T19:12:00+00:00",
+        "tone_score": -6.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 181.949,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100025,
+        "ship_name": "PLAN CORVETTE 025",
+        "latitude": 23.8897,
+        "longitude": 119.8689,
+        "speed": 19.3,
+        "course": 83.0,
+        "timestamp": "2026-02-06T19:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 182.448,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000103,
+        "ship_name": "CARGO 103",
+        "latitude": 23.7463,
+        "longitude": 119.2353,
+        "speed": 12.9,
+        "course": 120,
+        "timestamp": "2026-02-06T19:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 182.819,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000104,
+        "ship_name": "SILK 104",
+        "latitude": 24.8117,
+        "longitude": 119.1187,
+        "speed": 11.6,
+        "course": 130,
+        "timestamp": "2026-02-06T19:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 182.822,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100073,
+        "channel": "@militarymap",
+        "text": "Military ID checks intensified at Fujian Province borders.",
+        "timestamp": "2026-02-06T19:12:00+00:00",
+        "views": 10772
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 182.889,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100074,
+        "channel": "@ChinaOSINT",
+        "text": "Emergency management drills announced for coastal cities. Sudden.",
+        "timestamp": "2026-02-06T19:48:00+00:00",
+        "views": 12724
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 184.325,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100026,
+        "ship_name": "PLAN CORVETTE 026",
+        "latitude": 23.7386,
+        "longitude": 118.8948,
+        "speed": 18.8,
+        "course": 84.0,
+        "timestamp": "2026-02-06T20:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 185.365,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230117.shtml",
+        "title": "Separatism runs counter to interests of Taiwan compatriots",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-06T20:24:00+00:00",
+        "tone_score": -4.7,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 186.137,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000105,
+        "ship_name": "CONTAINER 105",
+        "latitude": 25.3238,
+        "longitude": 121.7999,
+        "speed": 13.0,
+        "course": 130,
+        "timestamp": "2026-02-06T20:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 187.422,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100075,
+        "channel": "@TaiwanWatch",
+        "text": "Civil defense shelters being inspected by authorities.",
+        "timestamp": "2026-02-06T20:24:00+00:00",
+        "views": 13935
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 188.607,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100027,
+        "ship_name": "PLAN CORVETTE 027",
+        "latitude": 23.8703,
+        "longitude": 119.9605,
+        "speed": 20.6,
+        "course": 93.0,
+        "timestamp": "2026-02-06T20:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 188.858,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100076,
+        "channel": "@OSINTtechnical",
+        "text": "Military requisition notices issued to some shipping companies.",
+        "timestamp": "2026-02-06T21:00:00+00:00",
+        "views": 16949
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 189.631,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000106,
+        "ship_name": "BULK 106",
+        "latitude": 23.6628,
+        "longitude": 119.6726,
+        "speed": 12.2,
+        "course": 70,
+        "timestamp": "2026-02-06T21:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 190.812,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_118.html",
+        "title": "Reunification timeline accelerating as separatists provoke",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-06T21:36:00+00:00",
+        "tone_score": -5.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 190.972,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100028,
+        "ship_name": "PLAN DESTROYER 028",
+        "latitude": 25.1323,
+        "longitude": 119.2564,
+        "speed": 18.1,
+        "course": 82.0,
+        "timestamp": "2026-02-06T21:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 191.286,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000107,
+        "ship_name": "TANKER 107",
+        "latitude": 24.4527,
+        "longitude": 120.9697,
+        "speed": 12.2,
+        "course": 130,
+        "timestamp": "2026-02-06T21:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 192.428,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100077,
+        "channel": "@IntelDoge",
+        "text": "Flight training at naval aviation schools suspended. Unusual.",
+        "timestamp": "2026-02-06T21:36:00+00:00",
+        "views": 18446
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 192.654,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100078,
+        "channel": "@militarymap",
+        "text": "Reservist recall notices reported in several coastal cities.",
+        "timestamp": "2026-02-06T22:12:00+00:00",
+        "views": 12747
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 193.506,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": 412100018,
+        "location_lat": 24.4,
+        "location_lon": 119.9,
+        "description": "Large-scale PLA exercise announced, live-fire zones declared",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 82,
+        "source_post_ids": [
+          82,
+          83,
+          84
+        ],
+        "created_at": "2026-02-06T22:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 195.405,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000109,
+        "ship_name": "VESSEL 109",
+        "latitude": 24.2111,
+        "longitude": 120.9079,
+        "speed": 12.2,
+        "course": 70,
+        "timestamp": "2026-02-06T22:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 195.413,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000108,
+        "ship_name": "FREIGHTER 108",
+        "latitude": 24.6272,
+        "longitude": 119.1981,
+        "speed": 11.2,
+        "course": 70,
+        "timestamp": "2026-02-06T22:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 195.606,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100029,
+        "ship_name": "PLAN DESTROYER 029",
+        "latitude": 24.9542,
+        "longitude": 119.6085,
+        "speed": 18.8,
+        "course": 81.0,
+        "timestamp": "2026-02-06T22:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 196.393,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100079,
+        "channel": "@ChinaOSINT",
+        "text": "Military vehicles observed entering previously inactive facilities.",
+        "timestamp": "2026-02-06T22:48:00+00:00",
+        "views": 8365
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 197.524,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx119.shtml",
+        "title": "Chinese military will not tolerate continued provocations",
+        "domain": "cctv.com",
+        "published_at": "2026-02-06T22:48:00+00:00",
+        "tone_score": -6.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 197.635,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412000110,
+        "ship_name": "MERCHANT 110",
+        "latitude": 24.8703,
+        "longitude": 120.9718,
+        "speed": 13.9,
+        "course": 70,
+        "timestamp": "2026-02-06T23:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 198.128,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100030,
+        "ship_name": "PLAN CORVETTE 030",
+        "latitude": 24.3055,
+        "longitude": 118.9967,
+        "speed": 19.8,
+        "course": 95.0,
+        "timestamp": "2026-02-06T23:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 198.907,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100080,
+        "channel": "@TaiwanWatch",
+        "text": "Secure communications testing noted by radio monitoring community.",
+        "timestamp": "2026-02-06T23:24:00+00:00",
+        "views": 16727
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 200.628,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Full-spectrum military readiness messaging across all outlets",
+        "confidence": 82,
+        "source_ids": [
+          41,
+          42,
+          43,
+          44
+        ],
+        "coordination_score": 75,
+        "outlet_count": 4,
+        "synchronized_phrases": [
+          "live-fire exercises",
+          "combat readiness",
+          "safeguard sovereignty"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "military",
+          "exercises",
+          "readiness"
+        ],
+        "article_ids": [
+          41,
+          42,
+          43,
+          44
+        ],
+        "created_at": "2026-02-07T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 200.821,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100031,
+        "ship_name": "PLAN CORVETTE 031",
+        "latitude": 24.0475,
+        "longitude": 118.7584,
+        "speed": 18.5,
+        "course": 85.0,
+        "timestamp": "2026-02-07T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 201.138,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/200.htm",
+        "title": "PLA Eastern Theater Command announces live-fire exercises",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-07T00:00:00+00:00",
+        "tone_score": -7.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "briefs",
+      "_demo_offset_seconds": 202.47,
+      "_demo_action": "insert",
+      "data": {
+        "title": "Taiwan Strait Escalation - AMBER Alert",
+        "threat_level": "AMBER",
+        "confidence": 80,
+        "summary": "Significant escalation detected. State media narrative coordination now synchronized with concrete military movements including amphibious ship loading and live-fire exercise announcements. Pattern indicates deliberate pre-conflict signaling.",
+        "evidence_chain": [
+          "All four major state outlets using identical 'live-fire exercises' and 'combat readiness' framing",
+          "PLA Eastern Theater Command announced large-scale exercises with live-fire zones",
+          "Amphibious assault ships loading at Zhanjiang (confirmed via satellite imagery per OSINT)",
+          "NOTAM issued for restricted airspace over Taiwan Strait",
+          "Combat aircraft sortie rates increased 300% according to OSINT sources",
+          "Type 052D destroyer concentration south of Wenzhou"
+        ],
+        "timeline": "Narrative coordination strengthened T+28h to T+42h. Military movements confirmed T+42h to T+48h. Official exercise announcement at T+46h.",
+        "information_gaps": [
+          "Exercise duration and end date not specified",
+          "Number of vessels involved in naval component unclear",
+          "No indication of ground force deployments yet"
+        ],
+        "collection_priorities": [
+          "Track amphibious vessel movements closely",
+          "Monitor for civilian evacuation notices",
+          "Watch for Rocket Force deployments",
+          "Assess international diplomatic responses"
+        ],
+        "key_developments": [
+          "Live-fire exercise officially announced",
+          "Amphibious ships loading confirmed",
+          "Six no-sail zones declared surrounding Taiwan",
+          "Narrative coordination at 75/100"
+        ],
+        "narrative_event_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "movement_event_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "generated_at": "2026-02-07T00:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 202.918,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100081,
+        "channel": "@OSINTtechnical",
+        "text": "BREAKING: Large-scale PLA exercise announced for Taiwan Strait. Live-fire zones declared.",
+        "timestamp": "2026-02-07T00:00:00+00:00",
+        "views": 158541
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 204.626,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100082,
+        "channel": "@IntelDoge",
+        "text": "Multiple amphibious assault ships departing Zhanjiang. This is significant.",
+        "timestamp": "2026-02-07T00:36:00+00:00",
+        "views": 103667
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 205.14,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100032,
+        "ship_name": "PLAN LANDING SHIP 032",
+        "latitude": 24.9637,
+        "longitude": 118.7312,
+        "speed": 18.0,
+        "course": 90.0,
+        "timestamp": "2026-02-07T00:36:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 206.616,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230201.shtml",
+        "title": "Military drills demonstrate resolve to safeguard sovereignty",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-07T01:12:00+00:00",
+        "tone_score": -8.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 206.7,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100083,
+        "channel": "@militarymap",
+        "text": "NOTAM indicates 6 no-sail zones surrounding Taiwan. Unprecedented scale.",
+        "timestamp": "2026-02-07T01:12:00+00:00",
+        "views": 46851
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 207.778,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100033,
+        "ship_name": "PLAN DESTROYER 033",
+        "latitude": 24.7815,
+        "longitude": 119.4763,
+        "speed": 18.4,
+        "course": 88.0,
+        "timestamp": "2026-02-07T01:12:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 208.026,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100034,
+        "ship_name": "PLAN LANDING SHIP 034",
+        "latitude": 24.8034,
+        "longitude": 118.9953,
+        "speed": 24.1,
+        "course": 88.0,
+        "timestamp": "2026-02-07T01:48:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 209.195,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100084,
+        "channel": "@ChinaOSINT",
+        "text": "Combat aircraft sorties increased 300% past 12 hours. J-20s confirmed airborne.",
+        "timestamp": "2026-02-07T01:48:00+00:00",
+        "views": 59330
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 210.353,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.7,
+        "location_lon": 120.3,
+        "description": "Multiple amphibious assault ships departing Zhanjiang",
+        "category": "convoy",
+        "location_name": "Taiwan Strait",
+        "confidence": 85,
+        "source_post_ids": [
+          88,
+          89,
+          90
+        ],
+        "created_at": "2026-02-07T02:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 210.436,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100085,
+        "channel": "@TaiwanWatch",
+        "text": "All civilian shipping diverted from strait. Military traffic only.",
+        "timestamp": "2026-02-07T02:24:00+00:00",
+        "views": 84147
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 210.515,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100035,
+        "ship_name": "PLAN LANDING SHIP 035",
+        "latitude": 25.4035,
+        "longitude": 118.8412,
+        "speed": 23.6,
+        "course": 88.0,
+        "timestamp": "2026-02-07T02:24:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 212.168,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_202.html",
+        "title": "Armed forces at high combat readiness to counter separatism",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-07T02:24:00+00:00",
+        "tone_score": -8.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 212.664,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100086,
+        "channel": "@OSINTtechnical",
+        "text": "Rocket Force TELs observed moving to coastal launch positions. Very concerning.",
+        "timestamp": "2026-02-07T03:00:00+00:00",
+        "views": 68399
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 215.353,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100036,
+        "ship_name": "PLAN SUPPORT SHIP 036",
+        "latitude": 25.3669,
+        "longitude": 118.963,
+        "speed": 22.6,
+        "course": 88.0,
+        "timestamp": "2026-02-07T03:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 215.665,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100037,
+        "ship_name": "PLAN FRIGATE 037",
+        "latitude": 25.4108,
+        "longitude": 119.5857,
+        "speed": 21.9,
+        "course": 86.0,
+        "timestamp": "2026-02-07T03:36:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 216.2,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx203.shtml",
+        "title": "Joint military operations commence in Taiwan Strait region",
+        "domain": "cctv.com",
+        "published_at": "2026-02-07T03:36:00+00:00",
+        "tone_score": -9.0,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 217.527,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100087,
+        "channel": "@IntelDoge",
+        "text": "Electronic warfare jamming detected across multiple frequencies. Active operations.",
+        "timestamp": "2026-02-07T03:36:00+00:00",
+        "views": 64382
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 217.854,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100038,
+        "ship_name": "PLAN DESTROYER 038",
+        "latitude": 25.1663,
+        "longitude": 119.507,
+        "speed": 17.7,
+        "course": 90.0,
+        "timestamp": "2026-02-07T04:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 218.266,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100088,
+        "channel": "@militarymap",
+        "text": "Naval blockade formation visible on AIS. At least 20 major combatants deployed.",
+        "timestamp": "2026-02-07T04:12:00+00:00",
+        "views": 54137
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 220.387,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100039,
+        "ship_name": "PLAN LANDING SHIP 039",
+        "latitude": 24.8654,
+        "longitude": 119.1364,
+        "speed": 15.3,
+        "course": 94.0,
+        "timestamp": "2026-02-07T04:48:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 221.784,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/204.htm",
+        "title": "Navy, air force units conduct coordinated strike drills",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-07T04:48:00+00:00",
+        "tone_score": -8.7,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 222.736,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100089,
+        "channel": "@ChinaOSINT",
+        "text": "Amphibious landing rehearsal underway. This is not a standard exercise.",
+        "timestamp": "2026-02-07T04:48:00+00:00",
+        "views": 158714
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 223.405,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100040,
+        "ship_name": "PLAN LANDING SHIP 040",
+        "latitude": 24.9714,
+        "longitude": 119.5793,
+        "speed": 23.5,
+        "course": 88.0,
+        "timestamp": "2026-02-07T05:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 225.122,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100041,
+        "ship_name": "PLAN DESTROYER 041",
+        "latitude": 25.1716,
+        "longitude": 119.09,
+        "speed": 22.0,
+        "course": 90.0,
+        "timestamp": "2026-02-07T06:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 225.265,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100090,
+        "channel": "@TaiwanWatch",
+        "text": "All indicators suggest imminent military action. Situation extremely tense.",
+        "timestamp": "2026-02-07T05:24:00+00:00",
+        "views": 80851
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 226.547,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100091,
+        "channel": "@OSINTtechnical",
+        "text": "Carrier strike group Type 003 Fujian now in strait. Full battle group.",
+        "timestamp": "2026-02-07T06:00:00+00:00",
+        "views": 81497
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 226.637,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.1,
+        "location_lon": 119.4,
+        "description": "Combat aircraft sorties increased 300% past 12 hours",
+        "category": "flight",
+        "location_name": "Taiwan Strait",
+        "confidence": 88,
+        "source_post_ids": [
+          94,
+          95,
+          96
+        ],
+        "created_at": "2026-02-07T06:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 227.403,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230205.shtml",
+        "title": "Rocket Force on standby as exercises escalate around Taiwan",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-07T06:00:00+00:00",
+        "tone_score": -9.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 227.745,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Coordinated military operations announcement with decisive action framing",
+        "confidence": 85,
+        "source_ids": [
+          45,
+          46,
+          47,
+          48
+        ],
+        "coordination_score": 80,
+        "outlet_count": 4,
+        "synchronized_phrases": [
+          "joint military operations",
+          "decisive action",
+          "high combat readiness"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "military",
+          "exercises",
+          "operations"
+        ],
+        "article_ids": [
+          45,
+          46,
+          47,
+          48
+        ],
+        "created_at": "2026-02-07T06:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 227.799,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100092,
+        "channel": "@IntelDoge",
+        "text": "Airborne assault forces loaded. IL-76 heavy airlift concentrated at bases.",
+        "timestamp": "2026-02-07T06:36:00+00:00",
+        "views": 177014
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 228.457,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100042,
+        "ship_name": "PLAN FRIGATE 042",
+        "latitude": 24.6968,
+        "longitude": 118.9543,
+        "speed": 20.7,
+        "course": 93.0,
+        "timestamp": "2026-02-07T06:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 231.103,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100093,
+        "channel": "@militarymap",
+        "text": "Live-fire missile launches confirmed. Anti-ship and land attack missiles.",
+        "timestamp": "2026-02-07T07:12:00+00:00",
+        "views": 54338
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 231.767,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100043,
+        "ship_name": "PLAN SUPPORT SHIP 043",
+        "latitude": 25.0797,
+        "longitude": 119.5558,
+        "speed": 16.6,
+        "course": 90.0,
+        "timestamp": "2026-02-07T07:12:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 232.033,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_206.html",
+        "title": "Military declares no-sail zones in six areas surrounding island",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-07T07:12:00+00:00",
+        "tone_score": -9.5,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 233.097,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100094,
+        "channel": "@ChinaOSINT",
+        "text": "Fighter sweeps establishing air superiority. CAP barriers in place.",
+        "timestamp": "2026-02-07T07:48:00+00:00",
+        "views": 63732
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 233.246,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100044,
+        "ship_name": "PLAN SUPPORT SHIP 044",
+        "latitude": 24.2034,
+        "longitude": 118.7507,
+        "speed": 17.7,
+        "course": 88.0,
+        "timestamp": "2026-02-07T07:48:00+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 234.623,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 25.0,
+        "location_lon": 120.0,
+        "description": "Six no-sail zones declared surrounding Taiwan",
+        "category": "restricted_zone",
+        "location_name": "Taiwan Strait",
+        "confidence": 90,
+        "source_post_ids": [
+          98,
+          99,
+          100
+        ],
+        "created_at": "2026-02-07T08:00:00+00:00"
+      }
+    },
+    {
+      "_table": "alerts",
+      "_demo_offset_seconds": 235.23,
+      "_demo_action": "update",
+      "data": {
+        "region": "Taiwan Strait",
+        "threat_level": "AMBER",
+        "threat_score": 68,
+        "confidence": 84,
+        "severity": "high",
+        "title": "Movement Confirmed",
+        "description": "Military readiness messaging synchronized with live-fire exercise announcement",
+        "event_ids": [],
+        "sub_scores": {
+          "outlet_score": 72,
+          "phrase_score": 68,
+          "volume_score": 62,
+          "geo_score": 70
+        },
+        "correlation_metadata": {
+          "narrative_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "movement_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "evidence_summary": "Full military readiness narrative with large-scale exercise and no-sail zones declared",
+          "detection_history": [
+            {
+              "detected_at": "2026-02-05T14:00:00+00:00",
+              "score": 12,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T04:00:00+00:00",
+              "score": 28,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T18:00:00+00:00",
+              "score": 52,
+              "level": "AMBER"
+            },
+            {
+              "detected_at": "2026-02-07T08:00:00+00:00",
+              "score": 68,
+              "level": "AMBER"
+            }
+          ]
+        },
+        "updated_at": "2026-02-07T08:00:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 235.251,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx207.shtml",
+        "title": "Combat aircraft patrol airspace, simulating blockade operations",
+        "domain": "cctv.com",
+        "published_at": "2026-02-07T08:24:00+00:00",
+        "tone_score": -9.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 236.35,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100045,
+        "ship_name": "PLAN CORVETTE 045",
+        "latitude": 25.3456,
+        "longitude": 118.731,
+        "speed": 18.8,
+        "course": 92.0,
+        "timestamp": "2026-02-07T08:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 237.17,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100095,
+        "channel": "@TaiwanWatch",
+        "text": "Mine countermeasure vessels clearing lanes. Pre-assault sequence.",
+        "timestamp": "2026-02-07T08:24:00+00:00",
+        "views": 63933
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 239.382,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100096,
+        "channel": "@OSINTtechnical",
+        "text": "Strategic bombers H-6K conducting long-range strike missions.",
+        "timestamp": "2026-02-07T09:00:00+00:00",
+        "views": 105634
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 240.129,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100046,
+        "ship_name": "PLAN CORVETTE 046",
+        "latitude": 24.1273,
+        "longitude": 119.3138,
+        "speed": 22.1,
+        "course": 94.0,
+        "timestamp": "2026-02-07T09:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 240.706,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100097,
+        "channel": "@IntelDoge",
+        "text": "Special forces insertion likely underway. Fast boats departed overnight.",
+        "timestamp": "2026-02-07T09:36:00+00:00",
+        "views": 45274
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 242.679,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/208.htm",
+        "title": "Amphibious assault units mobilized to coastal staging areas",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-07T09:36:00+00:00",
+        "tone_score": -10.0,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 242.972,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100047,
+        "ship_name": "PLAN FRIGATE 047",
+        "latitude": 24.097,
+        "longitude": 119.6724,
+        "speed": 22.3,
+        "course": 85.0,
+        "timestamp": "2026-02-07T09:36:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 243.576,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100048,
+        "ship_name": "PLAN DESTROYER 048",
+        "latitude": 24.7915,
+        "longitude": 119.3161,
+        "speed": 16.5,
+        "course": 93.0,
+        "timestamp": "2026-02-07T10:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 243.67,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100098,
+        "channel": "@militarymap",
+        "text": "Naval guns firing. Shore bombardment preparation phase begun.",
+        "timestamp": "2026-02-07T10:12:00+00:00",
+        "views": 110602
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 245.576,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100099,
+        "channel": "@ChinaOSINT",
+        "text": "Drone swarms deployed for ISR and targeting. Massive UAS presence.",
+        "timestamp": "2026-02-07T10:48:00+00:00",
+        "views": 73471
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 247.093,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230209.shtml",
+        "title": "PLA demonstrates capability to seize control of island by force",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-07T10:48:00+00:00",
+        "tone_score": -9.7,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 247.375,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100049,
+        "ship_name": "PLAN FRIGATE 049",
+        "latitude": 24.6302,
+        "longitude": 119.0458,
+        "speed": 21.4,
+        "course": 93.0,
+        "timestamp": "2026-02-07T10:48:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 249.403,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100050,
+        "ship_name": "PLAN LANDING SHIP 050",
+        "latitude": 24.8937,
+        "longitude": 118.7699,
+        "speed": 16.6,
+        "course": 93.0,
+        "timestamp": "2026-02-07T11:24:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 250.178,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100051,
+        "ship_name": "PLAN LANDING SHIP 051",
+        "latitude": 25.0872,
+        "longitude": 118.6581,
+        "speed": 19.9,
+        "course": 91.0,
+        "timestamp": "2026-02-07T12:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 250.378,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100100,
+        "channel": "@TaiwanWatch",
+        "text": "Electronic warfare aircraft jamming all civilian frequencies.",
+        "timestamp": "2026-02-07T11:24:00+00:00",
+        "views": 156019
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 250.649,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_210.html",
+        "title": "Electronic warfare systems activated to blind enemy defenses",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-07T12:00:00+00:00",
+        "tone_score": -9.2,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 252.081,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Maximum coordination: blockade and encirclement capabilities showcased",
+        "confidence": 90,
+        "source_ids": [
+          52,
+          53,
+          54,
+          55
+        ],
+        "coordination_score": 88,
+        "outlet_count": 4,
+        "synchronized_phrases": [
+          "blockade capability",
+          "encirclement",
+          "prepared for decisive action"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "military",
+          "operations",
+          "decisive_action"
+        ],
+        "article_ids": [
+          52,
+          53,
+          54,
+          55
+        ],
+        "created_at": "2026-02-07T12:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 252.707,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100101,
+        "channel": "@OSINTtechnical",
+        "text": "Amphibious assault wave 1 launched. Landing craft in water.",
+        "timestamp": "2026-02-07T12:00:00+00:00",
+        "views": 62450
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 253.423,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100052,
+        "ship_name": "PLAN DESTROYER 052",
+        "latitude": 24.8746,
+        "longitude": 119.4339,
+        "speed": 24.3,
+        "course": 85.0,
+        "timestamp": "2026-02-07T12:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 253.722,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100102,
+        "channel": "@IntelDoge",
+        "text": "Helicopter assault groups airborne. Vertical envelopment in progress.",
+        "timestamp": "2026-02-07T12:36:00+00:00",
+        "views": 102483
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 256.966,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx211.shtml",
+        "title": "Military spokesperson: Forces prepared for decisive action",
+        "domain": "cctv.com",
+        "published_at": "2026-02-07T13:12:00+00:00",
+        "tone_score": -10.0,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 257.241,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100053,
+        "ship_name": "PLAN LANDING SHIP 053",
+        "latitude": 25.4566,
+        "longitude": 118.6103,
+        "speed": 23.6,
+        "course": 92.0,
+        "timestamp": "2026-02-07T13:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 257.328,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100103,
+        "channel": "@militarymap",
+        "text": "Beach obstacles being cleared by combat engineers under fire.",
+        "timestamp": "2026-02-07T13:12:00+00:00",
+        "views": 52738
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 257.893,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100104,
+        "channel": "@ChinaOSINT",
+        "text": "Airborne drop observed. Paratroopers seizing airfield objectives.",
+        "timestamp": "2026-02-07T13:48:00+00:00",
+        "views": 83507
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 258.175,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100054,
+        "ship_name": "PLAN SUPPORT SHIP 054",
+        "latitude": 24.8747,
+        "longitude": 118.9457,
+        "speed": 16.5,
+        "course": 88.0,
+        "timestamp": "2026-02-07T13:48:00+00:00"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 260.031,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": 412100025,
+        "location_lat": 24.5,
+        "location_lon": 119.8,
+        "description": "Naval blockade formation visible, at least 20 major combatants",
+        "category": "naval",
+        "location_name": "Taiwan Strait",
+        "confidence": 92,
+        "source_post_ids": [
+          105,
+          106,
+          107,
+          108
+        ],
+        "created_at": "2026-02-07T14:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 260.111,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100105,
+        "channel": "@TaiwanWatch",
+        "text": "Naval air defense engaging targets. SAM launches confirmed.",
+        "timestamp": "2026-02-07T14:24:00+00:00",
+        "views": 78987
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 262.063,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100055,
+        "ship_name": "PLAN LANDING SHIP 055",
+        "latitude": 24.2525,
+        "longitude": 119.6856,
+        "speed": 21.2,
+        "course": 94.0,
+        "timestamp": "2026-02-07T14:24:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 262.458,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/212.htm",
+        "title": "Missile units assume highest alert status in Eastern Theater",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-07T14:24:00+00:00",
+        "tone_score": -8.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 262.91,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100106,
+        "channel": "@OSINTtechnical",
+        "text": "Logistics ships following assault force. Sustainment echelon moving.",
+        "timestamp": "2026-02-07T15:00:00+00:00",
+        "views": 150450
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 264.141,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100056,
+        "ship_name": "PLAN FRIGATE 056",
+        "latitude": 24.0113,
+        "longitude": 119.7794,
+        "speed": 18.2,
+        "course": 92.0,
+        "timestamp": "2026-02-07T15:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 265.191,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100057,
+        "ship_name": "PLAN DESTROYER 057",
+        "latitude": 25.1718,
+        "longitude": 119.6549,
+        "speed": 18.5,
+        "course": 92.0,
+        "timestamp": "2026-02-07T15:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 266.124,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100107,
+        "channel": "@IntelDoge",
+        "text": "Artillery fire support from coastal positions. Heavy bombardment.",
+        "timestamp": "2026-02-07T15:36:00+00:00",
+        "views": 150701
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 267.407,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230213.shtml",
+        "title": "Naval blockade exercise demonstrates encirclement capability",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-07T15:36:00+00:00",
+        "tone_score": -9.4,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 269.223,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100058,
+        "ship_name": "PLAN LANDING SHIP 058",
+        "latitude": 24.5284,
+        "longitude": 119.5288,
+        "speed": 18.9,
+        "course": 92.0,
+        "timestamp": "2026-02-07T16:12:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 270.369,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100108,
+        "channel": "@militarymap",
+        "text": "Air refueling tracks established. Sustained air operations enabled.",
+        "timestamp": "2026-02-07T16:12:00+00:00",
+        "views": 81519
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 270.418,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100109,
+        "channel": "@ChinaOSINT",
+        "text": "Medical evacuation helicopters active. Casualties being extracted.",
+        "timestamp": "2026-02-07T16:48:00+00:00",
+        "views": 166018
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 271.407,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100059,
+        "ship_name": "PLAN DESTROYER 059",
+        "latitude": 24.2011,
+        "longitude": 118.8904,
+        "speed": 23.4,
+        "course": 88.0,
+        "timestamp": "2026-02-07T16:48:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 272.599,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_214.html",
+        "title": "Paratroop divisions conduct airborne assault rehearsals",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-07T16:48:00+00:00",
+        "tone_score": -9.1,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 273.485,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100060,
+        "ship_name": "PLAN FRIGATE 060",
+        "latitude": 24.1243,
+        "longitude": 119.031,
+        "speed": 15.0,
+        "course": 91.0,
+        "timestamp": "2026-02-07T17:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 275.107,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100110,
+        "channel": "@TaiwanWatch",
+        "text": "Electronic attack on command and control networks. Cyber warfare active.",
+        "timestamp": "2026-02-07T17:24:00+00:00",
+        "views": 126729
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 275.304,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx215.shtml",
+        "title": "Cyber warfare units activated to disable enemy command systems",
+        "domain": "cctv.com",
+        "published_at": "2026-02-07T18:00:00+00:00",
+        "tone_score": -8.8,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 276.071,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100061,
+        "ship_name": "PLAN LANDING SHIP 061",
+        "latitude": 25.489,
+        "longitude": 119.7173,
+        "speed": 15.8,
+        "course": 92.0,
+        "timestamp": "2026-02-07T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 277.037,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100111,
+        "channel": "@OSINTtechnical",
+        "text": "Additional amphibious wave forming. Reinforcement echelon preparing.",
+        "timestamp": "2026-02-07T18:00:00+00:00",
+        "views": 151566
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 277.514,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.8,
+        "location_lon": 120.1,
+        "description": "Rocket Force TELs moving to coastal launch positions",
+        "category": "convoy",
+        "location_name": "Taiwan Strait",
+        "confidence": 90,
+        "source_post_ids": [
+          112,
+          113,
+          114
+        ],
+        "created_at": "2026-02-07T18:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 279.601,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100112,
+        "channel": "@IntelDoge",
+        "text": "Port seizure operations in progress. Heli-borne forces at harbors.",
+        "timestamp": "2026-02-07T18:36:00+00:00",
+        "views": 174024
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 279.61,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100062,
+        "ship_name": "PLAN DESTROYER 062",
+        "latitude": 24.8405,
+        "longitude": 119.2006,
+        "speed": 23.3,
+        "course": 87.0,
+        "timestamp": "2026-02-07T18:36:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 281.514,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100113,
+        "channel": "@militarymap",
+        "text": "Beachhead established. Ground forces consolidating positions.",
+        "timestamp": "2026-02-07T19:12:00+00:00",
+        "views": 165247
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 281.873,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100063,
+        "ship_name": "PLAN FRIGATE 063",
+        "latitude": 24.7869,
+        "longitude": 118.782,
+        "speed": 24.5,
+        "course": 94.0,
+        "timestamp": "2026-02-07T19:12:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 282.7,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.xinhuanet.com/english/20260205/216.htm",
+        "title": "Military reserves called up for large-scale mobilization drill",
+        "domain": "xinhuanet.com",
+        "published_at": "2026-02-07T19:12:00+00:00",
+        "tone_score": -9.6,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 283.164,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100114,
+        "channel": "@ChinaOSINT",
+        "text": "Air superiority achieved. No enemy air activity observed.",
+        "timestamp": "2026-02-07T19:48:00+00:00",
+        "views": 118508
+      }
+    },
+    {
+      "_table": "narrative_events",
+      "_demo_offset_seconds": 284.057,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "narrative_coordination",
+        "summary": "Peak coordination: imminent action framing across all state media",
+        "confidence": 92,
+        "source_ids": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "coordination_score": 93,
+        "outlet_count": 4,
+        "synchronized_phrases": [
+          "forces prepared",
+          "highest alert status",
+          "seize control by force"
+        ],
+        "geographic_focus": "Taiwan Strait",
+        "themes": [
+          "military",
+          "decisive_action",
+          "readiness"
+        ],
+        "article_ids": [
+          56,
+          57,
+          58,
+          59,
+          60
+        ],
+        "created_at": "2026-02-07T20:00:00+00:00"
+      }
+    },
+    {
+      "_table": "briefs",
+      "_demo_offset_seconds": 284.283,
+      "_demo_action": "insert",
+      "data": {
+        "title": "Taiwan Strait Escalation - RED ALERT",
+        "threat_level": "RED",
+        "confidence": 92,
+        "summary": "Imminent threat assessment. Peak narrative coordination using 'decisive action' and 'seize control by force' framing synchronized with naval blockade formation and amphibious assault wave launch. All indicators suggest transition from exercise to potential combat operations within hours.",
+        "evidence_chain": [
+          "Maximum state media coordination (93/100) with imminent action framing across all outlets",
+          "Naval blockade formation visible with at least 20 major combatants confirmed via AIS",
+          "Rocket Force TELs observed moving to coastal launch positions",
+          "Amphibious assault wave launched - landing craft confirmed in water per OSINT",
+          "All civilian shipping diverted from strait",
+          "Electronic warfare jamming detected across multiple frequencies",
+          "Six no-sail zones now fully enforced with military-only traffic"
+        ],
+        "timeline": "Threat level RED reached at T+70h. Amphibious wave launched T+70h. Blockade formation established T+62h to T+68h. Peak narrative coordination T+68h.",
+        "information_gaps": [
+          "Actual beach landing locations not confirmed",
+          "Taiwanese defensive response posture unknown",
+          "International military response pending"
+        ],
+        "collection_priorities": [
+          "CRITICAL: Monitor for beach assault indicators",
+          "CRITICAL: Track missile launch preparations",
+          "URGENT: Assess air superiority status",
+          "URGENT: Monitor for cyber attacks on critical infrastructure"
+        ],
+        "key_developments": [
+          "Amphibious assault operations initiated",
+          "Naval blockade fully established",
+          "State media using imminent action framing",
+          "Threat score 82/100 with 92% confidence"
+        ],
+        "narrative_event_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "movement_event_ids": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15
+        ],
+        "generated_at": "2026-02-07T20:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 285.229,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100064,
+        "ship_name": "PLAN CORVETTE 064",
+        "latitude": 24.2333,
+        "longitude": 119.2877,
+        "speed": 24.1,
+        "course": 88.0,
+        "timestamp": "2026-02-07T19:48:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 285.623,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.globaltimes.cn/page/202602/1230217.shtml",
+        "title": "Satellite imagery shows military buildup along coast: analysts",
+        "domain": "globaltimes.cn",
+        "published_at": "2026-02-07T20:24:00+00:00",
+        "tone_score": -8.3,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 286.221,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100065,
+        "ship_name": "PLAN CORVETTE 065",
+        "latitude": 24.3955,
+        "longitude": 118.8499,
+        "speed": 24.2,
+        "course": 94.0,
+        "timestamp": "2026-02-07T20:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 287.227,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100115,
+        "channel": "@TaiwanWatch",
+        "text": "Naval blockade complete. No vessels can enter or exit.",
+        "timestamp": "2026-02-07T20:24:00+00:00",
+        "views": 163275
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 287.624,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100066,
+        "ship_name": "PLAN LANDING SHIP 066",
+        "latitude": 24.3791,
+        "longitude": 119.1766,
+        "speed": 23.5,
+        "course": 91.0,
+        "timestamp": "2026-02-07T21:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 288.318,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100116,
+        "channel": "@OSINTtechnical",
+        "text": "Strategic infrastructure being secured. Key sites under PLA control.",
+        "timestamp": "2026-02-07T21:00:00+00:00",
+        "views": 63829
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 290.191,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100117,
+        "channel": "@IntelDoge",
+        "text": "Long-range precision strikes continuing. Cruise missile salvos.",
+        "timestamp": "2026-02-07T21:36:00+00:00",
+        "views": 122686
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 290.692,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100067,
+        "ship_name": "PLAN LANDING SHIP 067",
+        "latitude": 24.8239,
+        "longitude": 119.3001,
+        "speed": 17.0,
+        "course": 93.0,
+        "timestamp": "2026-02-07T21:36:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 290.742,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://www.people.com.cn/en/202602/05/c_218.html",
+        "title": "Joint command structure activated for Taiwan contingency",
+        "domain": "people.com.cn",
+        "published_at": "2026-02-07T21:36:00+00:00",
+        "tone_score": -9.9,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "movement_events",
+      "_demo_offset_seconds": 292.464,
+      "_demo_action": "insert",
+      "data": {
+        "event_type": "military_movement",
+        "vessel_mmsi": null,
+        "location_lat": 24.3,
+        "location_lon": 119.5,
+        "description": "Amphibious assault wave launched, landing craft in water",
+        "category": "convoy",
+        "location_name": "Taiwan Strait",
+        "confidence": 95,
+        "source_post_ids": [
+          118,
+          119,
+          120
+        ],
+        "created_at": "2026-02-07T22:00:00+00:00"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 293.198,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100068,
+        "ship_name": "PLAN SUPPORT SHIP 068",
+        "latitude": 25.2211,
+        "longitude": 119.7635,
+        "speed": 19.8,
+        "course": 88.0,
+        "timestamp": "2026-02-07T22:12:00+00:00"
+      }
+    },
+    {
+      "_table": "alerts",
+      "_demo_offset_seconds": 293.632,
+      "_demo_action": "update",
+      "data": {
+        "region": "Taiwan Strait",
+        "threat_level": "RED",
+        "threat_score": 82,
+        "confidence": 92,
+        "severity": "critical",
+        "title": "Full Alert",
+        "description": "Peak coordination with naval blockade and amphibious assault operations",
+        "event_ids": [],
+        "sub_scores": {
+          "outlet_score": 88,
+          "phrase_score": 82,
+          "volume_score": 78,
+          "geo_score": 85
+        },
+        "correlation_metadata": {
+          "narrative_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "movement_event_ids": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "evidence_summary": "Maximum narrative coordination with imminent action framing and amphibious assault wave launched",
+          "detection_history": [
+            {
+              "detected_at": "2026-02-05T14:00:00+00:00",
+              "score": 12,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T04:00:00+00:00",
+              "score": 28,
+              "level": "GREEN"
+            },
+            {
+              "detected_at": "2026-02-06T18:00:00+00:00",
+              "score": 52,
+              "level": "AMBER"
+            },
+            {
+              "detected_at": "2026-02-07T08:00:00+00:00",
+              "score": 68,
+              "level": "AMBER"
+            },
+            {
+              "detected_at": "2026-02-07T22:00:00+00:00",
+              "score": 82,
+              "level": "RED"
+            }
+          ]
+        },
+        "updated_at": "2026-02-07T22:00:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 295.257,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100118,
+        "channel": "@militarymap",
+        "text": "Hospital ships arriving. Casualty receiving stations operational.",
+        "timestamp": "2026-02-07T22:12:00+00:00",
+        "views": 139905
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 295.992,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100119,
+        "channel": "@ChinaOSINT",
+        "text": "ISR assets providing real-time targeting. Full battlefield awareness.",
+        "timestamp": "2026-02-07T22:48:00+00:00",
+        "views": 122836
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 296.779,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100069,
+        "ship_name": "PLAN SUPPORT SHIP 069",
+        "latitude": 25.4091,
+        "longitude": 118.6584,
+        "speed": 15.4,
+        "course": 94.0,
+        "timestamp": "2026-02-07T22:48:00+00:00"
+      }
+    },
+    {
+      "_table": "articles",
+      "_demo_offset_seconds": 297.019,
+      "_demo_action": "insert",
+      "data": {
+        "url": "https://english.cctv.com/2026/02/05/ARTIx219.shtml",
+        "title": "Air defense forces conduct live-fire missile intercept tests",
+        "domain": "cctv.com",
+        "published_at": "2026-02-07T22:48:00+00:00",
+        "tone_score": -8.6,
+        "language": "en",
+        "source_country": "CN"
+      }
+    },
+    {
+      "_table": "vessel_positions",
+      "_demo_offset_seconds": 298.434,
+      "_demo_action": "insert",
+      "data": {
+        "mmsi": 412100070,
+        "ship_name": "PLAN FRIGATE 070",
+        "latitude": 25.1717,
+        "longitude": 119.492,
+        "speed": 15.6,
+        "course": 90.0,
+        "timestamp": "2026-02-07T23:24:00+00:00"
+      }
+    },
+    {
+      "_table": "social_posts",
+      "_demo_offset_seconds": 300.188,
+      "_demo_action": "insert",
+      "data": {
+        "telegram_id": 100120,
+        "channel": "@TaiwanWatch",
+        "text": "Situation critical. Full-scale invasion in progress. World watches.",
+        "timestamp": "2026-02-07T23:24:00+00:00",
+        "views": 118810
+      }
+    }
+  ]
+}
