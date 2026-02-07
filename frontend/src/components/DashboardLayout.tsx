@@ -1,17 +1,11 @@
 import { cn } from '../lib/utils'
+import { ThreatBanner } from './ThreatBanner'
 
 export function DashboardLayout() {
   return (
     <div className="h-screen grid grid-cols-[320px_1fr_360px] grid-rows-[48px_1fr_200px]">
       {/* Threat Status Banner - Top, full width */}
-      <div
-        className="col-span-3 bg-green-100 border-b border-gray-200 flex items-center px-6"
-        style={{ gridArea: '1 / 1 / 2 / 4' }}
-      >
-        <div className="text-sm font-semibold text-gray-700">
-          THREAT BANNER
-        </div>
-      </div>
+      <ThreatBanner />
 
       {/* Event Feed Panel - Left */}
       <div
