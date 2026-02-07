@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 4 of 5 (Visualization)
-Plan: 2 of 4 in current phase
+Plan: 3 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-07 — Completed 04-02-PLAN.md (Threat Banner + Map)
+Last activity: 2026-02-07 — Completed 04-03-PLAN.md (Event Feed + Timeline)
 
-Progress: [████████████░░] 70% (12/17 plans completed)
+Progress: [█████████████░] 76% (13/17 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 12
-- Average duration: ~2.7 minutes
-- Total execution time: ~0.8 hours
+- Total plans completed: 13
+- Average duration: ~2.9 minutes
+- Total execution time: ~0.9 hours
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [████████████░░] 70% (12/17 plans complete
 | Phase 1 | 4/4 | 11 min | 2.75 min |
 | Phase 2 | 4/4 | 20 min | 5 min |
 | Phase 3 | 3/3 | 7.1 min | 2.4 min |
-| Phase 4 | 2/4 | 6 min | 3 min |
+| Phase 4 | 3/4 | 10 min | 3.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-02 (2.3 min), 03-03 (2.5 min), 04-01 (3 min), 04-02 (3 min)
-- Trend: Consistent velocity maintained, Phase 4 UI work averaging 3 min per plan
+- Last 5 plans: 03-03 (2.5 min), 04-01 (3 min), 04-02 (3 min), 04-03 (4 min)
+- Trend: Slight uptick in Phase 4 as UI complexity increases (more hooks, components)
 
 *Updated after each plan completion*
 
@@ -78,6 +78,10 @@ Recent decisions affecting current work:
 - Heatmap layer below vessel markers (04-02: movement event density visualization)
 - Narrative regions from keyword extraction (04-02: simple keyword-to-polygon mapping, no geocoding API)
 - Fallback SVG map without Mapbox token (04-02: developer experience, works without account)
+- Temporal matching for movement events (04-03: 5-minute window for post-to-event association, acceptable for demo)
+- Coordination signals via narrative_events.source_ids Set (04-03: O(1) lookup for purple "COORDINATED" badge)
+- Interleaved feed sorted by timestamp (04-03: unified intelligence flow regardless of source)
+- Recharts ComposedChart for timeline (04-03: area chart + scatter overlay for threat score and narrative events)
 
 ### Pending Todos
 
@@ -108,9 +112,9 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed 04-02-PLAN.md (Threat Banner + Map) — 2 task commits
+Stopped at: Completed 04-03-PLAN.md (Event Feed + Timeline) — 2 task commits + 1 fix commit
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (Phase 4 Plan 2 complete)*
+*Last updated: 2026-02-07 (Phase 4 Plan 3 complete)*
