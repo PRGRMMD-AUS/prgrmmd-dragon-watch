@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 3 of 5 (Correlation Engine)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-07 — Completed 03-01-PLAN.md (Foundation Types)
+Last activity: 2026-02-07 — Completed 03-02-PLAN.md (Correlation Engine)
 
-Progress: [████████░░] 42% (2.25/5 phases completed)
+Progress: [████████░░] 45% (2.5/5 phases completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 8
-- Average duration: ~2.6 minutes
-- Total execution time: ~0.45 hours
+- Total plans completed: 9
+- Average duration: ~2.5 minutes
+- Total execution time: ~0.5 hours
 
 **By Phase:**
 
@@ -29,11 +29,11 @@ Progress: [████████░░] 42% (2.25/5 phases completed)
 |-------|-------|-------|----------|
 | Phase 1 | 4/4 | 11 min | 2.75 min |
 | Phase 2 | 4/4 | 20 min | 5 min |
-| Phase 3 | 1/4 | 2.3 min | 2.3 min |
+| Phase 3 | 2/4 | 4.6 min | 2.3 min |
 
 **Recent Trend:**
-- Last 5 plans: 02-02 (5 min), 02-03 (5 min), 02-04 (5 min), 03-01 (2.3 min)
-- Trend: Phase 3 foundation types faster than AI integration tasks (no async complexity)
+- Last 5 plans: 02-03 (5 min), 02-04 (5 min), 03-01 (2.3 min), 03-02 (2.3 min)
+- Trend: Phase 3 plans consistently fast (2.3 min avg), correlation engine matching foundation types speed
 
 *Updated after each plan completion*
 
@@ -61,6 +61,10 @@ Recent decisions affecting current work:
 - Shapely over GeoPandas for single-region containment (03-01: avoids heavyweight GDAL/GEOS dependencies)
 - Confidence capped at 95% max (03-01: always acknowledge OSINT correlation uncertainty)
 - Separate correlation and LLM ThreatLevel enums (03-01: different purposes, different implementations)
+- 72-hour correlation window for narrative-movement matching (03-02: matches demo scenario timeline)
+- Weight sub-scores as outlet(30%), phrase(25%), volume(20%), geo(25%) (03-02: prioritize outlet coordination signal)
+- Geographic match requires BOTH narrative focus AND movement coordinates (03-02: prevents false positives from partial matches)
+- Normalize with tuned ranges: outlets 1-4, phrases 0-10, volume 0-50 (03-02: calibrated to demo data)
 
 ### Pending Todos
 
@@ -80,16 +84,18 @@ None yet.
 
 **Phase 2:** Novel prompt engineering for narrative coordination detection (sparse public examples) — may require iteration during Phase 2 LLM wrapper development.
 
-**Phase 3:** Statistical baseline calibration for correlation engine — false positive rate must be validated against real data during Phase 3 testing.
+**Phase 3 (active):** Statistical baseline calibration for correlation engine — current normalization ranges tuned to demo data (4 outlets, 10 phrases, 50 posts). Production deployment MUST recalibrate with historical baseline from real GDELT/Telegram feeds. False positive rate unknown until validated against ground truth.
+
+**Phase 3 (new):** Alert schema compatibility — correlation engine writes threat_level, threat_score, confidence, sub_scores, correlation_metadata fields. If Supabase alerts table schema differs, upsert will fail. Plan 03-03 must verify schema and add columns if needed.
 
 **Phase 4:** Lovable-generated code quality for Supabase realtime unknown — schedule early integration testing at Phase 4 start to catch issues.
 
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed 03-01-PLAN.md (Foundation Types) — 2 tasks, 2 commits
+Stopped at: Completed 03-02-PLAN.md (Correlation Engine) — 2 tasks, 2 commits
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (after 03-01)*
+*Last updated: 2026-02-07 (after 03-02)*
