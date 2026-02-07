@@ -10,18 +10,18 @@ See: .planning/PROJECT.md (updated 2026-02-07)
 ## Current Position
 
 Phase: 4 of 5 (Visualization)
-Plan: 1 of 4 in current phase
+Plan: 2 of 4 in current phase
 Status: In progress
-Last activity: 2026-02-07 — Completed 04-01-PLAN.md (Frontend Scaffold)
+Last activity: 2026-02-07 — Completed 04-02-PLAN.md (Threat Banner + Map)
 
-Progress: [███████████░░░] 64% (11/17 plans completed)
+Progress: [████████████░░] 70% (12/17 plans completed)
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 11
+- Total plans completed: 12
 - Average duration: ~2.7 minutes
-- Total execution time: ~0.7 hours
+- Total execution time: ~0.8 hours
 
 **By Phase:**
 
@@ -30,11 +30,11 @@ Progress: [███████████░░░] 64% (11/17 plans complete
 | Phase 1 | 4/4 | 11 min | 2.75 min |
 | Phase 2 | 4/4 | 20 min | 5 min |
 | Phase 3 | 3/3 | 7.1 min | 2.4 min |
-| Phase 4 | 1/4 | 3 min | 3 min |
+| Phase 4 | 2/4 | 6 min | 3 min |
 
 **Recent Trend:**
-- Last 5 plans: 03-01 (2.3 min), 03-02 (2.3 min), 03-03 (2.5 min), 04-01 (3 min)
-- Trend: Consistent velocity maintained, Phase 4 frontend scaffold comparable to backend work
+- Last 5 plans: 03-02 (2.3 min), 03-03 (2.5 min), 04-01 (3 min), 04-02 (3 min)
+- Trend: Consistent velocity maintained, Phase 4 UI work averaging 3 min per plan
 
 *Updated after each plan completion*
 
@@ -72,6 +72,12 @@ Recent decisions affecting current work:
 - Manual shadcn/ui dependencies install (04-01: avoids interactive prompts)
 - CSS Grid with grid-template-areas for dashboard layout (04-01: named zones for clarity)
 - Light theme (white/gray-50) for dashboard (04-01: modern SaaS analytics feel, not dark command center)
+- Threat banner pulse animation on escalation (04-02: Tailwind animate-pulse for 2 seconds when level changes)
+- Map fixed to Taiwan Strait view with disabled interaction (04-02: display panel not exploration tool)
+- Vessel markers as rotated SVG triangles (04-02: show directional heading from course field)
+- Heatmap layer below vessel markers (04-02: movement event density visualization)
+- Narrative regions from keyword extraction (04-02: simple keyword-to-polygon mapping, no geocoding API)
+- Fallback SVG map without Mapbox token (04-02: developer experience, works without account)
 
 ### Pending Todos
 
@@ -97,12 +103,14 @@ None yet.
 
 **Phase 4 (resolved 04-01):** Lovable-generated code quality for Supabase realtime unknown — built custom React project with Vite instead, implemented generic useRealtimeSubscription hook with full TypeScript types. Direct control over realtime integration.
 
+**Phase 4 (pending):** Optional Mapbox token setup for full map rendering — fallback SVG works without token but production deployment should set VITE_MAPBOX_TOKEN for Mapbox Light style. Get token from https://account.mapbox.com/access-tokens/
+
 ## Session Continuity
 
 Last session: 2026-02-07 (phase execution)
-Stopped at: Completed 04-01-PLAN.md (Frontend Scaffold) — 2 task commits (Task 1 skipped - migration already complete)
+Stopped at: Completed 04-02-PLAN.md (Threat Banner + Map) — 2 task commits
 Resume file: None
 
 ---
 *State initialized: 2026-02-07*
-*Last updated: 2026-02-07 (Phase 4 Plan 1 complete)*
+*Last updated: 2026-02-07 (Phase 4 Plan 2 complete)*
