@@ -15,7 +15,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 - [x] **Phase 1: Foundation** - Supabase schema and multi-source data ingestion
 - [x] **Phase 2: Intelligence Processing** - LLM-powered narrative and movement analysis
 - [x] **Phase 3: Correlation Engine** - Dual-stream threat detection
-- [ ] **Phase 4: Visualization** - Real-time dashboard with all panels
+- [x] **Phase 4: Visualization** - Real-time dashboard with all panels
 - [ ] **Phase 5: Demo Integration** - Playback engine and offline reliability
 
 ## Phase Details
@@ -85,10 +85,10 @@ Plans:
 **Plans**: 4 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Schema migration + React project scaffold + layout shell + Supabase client
-- [ ] 04-02-PLAN.md — Threat status banner + Taiwan Strait map with vessel markers
-- [ ] 04-03-PLAN.md — Event feed cards (left panel) + Narrative timeline (bottom panel)
-- [ ] 04-04-PLAN.md — Intelligence brief sidebar + Visual polish + Human verification
+- [x] 04-01-PLAN.md — Schema migration + React project scaffold + layout shell + Supabase client
+- [x] 04-02-PLAN.md — Threat status banner + Taiwan Strait map with vessel markers
+- [x] 04-03-PLAN.md — Event feed cards (left panel) + Narrative timeline (bottom panel)
+- [x] 04-04-PLAN.md — Intelligence brief sidebar + Visual polish + Human verification
 
 ### Phase 5: Demo Integration
 **Goal**: Demo runs reliably GREEN to RED in 5 minutes with no live API dependencies
@@ -115,9 +115,9 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundation | 4/4 | Complete | 2026-02-07 |
 | 2. Intelligence Processing | 4/4 | Complete | 2026-02-07 |
 | 3. Correlation Engine | 3/3 | Complete | 2026-02-07 |
-| 4. Visualization | 0/4 | Not started | - |
+| 4. Visualization | 4/4 | Complete | 2026-02-07 |
 | 5. Demo Integration | 0/TBD | Not started | - |
 
 ---
 *Roadmap created: 2026-02-07*
-*Last updated: 2026-02-07 (Phase 3 complete)*
+*Last updated: 2026-02-07 (Phase 4 complete)*
