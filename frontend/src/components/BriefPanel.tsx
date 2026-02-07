@@ -1,5 +1,5 @@
 import { useBriefs } from '../hooks/useBriefs'
-import { ThreatLevel } from '../types/database'
+import type { ThreatLevel } from '../types/database'
 
 const threatLevelStyles: Record<ThreatLevel, { bg: string; text: string }> = {
   GREEN: { bg: 'bg-green-100', text: 'text-green-800' },

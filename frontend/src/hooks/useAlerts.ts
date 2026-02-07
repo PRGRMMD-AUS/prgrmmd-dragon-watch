@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { Alert } from '../types/database'
+import type { Alert } from '../types/database'
 import { RealtimeChannel } from '@supabase/supabase-js'
 
 export function useAlerts() {

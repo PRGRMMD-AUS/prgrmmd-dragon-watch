@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { Brief } from '../types/database'
+import type { Brief } from '../types/database'
 
 interface UseBriefsReturn {
   brief: Brief | null

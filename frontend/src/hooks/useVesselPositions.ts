@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../lib/supabase'
-import { VesselPosition } from '../types/database'
+import type { VesselPosition } from '../types/database'
 import { RealtimeChannel } from '@supabase/supabase-js'
 
 export function useVesselPositions() {

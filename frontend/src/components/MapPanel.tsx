@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import Map, { Marker, Source, Layer } from 'react-map-gl'
-import type { LayerProps } from 'react-map-gl'
+import Map, { Marker, Source, Layer } from 'react-map-gl/mapbox'
+import type { LayerProps } from 'react-map-gl/mapbox'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { useVesselPositions } from '../hooks/useVesselPositions'
 import { useMovementHeatmap } from '../hooks/useMovementHeatmap'

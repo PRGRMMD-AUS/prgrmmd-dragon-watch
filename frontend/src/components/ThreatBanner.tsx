@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { useAlerts } from '../hooks/useAlerts'
-import { ThreatLevel } from '../types/database'
+import type { ThreatLevel } from '../types/database'
 
 export function ThreatBanner() {
   const { alert, loading } = useAlerts()
